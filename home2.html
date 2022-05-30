@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" 
+        type="text/css" href=
+"https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <link rel="stylesheet" href="css/home_style.css">
+  </head>
+  <body>
+    <div id="wrapper">
+  
+      <table border=1 id="table_detail" 
+          align=center cellpadding=10>
+
+        
+        <!-- Ramen row -->
+        <tr onclick="showHideRow('hidden_row1-1', 'hidden_row1-2', 'hidden_row1-3');">
+            <th colspan=4>Ramen</th>
+        </tr>
+        <tr id="hidden_row1-1" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                MISO
+            </td>
+        </tr>
+        <tr id="hidden_row1-2" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                SHOYU
+            </td>
+        </tr>
+        <tr id="hidden_row1-3" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                SHIO
+            </td>
+        </tr>
+
+        <!-- Ramen Set-->
+        <tr onclick="
+        showHideRow('hidden_row2A', 'hidden_row2B'); 
+        hideRow('hidden_row2A-1','hidden_row2A-2','hidden_row2A-3'); 
+        hideRow('hidden_row2B-1','hidden_row2B-2','hidden_row2B-3')
+        ">
+            <th colspan=4>Ramen SET</th>
+        <tr 
+        id="hidden_row2A" 
+        onclick="showHideRow('hidden_row2A-1','hidden_row2A-2','hidden_row2A-3');">
+            <td colspan=4>SET A</th>
+        </tr>
+
+        <tr id="hidden_row2A-1" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                MISO SET A
+            </td>
+        </tr>
+        <tr id="hidden_row2A-2" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                SHOYU SET A
+            </td>
+        </tr>
+        <tr id="hidden_row2A-3" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                SHIO SET A
+            </td>
+        </tr>
+
+        <tr id="hidden_row2B" onclick="showHideRow('hidden_row2B-1','hidden_row2B-2','hidden_row2B-3');">
+            <td colspan=4>SET B</th>
+        </tr>
+
+        <tr id="hidden_row2B-1" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                MISO SET B
+            </td>
+        </tr>
+        <tr id="hidden_row2B-2" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                SHOYU SET B
+            </td>
+        </tr>
+        <tr id="hidden_row2B-3" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                SHIO SET B
+            </td>
+        </tr>
+
+        <!-- Side Dish-->
+        <tr onclick="showHideRow('row_side1', 'row_side2', 'row_side3', 'row_side4', 'row_side5', 'row_side6', 'row_side7', 'row_side8', 'row_side9', 'row_side10');">
+            <th colspan=4>Side Dish</th>
+        </tr>
+        <tr id="row_side1" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Gyoza (5pcs)
+            </td>
+        </tr>
+        <tr id="row_side2" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Chashu Plate (shoulder or belly)
+            </td>
+        </tr>
+        <tr id="row_side3" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Chashu Burger (shoulder or belly)
+            </td>
+        </tr>
+        <tr id="row_side4" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Chashu Don
+            </td>
+        </tr>
+        <tr id="row_side5" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Green Onion Don
+            </td>
+        </tr>
+        <tr id="row_side6" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Kimuchee plate
+            </td>
+        </tr>
+        <tr id="row_side7" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Pickles
+            </td>
+        </tr>
+        <tr id="row_side8" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Rice
+            </td>
+        </tr>
+        <tr id="row_side9" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Steamed bun
+            </td>
+        </tr>
+        <tr id="row_side10" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Mini Salad
+            </td>
+        </tr>
+
+        <!-- Ramen topping-->
+        <tr onclick="showHideRow('row_top1', 'row_top2', 'row_top3', 'row_top4', 'row_top5', 'row_top6', 'row_top7', 'row_top8', 'row_top9', 'row_top10');">
+            <th colspan=4>Topping</th>
+        </tr>
+        <tr id="row_top1" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Chashu (shoulder or belly)
+            </td>
+        </tr>
+        <tr id="row_top2" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Shrimp Cakes (2 pcs)
+            </td>
+        </tr>
+        <tr id="row_top3" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Boiled Egg
+            </td>
+        </tr>
+        <tr id="row_top4" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Green Onion
+            </td>
+        </tr>
+        <tr id="row_top5" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Menma
+            </td>
+        </tr>
+        <tr id="row_top6" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Wet Seaweed 
+            </td>
+        </tr>
+        <tr id="row_top7" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Dried Seaweed
+            </td>
+        </tr>
+        <tr id="row_top8" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Bean Sprouts
+            </td>
+        </tr>
+        <tr id="row_top9" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Butter
+            </td>
+        </tr>
+        <tr id="row_top10" class="hidden_row">
+            <td colspan=4>
+                <input type="checkbox">
+                Sweet Corn
+            </td>
+        </tr>
+
+
+      </table>
+  </div>
+
+  <script type="text/javascript" src="js/home_script.js"></script>
+  </body>
+</html>
