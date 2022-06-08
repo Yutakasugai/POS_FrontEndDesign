@@ -14,6 +14,7 @@
 "https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
     <link rel="stylesheet" href="css/home_style.css">
+    <link rel="stylesheet" href="css/home_modal.css">
   </head>
   <body>
     <div id="wrapper">
@@ -22,218 +23,378 @@
           align=center cellpadding=10>
 
         
+        <tr id="top_row" 
+        onclick="showRow('ramen_row', 'set_row', 'side_dish_row', 'topping_row', 'dri_des_row');
+        hideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato');
+        hideRow('set_A_row', 'set_B_row')
+        hideRow('row_misoSA', 'row_shoyuSA', 'row_shioSA', 'row_shrimpSA', 'row_hotMisoSA', 'row_currySA', 'row_vegeSA', 'row_tomatoSA');
+        hideRow('row_misoSB', 'row_shoyuSB', 'row_shioSB', 'row_shrimpSB', 'row_hotMisoSB', 'row_currySB', 'row_vegeSB', 'row_tomatoSB');
+        hideRow('row_side1', 'row_side2', 'row_side3', 'row_side4', 'row_side5', 'row_side6', 'row_side7', 'row_side8', 'row_side9', 'row_side10');
+        hideRow('row_top1', 'row_top2', 'row_top3', 'row_top4', 'row_top5', 'row_top6', 'row_top7', 'row_top8', 'row_top9', 'row_top10');
+
+        ">
+            <th>TOP MENU</th>
+        </tr>
+
+        
         <!-- Ramen row -->
-        <tr onclick="showHideRow('hidden_row1-1', 'hidden_row1-2', 'hidden_row1-3');">
+        <tr id="ramen_row" onclick="
+        showHideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato');
+        hideRow('set_row', 'side_dish_row', 'topping_row', 'dri_des_row')
+        ">
             <th colspan=4>Ramen</th>
         </tr>
-        <tr id="hidden_row1-1" class="hidden_row">
+
+        <tr id="row_miso" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
-                MISO
+                <button class="modalButton" id="misoModal">Miso Ramen</button>
             </td>
         </tr>
-        <tr id="hidden_row1-2" class="hidden_row">
+        <tr id="row_shoyu" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
-                SHOYU
+                Shoyu Ramen
             </td>
         </tr>
-        <tr id="hidden_row1-3" class="hidden_row">
+        <tr id="row_shio" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
-                SHIO
+                Shio Ramen
+            </td>
+        </tr>
+        <tr id="row_shrimp" class="hidden_row">
+            <td colspan=4>
+                Shrimp Ramen
+            </td>
+        </tr>
+        <tr id="row_hotMiso" class="hidden_row">
+            <td colspan=4>
+                Hot Miso Ramen
+            </td>
+        </tr>
+        <tr id="row_curry" class="hidden_row">
+            <td colspan=4>
+                Curry Ramen
+            </td>
+        </tr>
+        <tr id="row_vege" class="hidden_row">
+            <td colspan=4>
+                Vegetable Ramen
+            </td>
+        </tr>
+        <tr id="row_tomato" class="hidden_row">
+            <td colspan=4>
+                Tomato Ramen
             </td>
         </tr>
 
         <!-- Ramen Set-->
-        <tr onclick="
-        showHideRow('hidden_row2A', 'hidden_row2B'); 
-        hideRow('hidden_row2A-1','hidden_row2A-2','hidden_row2A-3'); 
-        hideRow('hidden_row2B-1','hidden_row2B-2','hidden_row2B-3')
+        <tr id="set_row" onclick="
+        showHideRow('set_A_row', 'set_B_row'); 
+        hideRow('ramen_row', 'side_dish_row', 'topping_row', 'dri_des_row')
+        hideRow('row_misoSA', 'row_shoyuSA', 'row_shioSA', 'row_shrimpSA', 'row_hotMisoSA', 'row_currySA', 'row_vegeSA', 'row_tomatoSA');
+        hideRow('row_misoSB', 'row_shoyuSB', 'row_shioSB', 'row_shrimpSB', 'row_hotMisoSB', 'row_currySB', 'row_vegeSB', 'row_tomatoSB');
         ">
             <th colspan=4>Ramen SET</th>
+        </tr>
+
+        <!-- "hidden_row" makes a row dissapear in the first place -->
         <tr 
-        id="hidden_row2A" 
-        onclick="showHideRow('hidden_row2A-1','hidden_row2A-2','hidden_row2A-3');">
-            <td colspan=4>SET A</th>
+        id="set_A_row" 
+        class="hidden_row"
+        onclick="showHideRow('row_misoSA', 'row_shoyuSA', 'row_shioSA', 'row_shrimpSA', 'row_hotMisoSA', 'row_currySA', 'row_vegeSA', 'row_tomatoSA');
+        ">
+            <th colspan=4>SET A</th>
         </tr>
 
-        <tr id="hidden_row2A-1" class="hidden_row">
+        <tr id="row_misoSA" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
-                MISO SET A
+                Miso SET A
             </td>
         </tr>
-        <tr id="hidden_row2A-2" class="hidden_row">
+        <tr id="row_shoyuSA" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
-                SHOYU SET A
+                Shoyu SET A
             </td>
         </tr>
-        <tr id="hidden_row2A-3" class="hidden_row">
+        <tr id="row_shioSA" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
-                SHIO SET A
+                Shio SET A
+            </td>
+        </tr>
+        <tr id="row_shrimpSA" class="hidden_row">
+            <td colspan=4>
+                Shrimp SET A
+            </td>
+        </tr>
+        <tr id="row_hotMisoSA" class="hidden_row">
+            <td colspan=4>
+                Hot Miso SET A
+            </td>
+        </tr>
+        <tr id="row_currySA" class="hidden_row">
+            <td colspan=4>
+                Curry SET A
+            </td>
+        </tr>
+        <tr id="row_vegeSA" class="hidden_row">
+            <td colspan=4>
+                Vegetable SET A
+            </td>
+        </tr>
+        <tr id="row_tomatoSA" class="hidden_row">
+            <td colspan=4>
+                Tomato SET A
             </td>
         </tr>
 
-        <tr id="hidden_row2B" onclick="showHideRow('hidden_row2B-1','hidden_row2B-2','hidden_row2B-3');">
-            <td colspan=4>SET B</th>
+        <tr id="set_B_row" 
+        class="hidden_row"
+        onclick="showHideRow('row_misoSB', 'row_shoyuSB', 'row_shioSB', 'row_shrimpSB', 'row_hotMisoSB', 'row_currySB', 'row_vegeSB', 'row_tomatoSB');">
+            <th colspan=4>SET B</th>
         </tr>
 
-        <tr id="hidden_row2B-1" class="hidden_row">
+        <tr id="row_misoSB" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
-                MISO SET B
+                Miso SET B
             </td>
         </tr>
-        <tr id="hidden_row2B-2" class="hidden_row">
+        <tr id="row_shoyuSB" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
-                SHOYU SET B
+                Shoyu SET B
             </td>
         </tr>
-        <tr id="hidden_row2B-3" class="hidden_row">
+        <tr id="row_shioSB" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
-                SHIO SET B
+                Shio SET B
+            </td>
+        </tr>
+        <tr id="row_shrimpSB" class="hidden_row">
+            <td colspan=4>
+                Shrimp SET B
+            </td>
+        </tr>
+        <tr id="row_hotMisoSB" class="hidden_row">
+            <td colspan=4>
+                Hot Miso SET B
+            </td>
+        </tr>
+        <tr id="row_currySB" class="hidden_row">
+            <td colspan=4>
+                Curry SET B
+            </td>
+        </tr>
+        <tr id="row_vegeSB" class="hidden_row">
+            <td colspan=4>
+                Vegetable SET B
+            </td>
+        </tr>
+        <tr id="row_tomatoSB" class="hidden_row">
+            <td colspan=4>
+                Tomato SET B
             </td>
         </tr>
 
         <!-- Side Dish-->
-        <tr onclick="showHideRow('row_side1', 'row_side2', 'row_side3', 'row_side4', 'row_side5', 'row_side6', 'row_side7', 'row_side8', 'row_side9', 'row_side10');">
+        <tr id="side_dish_row" 
+        onclick="
+        showHideRow('row_side1', 'row_side2', 'row_side3', 'row_side4', 'row_side5', 'row_side6', 'row_side7', 'row_side8', 'row_side9', 'row_side10');
+        hideRow('ramen_row', 'set_row', 'topping_row', 'dri_des_row')
+        ">
             <th colspan=4>Side Dish</th>
         </tr>
+
         <tr id="row_side1" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Gyoza (5pcs)
             </td>
         </tr>
         <tr id="row_side2" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Chashu Plate (shoulder or belly)
             </td>
         </tr>
         <tr id="row_side3" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Chashu Burger (shoulder or belly)
             </td>
         </tr>
         <tr id="row_side4" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Chashu Don
             </td>
         </tr>
         <tr id="row_side5" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Green Onion Don
             </td>
         </tr>
         <tr id="row_side6" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Kimuchee plate
             </td>
         </tr>
         <tr id="row_side7" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Pickles
             </td>
         </tr>
         <tr id="row_side8" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Rice
             </td>
         </tr>
         <tr id="row_side9" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Steamed bun
             </td>
         </tr>
         <tr id="row_side10" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Mini Salad
             </td>
         </tr>
 
         <!-- Ramen topping-->
-        <tr onclick="showHideRow('row_top1', 'row_top2', 'row_top3', 'row_top4', 'row_top5', 'row_top6', 'row_top7', 'row_top8', 'row_top9', 'row_top10');">
+        <tr id="topping_row" onclick="
+        showHideRow('row_top1', 'row_top2', 'row_top3', 'row_top4', 'row_top5', 'row_top6', 'row_top7', 'row_top8', 'row_top9', 'row_top10');
+        hideRow('ramen_row', 'set_row', 'side_dish_row', 'dri_des_row')
+        ">
             <th colspan=4>Topping</th>
         </tr>
         <tr id="row_top1" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Chashu (shoulder or belly)
             </td>
         </tr>
         <tr id="row_top2" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Shrimp Cakes (2 pcs)
             </td>
         </tr>
         <tr id="row_top3" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Boiled Egg
             </td>
         </tr>
         <tr id="row_top4" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Green Onion
             </td>
         </tr>
         <tr id="row_top5" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Menma
             </td>
         </tr>
         <tr id="row_top6" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Wet Seaweed 
             </td>
         </tr>
         <tr id="row_top7" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Dried Seaweed
             </td>
         </tr>
         <tr id="row_top8" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Bean Sprouts
             </td>
         </tr>
         <tr id="row_top9" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Butter
             </td>
         </tr>
         <tr id="row_top10" class="hidden_row">
             <td colspan=4>
-                <input type="checkbox">
                 Sweet Corn
             </td>
         </tr>
 
 
+        <!-- Drink and dessert row -->
+        <tr id="dri_des_row" onclick="
+        showHideRow('dessert_row', 'soft_drink_row', 'beer_row'); 
+        hideRow('ramen_row', 'set_row', 'side_dish_row', 'side_dish_row', 'topping_row')
+        ">
+            <th colspan=4>Drinks and Dessert</th>
+        </tr>
+
+        <tr 
+        id="dessert_row" 
+        onclick="showHideRow('macha_ice')"
+        class="hidden_row">
+            <th colspan=4>Dessert</th>
+        </tr>
+        
+        <tr id="macha_ice"
+        class="hidden_row">
+            <td>Matcha Ice Cream</td>
+        </tr>
+
+        <tr
+        id="soft_drink_row" 
+        onclick="showHideRow('cola', 'sprite', 'ice_tea')"
+        class="hidden_row">
+            <th colspan=4>Soft Drinks</th>
+        </tr>
+        
+        <tr id="cola"
+        class="hidden_row">
+            <td>Coca-Cola</td>
+        </tr>
+
+        <tr id="sprite"
+        class="hidden_row">
+            <td>Sprite</td>
+        </tr>
+
+        <tr id="ice_tea"
+        class="hidden_row">
+            <td>Ice Tea</td>
+        </tr>
+
+        <tr
+        id="beer_row" 
+        onclick="showHideRow('asahi', 'sapporo', 'kokanee')"
+        class="hidden_row">
+            <th colspan=4>Beer</th>
+        </tr>
+        
+        <tr id="asahi"
+        class="hidden_row">
+            <td>Asahi</td>
+        </tr>
+
+        <tr id="sapporo"
+        class="hidden_row">
+            <td>Sapporo</td>
+        </tr>
+
+        <tr id="kokanee"
+        class="hidden_row">
+            <td>Kokanee</td>
+        </tr>
       </table>
+
+      <!-- Modal -->
+      <div class="modal_bg">
+          <div class="modal_content">
+            <div class="modal_header">
+                <div class="title">
+                    Additional info for the ramen
+                </div>
+                <button class="close_button">&times;</button>
+            </div>
+            <div class="modal_body">
+                Users shouldn’t need to find a tooltip in order to complete their task. Tooltips are best when they provide additional explanation for a form field unfamiliar to some users or reasoning for what may seem like an unusual request. Remember that tooltips disappear, so instructions or other directly actionable information, like field requirements, shouldn’t be in a tooltip. (If it is, people will have to commit it to their working memory in order to be able to act upon it.)
+            </div>
+        </div>
+      </div>
+
   </div>
 
   <script type="text/javascript" src="js/home_script.js"></script>
+  <script type="text/javascript" src="js/home_modal.js"></script>
   </body>
 </html>
