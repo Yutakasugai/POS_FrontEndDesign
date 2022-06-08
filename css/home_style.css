@@ -6,6 +6,7 @@ body {
   font-family: "Myriad Pro", 
       "Helvetica Neue", Helvetica, 
       Arial, Sans-Serif;
+  font-size: 40px;
 }
 
 #wrapper {
@@ -49,4 +50,27 @@ body {
 th {
   font-weight: 700;
   font-size: larger;
+}
+
+tr {
+  height: 100px;
+}
+
+.modalButton {
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align: left;
+  padding-left: 20px;
+  background-color: #c3c3c3;
+  border-radius: 10px;
+  color: #564a4a;l
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
 }
