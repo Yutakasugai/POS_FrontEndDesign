@@ -19,7 +19,7 @@
   <body>
     <div id="wrapper">
   
-      <table border=1 id="table_detail" 
+      <table border=1 id="table_detail"
           align=center cellpadding=10>
 
         
@@ -31,7 +31,10 @@
         hideRow('row_misoSB', 'row_shoyuSB', 'row_shioSB', 'row_shrimpSB', 'row_hotMisoSB', 'row_currySB', 'row_vegeSB', 'row_tomatoSB');
         hideRow('row_side1', 'row_side2', 'row_side3', 'row_side4', 'row_side5', 'row_side6', 'row_side7', 'row_side8', 'row_side9', 'row_side10');
         hideRow('row_top1', 'row_top2', 'row_top3', 'row_top4', 'row_top5', 'row_top6', 'row_top7', 'row_top8', 'row_top9', 'row_top10');
-
+        hideRow('dessert_row', 'soft_drink_row', 'beer_row'); 
+        hideRow('macha_ice');
+        hideRow('cola', 'sprite', 'ice_tea');
+        hideRow('asahi', 'sapporo', 'kokanee');
         ">
             <th>TOP MENU</th>
         </tr>
@@ -52,37 +55,37 @@
         </tr>
         <tr id="row_shoyu" class="hidden_row">
             <td colspan=4>
-                Shoyu Ramen
+                <button class="modalButton" id="shoyuModal">Shoyu Ramen</button>
             </td>
         </tr>
         <tr id="row_shio" class="hidden_row">
             <td colspan=4>
-                Shio Ramen
+                <button class="modalButton" id="shioModal">Shio Ramen</button>
             </td>
         </tr>
         <tr id="row_shrimp" class="hidden_row">
             <td colspan=4>
-                Shrimp Ramen
+                <button class="modalButton" id="shrimpModal">Shrimp Ramen</button>
             </td>
         </tr>
         <tr id="row_hotMiso" class="hidden_row">
             <td colspan=4>
-                Hot Miso Ramen
+                <button class="modalButton" id="hotMisoModal">Hot Miso Ramen</button>
             </td>
         </tr>
         <tr id="row_curry" class="hidden_row">
             <td colspan=4>
-                Curry Ramen
+                <button class="modalButton" id="curryModal">Curry Ramen</button>
             </td>
         </tr>
         <tr id="row_vege" class="hidden_row">
             <td colspan=4>
-                Vegetable Ramen
+                <button class="modalButton" id="vegeModal">Vegetable Ramen</button>
             </td>
         </tr>
         <tr id="row_tomato" class="hidden_row">
             <td colspan=4>
-                Tomato Ramen
+                <button class="modalButton" id="tomatoModal">Tomato Ramen</button>
             </td>
         </tr>
 
@@ -107,42 +110,42 @@
 
         <tr id="row_misoSA" class="hidden_row">
             <td colspan=4>
-                Miso SET A
+                <button class="modalButton" id="misoSA_Modal">Miso SET A</button>
             </td>
         </tr>
         <tr id="row_shoyuSA" class="hidden_row">
             <td colspan=4>
-                Shoyu SET A
+                <button class="modalButton" id="shoyuSA_Modal">Shoyu SET A</button>
             </td>
         </tr>
         <tr id="row_shioSA" class="hidden_row">
             <td colspan=4>
-                Shio SET A
+                <button class="modalButton" id="shioSA_Modal">Shio SET A</button>
             </td>
         </tr>
         <tr id="row_shrimpSA" class="hidden_row">
             <td colspan=4>
-                Shrimp SET A
+                <button class="modalButton" id="shrimpSA_Modal">Shrimp SET A</button>
             </td>
         </tr>
         <tr id="row_hotMisoSA" class="hidden_row">
             <td colspan=4>
-                Hot Miso SET A
+                <button class="modalButton" id="hotMisoSA_Modal">Hot Miso SET A</button>
             </td>
         </tr>
         <tr id="row_currySA" class="hidden_row">
             <td colspan=4>
-                Curry SET A
+                <button class="modalButton" id="currySA_Modal">Curry SET A</button>
             </td>
         </tr>
         <tr id="row_vegeSA" class="hidden_row">
             <td colspan=4>
-                Vegetable SET A
+                <button class="modalButton" id="vegeSA_Modal">Vegetable SET A</button>
             </td>
         </tr>
         <tr id="row_tomatoSA" class="hidden_row">
             <td colspan=4>
-                Tomato SET A
+                <button class="modalButton" id="tomatoSA_Modal">Tomato SET A</button>
             </td>
         </tr>
 
@@ -154,42 +157,42 @@
 
         <tr id="row_misoSB" class="hidden_row">
             <td colspan=4>
-                Miso SET B
+                <button class="modalButton" id="misoSB_Modal">Miso SET B</button>
             </td>
         </tr>
         <tr id="row_shoyuSB" class="hidden_row">
             <td colspan=4>
-                Shoyu SET B
+                <button class="modalButton" id="shoyuSB_Modal">Shoyu SET B</button>
             </td>
         </tr>
         <tr id="row_shioSB" class="hidden_row">
             <td colspan=4>
-                Shio SET B
+                <button class="modalButton" id="shioSB_Modal">Shio SET B</button>
             </td>
         </tr>
         <tr id="row_shrimpSB" class="hidden_row">
             <td colspan=4>
-                Shrimp SET B
+                <button class="modalButton" id="shrimpSB_Modal">Shrimp SET B</button>
             </td>
         </tr>
         <tr id="row_hotMisoSB" class="hidden_row">
             <td colspan=4>
-                Hot Miso SET B
+                <button class="modalButton" id="hotMisoSB_Modal">Hot Miso SET B</button>
             </td>
         </tr>
         <tr id="row_currySB" class="hidden_row">
             <td colspan=4>
-                Curry SET B
+                <button class="modalButton" id="currySB_Modal">Curry SET B</button>
             </td>
         </tr>
         <tr id="row_vegeSB" class="hidden_row">
             <td colspan=4>
-                Vegetable SET B
+                <button class="modalButton" id="vegeSB_Modal">Vegetable SET B</button>
             </td>
         </tr>
         <tr id="row_tomatoSB" class="hidden_row">
             <td colspan=4>
-                Tomato SET B
+                <button class="modalButton" id="tomatoSB_Modal">Tomato SET B</button>
             </td>
         </tr>
 
@@ -378,19 +381,160 @@
       </table>
 
       <!-- Modal -->
-      <div class="modal_bg">
-          <div class="modal_content">
-            <div class="modal_header">
-                <div class="title">
-                    Additional info for the ramen
+        <div class="modal_bg">
+            <div class="modal_content">
+                <div class="modal_header">
+                    <div class="title">
+                        Preferences
+                    </div>
+                    <button class="close_button">&times;</button>
                 </div>
-                <button class="close_button">&times;</button>
-            </div>
-            <div class="modal_body">
-                Users shouldn’t need to find a tooltip in order to complete their task. Tooltips are best when they provide additional explanation for a form field unfamiliar to some users or reasoning for what may seem like an unusual request. Remember that tooltips disappear, so instructions or other directly actionable information, like field requirements, shouldn’t be in a tooltip. (If it is, people will have to commit it to their working memory in order to be able to act upon it.)
+                <div class="modal_row">
+                    <div class="preference_item">
+                        <div class="preference_title">
+                            Soup: 
+                            <div class="preference_choice">
+                                <div class="soup:regular">
+                                    <input type="checkbox" class="largerCheckbox"> Regular
+                                </div>
+                                <div class="soup_rich">
+                                    <input type="checkbox" class="largerCheckbox"> Rich
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preference_item">
+                        <div class="preference_title">
+                            Chashu: 
+                            <div class="preference_choice">
+                                <div class="chashu_shoulder">
+                                    <input type="checkbox" class="largerCheckbox"> Regular
+                            </div>
+                            <div class="chashu_belly">
+                                <input type="checkbox" class="largerCheckbox"> Rich
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="modal_row">
+                    <div class="preference_item">
+                        <div class="preference_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Chili Garlic
+                        </div>
+                    </div>
+                    <div class="preference_item">
+                        <div class="preference_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Ground Garlic
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal_header2">
+                    Extra
+                </div>
+                <div class="modal_row">
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Extra Noodles
+                        </div>
+                    </div>
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Extra Soup
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal_header2">
+                    Topping
+                </div>
+                <div class="modal_row">
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Chashu
+                        </div>
+                    </div>
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Shrimnp Cakes
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_row">
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Boiled Eggs
+                        </div>
+                    </div>
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Wet Seaweed
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_row">
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Dried Seaweed
+                        </div>
+                    </div>
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Green Onion
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_row">
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Bean Sprouts
+                        </div>
+                    </div>
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Butter
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_row">
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Sweet Corn
+                        </div>
+                    </div>
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Cheese
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_row">
+                    <div class="topping_item">
+                        <div class="topping_title">
+                            <input type="checkbox" class="largerCheckbox">
+                            Bloccoli
+                        </div>
+                    </div>
+                </div>          
             </div>
         </div>
-      </div>
 
   </div>
 

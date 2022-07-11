@@ -6,7 +6,7 @@ body {
   font-family: "Myriad Pro", 
       "Helvetica Neue", Helvetica, 
       Arial, Sans-Serif;
-  font-size: 40px;
+  font-size: 80px;
 }
 
 #wrapper {
@@ -50,10 +50,16 @@ body {
 th {
   font-weight: 700;
   font-size: larger;
+  
+}
+
+td {
+  font-weight: 500;
 }
 
 tr {
-  height: 100px;
+  height: 200px;
+  
 }
 
 .modalButton {
@@ -62,15 +68,57 @@ tr {
   border: none;
   text-align: left;
   padding-left: 20px;
-  background-color: #c3c3c3;
+  background-color: #d4d4d4;
   border-radius: 10px;
-  color: #564a4a;l
+  color: #000000;
+  font-weight: 500;
 }
 
-button:hover {
+.modalButton:hover {
   cursor: pointer;
 }
 
 button:hover {
   opacity: 0.8;
+}
+
+#top_row{
+  background-color: rgb(249, 119, 72);
+  color: rgb(0, 0, 0);
+  font-size: 90px;
+}
+
+#ramen_row{
+  background-color: rgb(69, 217, 250);
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #676767;
+}
+
+#set_row {
+  background-color: rgb(255, 116, 144);
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #676767;
+}
+
+#side_dish_row {
+  background-color: rgb(91, 174, 91);
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #676767;
+}
+
+#topping_row {
+  background-color: rgb(252, 207, 84);
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #676767;
+}
+
+#dri_des_row {
+  background-color: rgb(25, 164, 251);
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #676767;
 }
