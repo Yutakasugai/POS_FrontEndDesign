@@ -4,9 +4,148 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin_home.css">
     <title>Admin-Home: Test Page</title>
 </head>
 <body>
-    <h1>Hello This is admin home page</h1>
+
+    <!-- Top Line -->
+    <div class="page-container">
+
+        <!-- User and Date -->
+        <div class="page-info">
+            <h1>Name: Sample Yuta</h1>
+            <h2>Date: July 17 (Wed)</h2>
+            <h2 id="page-time">Time: Lunch</h2>
+        </div>
+        
+        <!-- circle buttons at the top -->
+        <div class="circle-buttons">
+            <button id="table-btn">T</button>
+            <button id="userCheck-btn">U</button>
+        </div>
+
+        <div></div>
+
+        <!-- square buttons at the top -->
+        <div class="square-buttons">
+            <button id="history-btn">History</button>
+            <button id="close-btn">Close</button>
+        </div>
+
+        <div></div>
+
+    </div>
+
+    <!-- Order Box -->
+    <div class="box-container">
+
+        <!-- Box-1 -->
+        <div class="order-box">
+            <div class="box-title">
+                <p>ToGo</p>
+            </div>
+
+            <div class="order-items">
+                <p id="ramen">Miso R/S</p>
+                <p id="add-toppings">+ 2(Ex</p>
+                <p id="add-toppings">+ S</p>
+                <p id="add-toppings">+ 3(Egg</p>
+
+                <p id="side-order">C.Don</p>
+                <p id="side-order">C.plate S</p>
+            </div>
+
+            <div class="done-btn">
+                <button id="done-button">Done</button>
+            </div>
+        </div>
+
+        <!-- Box-2 -->
+        <div class="order-box">
+            <div class="box-title">
+                <p>T - 1</p>
+            </div>
+
+            <div class="order-items">
+                <p id="ramen">Miso R/S</p>
+                <p id="add-toppings">+ 2(Ex</p>
+                <p id="add-toppings">+ S</p>
+                <p id="add-toppings">+ 3(Egg</p>
+
+                <p id="ramen">Shi R/S</p>
+                <p id="add-toppings">+ S</p>
+        
+                <p id="set-menu">SetB => Shio R/S</p>
+                <p id="add-toppings">+ Ex</p>
+            </div>
+
+            <div class="done-btn">
+                <button id="done-button">Done</button>
+            </div>
+        </div>
+
+        <!-- Box-3 -->
+        <div class="order-box">
+            <div class="box-title">
+                <p>T - 5</p>
+            </div>
+
+            <div class="order-items">
+                <p id="ramen">Miso R/S</p>
+                <p id="add-toppings">+ 2(Ex</p>
+                <p id="add-toppings">+ S</p>
+                <p id="add-toppings">+ 3(Egg</p>
+
+                <p id="side-order">C.Don</p>
+                <p id="side-order">C.plate S</p>
+            </div>
+
+            <div class="done-btn">
+                <button id="done-button">Done</button>
+            </div>
+        </div>
+
+        <!-- Box-4 -->
+        <div class="order-box">
+            <div class="box-title">
+                <p>Phone</p>
+            </div>
+
+            <div class="order-items">
+                <p id="ramen">Miso R/S</p>
+                <p id="add-toppings">+ 2(Ex</p>
+                <p id="add-toppings">+ S</p>
+                <p id="add-toppings">+ 3(Egg</p>
+
+                <p id="side-order">C.Don</p>
+                <p id="side-order">C.plate S</p>
+            </div>
+
+            <div class="done-btn">
+                <button id="done-button">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- More orders shown at the corner -->
+    <div class="bottom-container">
+
+        <div class="home-button">
+            <button id="home-btn">Home</button>
+        </div>
+
+        <div class="moreOrder-container">
+            <div class="num-panel">
+                <p>+ 3</p>
+            </div>
+    
+            <div class="two-boxes">
+                <div class="box-1"></div>
+                <div class="box-2"></div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
