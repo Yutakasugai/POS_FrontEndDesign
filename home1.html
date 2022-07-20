@@ -5,71 +5,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
-    <title>Document</title>
+    <title>Server-Home: Test Page</title>
 </head>
 <body>
-  <div class="page_info">
-    <h1>Add Page</h1>
-    <h2>User Name: {{name}}</h2>
-  </div>
-    
-  <div class="table1and2">
-    <div class="table">
-      <p class="table_num">
-        TABLE 1
-      </p>
-      <div class="add_view">
-        <button class="add-button">Add</button>
 
-        <button class="view-btn">View</button>
+  <!-- Top Line for user info and some buttons -->
+  <div class="page-container">
+
+    <div class="page-info">
+      <h1>User Name: Sample</h1>
+      <h2>Date: July 17 (Wed)</h2>
+      <h2 id="page-time">Time: Lunch</h2>
+    </div>
+
+    <div></div>
+
+    <div class="page-buttons">
+      <button id="phone-button">Phone</button>
+      <button id="takeout-button">Take Out</button>
+    </div>
+
+  </div>
+  
+  <!-- Table page content -->
+
+  <!-- Table-1 and Table-2 -->
+  <div class="table-container">
+
+    <div class="table1and2">
+
+      <div class="table" id="table1">
+        <p class="table_num">T1</p>
+        <div class="add-view">
+          <button class="update-button">Update</button>
+          <button class="add-button">Add</button>
+        </div>
+      </div>
+
+      <div class="table" id="table2">
+        <p class="table_num">T2</p>
+        <div class="add-view">
+          <button class="update-button">Update</button>
+          <button class="add-button">Add</button>
+        </div>
       </div>
 
     </div>
-    <div class="table">
-      <p class="table_num">
-        TABLE 2
-      </p>
-      <div class="add_view">
-        <button class="add-button">Add</button>
-        <button class="view-btn">View</button>
+
+    <!-- Table-3 and Table-4 -->
+    <div class="table3and4">
+
+      <div class="table" id="table3">
+        <p class="table_num">T3</p>
+        <div class="add-view">
+          <button class="update-button">Update</button>
+          <button class="add-button">Add</button>
+        </div>
+      </div>
+
+      <div class="table" id="table4">
+        <p class="table_num">T4</p>
+        <div class="add-view">
+          <button class="update-button">Update</button>
+          <button class="add-button">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table-5 and Table-6 -->
+    <div class="table5and6">
+
+      <div class="table" id="table5">
+        <p class="table_num">T5</p>
+        <div class="add-view">
+          <button class="update-button">Update</button>
+          <button class="add-button">Add</button>
+        </div>
+      </div>
+
+      <div class="table" id="table6">
+        <p class="table_num">T6</p>
+        <div class="add-view">
+          <button class="update-button">Update</button>
+          <button class="add-button">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table-7 and Table-8 -->
+    <div class="table7and8">
+
+      <div class="table" id="table7">
+        <p class="table_num">T7</p>
+        <div class="add-view">
+          <button class="update-button">Update</button>
+          <button class="add-button">Add</button>
+        </div>
+      </div>
+
+      <div class="table" id="table8">
+        <p class="table_num">T8</p>
+        <div class="add-view">
+          <button class="update-button">Update</button>
+          <button class="add-button">Add</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Take Out and Phone Order Boxes -->
+  <div class="togo-phone">
+
+    <div class="table" id="colunm-1">
+      <p class="table_num">Togo</p>
+      <div class="done-view">
+        <button class="done-button" id="doneBtn_1">Done</button>
+        <button class="view-button">View</button>
+      </div>
+    </div>
+
+    <div class="table" id="colunm-2">
+      <p class="table_num">Phone</p>
+      <div class="done-view">
+        <button class="done-button" id="doneBtn_2">Done</button>
+        <button class="view-button">View</button>
       </div>
     </div>
   </div>
 
-  <div class="table3and4">
-    <div class="table">
-      <p class="table_num">
-        TABLE 3
-      </p>
-      <div class="add_view">
-        <button class="add-button">Add</button>
-        <button class="view-btn">View</button>
-      </div>
+  <!-- Sign out Btn and Close Btn -->
+  <div class="button-container">
+    <div class="signout-btn">
+      <button>Sign Out</button>
     </div>
-    <div class="table">
-      <p class="table_num">
-        TABLE 4
-      </p>
-      <div class="add_view">
-        <button class="add-button">Add</button>
-        <button class="view-btn">View</button>
-      </div>
+
+    <div class="close-btn">
+      <button>Close</button>
     </div>
   </div>
 
-  <div class="table5">
-    <div class="table">
-      <p class="table_num">
-        TABLE 5
-      </p>
-      <div class="add_view">
-        <button class="add-button">Add</button>
-        <button class="view-btn">View</button>
-      </div>
-    </div>
-  </div>
-   
-  <script type="text/javascript" src="js/check_modal.js"></script>
+  <script type="text/javascript" src="js/server-home.js"></script>
 
 </body>
 </html>
