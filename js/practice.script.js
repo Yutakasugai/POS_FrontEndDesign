@@ -1,3 +1,14 @@
+//swiper js
+const swiper = new Swiper('.swiper', {
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
+
+
+
+//modal
 const checkModal = document.getElementById('openModal');
 
 checkModal.addEventListener('click', () => {
