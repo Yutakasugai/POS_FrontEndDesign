@@ -13,6 +13,7 @@
         type="text/css" href=
 "https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/home_style.css">
     <link rel="stylesheet" href="css/home_modal.css">
   </head>
@@ -36,16 +37,24 @@
         hideRow('cola', 'sprite', 'ice_tea');
         hideRow('asahi', 'sapporo', 'kokanee');
         ">
-            <th>TOP MENU</th>
+            <th>
+                <div id="top_box">
+                    TOP MENU
+                </div>
+            </th>
         </tr>
 
         
         <!-- Ramen row -->
         <tr id="ramen_row" onclick="
-        showHideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato');
+        showRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato');
         hideRow('set_row', 'side_dish_row', 'topping_row', 'dri_des_row')
         ">
-            <th colspan=4>Ramen</th>
+            <th colspan=4>
+                <div id="ramen_box">
+                    Ramen
+                </div>
+            </th>
         </tr>
 
         <tr id="row_miso" class="hidden_row">
@@ -91,21 +100,27 @@
 
         <!-- Ramen Set-->
         <tr id="set_row" onclick="
-        showHideRow('set_A_row', 'set_B_row'); 
+        showRow('set_A_row', 'set_B_row'); 
         hideRow('ramen_row', 'side_dish_row', 'topping_row', 'dri_des_row')
         hideRow('row_misoSA', 'row_shoyuSA', 'row_shioSA', 'row_shrimpSA', 'row_hotMisoSA', 'row_currySA', 'row_vegeSA', 'row_tomatoSA');
         hideRow('row_misoSB', 'row_shoyuSB', 'row_shioSB', 'row_shrimpSB', 'row_hotMisoSB', 'row_currySB', 'row_vegeSB', 'row_tomatoSB');
         ">
-            <th colspan=4>Ramen SET</th>
+            <th colspan=4>
+                <div id="set_box">
+                    Ramen SET
+                </div>
+            </th>
         </tr>
 
         <!-- "hidden_row" makes a row dissapear in the first place -->
         <tr 
         id="set_A_row" 
         class="hidden_row"
-        onclick="showHideRow('row_misoSA', 'row_shoyuSA', 'row_shioSA', 'row_shrimpSA', 'row_hotMisoSA', 'row_currySA', 'row_vegeSA', 'row_tomatoSA');
+        onclick="showRow('row_misoSA', 'row_shoyuSA', 'row_shioSA', 'row_shrimpSA', 'row_hotMisoSA', 'row_currySA', 'row_vegeSA', 'row_tomatoSA');
         ">
-            <th colspan=4>SET A</th>
+            <th colspan=4>
+                <div class="simple_box2">SET A</div>
+            </th>
         </tr>
 
         <tr id="row_misoSA" class="hidden_row">
@@ -151,8 +166,10 @@
 
         <tr id="set_B_row" 
         class="hidden_row"
-        onclick="showHideRow('row_misoSB', 'row_shoyuSB', 'row_shioSB', 'row_shrimpSB', 'row_hotMisoSB', 'row_currySB', 'row_vegeSB', 'row_tomatoSB');">
-            <th colspan=4>SET B</th>
+        onclick="showRow('row_misoSB', 'row_shoyuSB', 'row_shioSB', 'row_shrimpSB', 'row_hotMisoSB', 'row_currySB', 'row_vegeSB', 'row_tomatoSB');">
+            <th colspan=4>
+                <div class="simple_box2">SET B</div>
+            </th>
         </tr>
 
         <tr id="row_misoSB" class="hidden_row">
@@ -199,189 +216,249 @@
         <!-- Side Dish-->
         <tr id="side_dish_row" 
         onclick="
-        showHideRow('row_side1', 'row_side2', 'row_side3', 'row_side4', 'row_side5', 'row_side6', 'row_side7', 'row_side8', 'row_side9', 'row_side10');
+        showRow('row_side1', 'row_side2', 'row_side3', 'row_side4', 'row_side5', 'row_side6', 'row_side7', 'row_side8', 'row_side9', 'row_side10');
         hideRow('ramen_row', 'set_row', 'topping_row', 'dri_des_row')
         ">
-            <th colspan=4>Side Dish</th>
+            <th colspan=4>
+                <div id="side_dish_box">Side Dish</div>    
+            </th>
         </tr>
 
         <tr id="row_side1" class="hidden_row">
             <td colspan=4>
-                Gyoza (5pcs)
+                <div class="simple_box">Gyoza (5pcs)</div>
             </td>
         </tr>
         <tr id="row_side2" class="hidden_row">
             <td colspan=4>
-                Chashu Plate (shoulder or belly)
+                <div class="simple_box">Chashu Plate (shoulder or belly)</div>
             </td>
         </tr>
         <tr id="row_side3" class="hidden_row">
             <td colspan=4>
-                Chashu Burger (shoulder or belly)
+                <div class="simple_box">Chashu Burger (shoulder or belly)</div>
             </td>
         </tr>
         <tr id="row_side4" class="hidden_row">
             <td colspan=4>
-                Chashu Don
+                <div class="simple_box">Chashu Don</div>
             </td>
         </tr>
         <tr id="row_side5" class="hidden_row">
             <td colspan=4>
-                Green Onion Don
+                <div class="simple_box">Green Onion Don</div>               
             </td>
         </tr>
         <tr id="row_side6" class="hidden_row">
             <td colspan=4>
-                Kimuchee plate
+                <div class="simple_box">Kimuchee plate</div>                
             </td>
         </tr>
         <tr id="row_side7" class="hidden_row">
             <td colspan=4>
-                Pickles
+                <div class="simple_box">Pickles</div> 
             </td>
         </tr>
         <tr id="row_side8" class="hidden_row">
             <td colspan=4>
-                Rice
+                <div class="simple_box">Rice</div> 
             </td>
         </tr>
         <tr id="row_side9" class="hidden_row">
             <td colspan=4>
-                Steamed bun
+                <div class="simple_box">Steamed bun</div> 
             </td>
         </tr>
         <tr id="row_side10" class="hidden_row">
             <td colspan=4>
-                Mini Salad
+                <div class="simple_box">Mini Salad</div> 
             </td>
         </tr>
 
         <!-- Ramen topping-->
         <tr id="topping_row" onclick="
-        showHideRow('row_top1', 'row_top2', 'row_top3', 'row_top4', 'row_top5', 'row_top6', 'row_top7', 'row_top8', 'row_top9', 'row_top10');
+        showRow('row_top1', 'row_top2', 'row_top3', 'row_top4', 'row_top5', 'row_top6', 'row_top7', 'row_top8', 'row_top9', 'row_top10');
         hideRow('ramen_row', 'set_row', 'side_dish_row', 'dri_des_row')
         ">
-            <th colspan=4>Topping</th>
+            <th colspan=4>
+                <div id="topping_box">Topping</div>
+            </th>
         </tr>
         <tr id="row_top1" class="hidden_row">
             <td colspan=4>
-                Chashu (shoulder or belly)
+                <div class="simple_box">Chashu (shoulder or belly)</div> 
             </td>
         </tr>
         <tr id="row_top2" class="hidden_row">
             <td colspan=4>
-                Shrimp Cakes (2 pcs)
+                <div class="simple_box">Shrimp Cakes (2 pcs)</div>              
             </td>
         </tr>
         <tr id="row_top3" class="hidden_row">
             <td colspan=4>
-                Boiled Egg
+                <div class="simple_box">Boiled Egg</div>                
             </td>
         </tr>
         <tr id="row_top4" class="hidden_row">
             <td colspan=4>
-                Green Onion
+                <div class="simple_box">Green Onion</div>
+                
             </td>
         </tr>
         <tr id="row_top5" class="hidden_row">
             <td colspan=4>
-                Menma
+                <div class="simple_box">Menma</div>               
             </td>
         </tr>
         <tr id="row_top6" class="hidden_row">
             <td colspan=4>
-                Wet Seaweed 
+                <div class="simple_box">Wet Seaweed</div>                 
             </td>
         </tr>
         <tr id="row_top7" class="hidden_row">
             <td colspan=4>
-                Dried Seaweed
+                <div class="simple_box">Dried Seaweed</div>                
             </td>
         </tr>
         <tr id="row_top8" class="hidden_row">
             <td colspan=4>
-                Bean Sprouts
+                <div class="simple_box">Bean Sprouts</div>
             </td>
         </tr>
         <tr id="row_top9" class="hidden_row">
             <td colspan=4>
-                Butter
+                <div class="simple_box">Butter</div>             
             </td>
         </tr>
         <tr id="row_top10" class="hidden_row">
             <td colspan=4>
-                Sweet Corn
+                <div class="simple_box">Sweet Corn</div>               
             </td>
         </tr>
 
 
         <!-- Drink and dessert row -->
         <tr id="dri_des_row" onclick="
-        showHideRow('dessert_row', 'soft_drink_row', 'beer_row'); 
+        showRow('dessert_row', 'soft_drink_row', 'beer_row'); 
         hideRow('ramen_row', 'set_row', 'side_dish_row', 'side_dish_row', 'topping_row')
         ">
-            <th colspan=4>Drinks and Dessert</th>
+            <th colspan=4>
+                <div id="dri_des_box">Drinks and Dessert</div>
+            </th>
         </tr>
 
         <tr 
         id="dessert_row" 
-        onclick="showHideRow('macha_ice')"
+        onclick="showRow('macha_ice')"
         class="hidden_row">
-            <th colspan=4>Dessert</th>
+            <th colspan=4>
+                <div class="simple_box2">Dessert</div>
+            </th>
         </tr>
         
         <tr id="macha_ice"
         class="hidden_row">
-            <td>Matcha Ice Cream</td>
+            <td>
+                <div class="simple_box">Matcha Ice Cream</div> 
+            </td>
         </tr>
 
         <tr
         id="soft_drink_row" 
-        onclick="showHideRow('cola', 'sprite', 'ice_tea')"
+        onclick="showRow('cola', 'sprite', 'ice_tea')"
         class="hidden_row">
-            <th colspan=4>Soft Drinks</th>
+            <th colspan=4>
+                <div class="simple_box2">Soft Drinks</div>
+            </th>
         </tr>
         
         <tr id="cola"
         class="hidden_row">
-            <td>Coca-Cola</td>
+            <td>
+                <div class="simple_box">Coca-Cola</div>
+            </td>
         </tr>
 
         <tr id="sprite"
         class="hidden_row">
-            <td>Sprite</td>
+            <td>
+                <div class="simple_box">Sprite</div>
+            </td>
         </tr>
 
         <tr id="ice_tea"
         class="hidden_row">
-            <td>Ice Tea</td>
+            <td>
+                <div class="simple_box">Ice Tea</div>
+            </td>
         </tr>
 
         <tr
         id="beer_row" 
-        onclick="showHideRow('asahi', 'sapporo', 'kokanee')"
+        onclick="showRow('asahi', 'sapporo', 'kokanee')"
         class="hidden_row">
-            <th colspan=4>Beer</th>
+            <th colspan=4>
+                <div class="simple_box2">Beer</div>
+            </th>
         </tr>
         
         <tr id="asahi"
         class="hidden_row">
-            <td>Asahi</td>
+            <td>
+                <div class="simple_box">Asahi</div>
+            </td>
         </tr>
 
         <tr id="sapporo"
         class="hidden_row">
-            <td>Sapporo</td>
+            <td>
+                <div class="simple_box">Sapporo</div>
+            </td>
         </tr>
 
         <tr id="kokanee"
         class="hidden_row">
-            <td>Kokanee</td>
+            <td>
+                <div class="simple_box">Kokanee</div>
+            </td>
         </tr>
       </table>
 
       <!-- Modal -->
         <div class="modal_bg">
+            <div class="modal_content">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!--modal 1-->
+                        <div class="swiper-slide">
+                          <div class="slide-title">
+                            Preferences
+                          </div>
+                          <div class="slide-item">
+                            <div class="item-name">
+                                Soup
+                            </div>
+                            <div class="preference-container">
+                                <div class="item-preference1"></div>
+                                <div class="item-preference2"></div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                        <!--modal 2-->
+                        <div class="swiper-slide">
+                          modal2
+                        </div>
+                        <!--modal 3-->
+                        <div class="swiper-slide">
+                          modal 3
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <!--
             <div class="modal_content">
                 <div class="modal_header">
                     <div class="title">
@@ -534,10 +611,13 @@
                     </div>
                 </div>          
             </div>
+
+            -->
         </div>
 
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="js/home_script.js"></script>
   <script type="text/javascript" src="js/home_modal.js"></script>
   </body>
