@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin_record.css">
+    <title>Admin Record: Test Page</title>
+</head>
+<body>
+    <!-- Top Line -->
+    <div class="page-container">
+        <!-- User and Date -->
+        <div class="page-info">
+            <h1>Name: Sample Yuta</h1>
+            <h2>Date: July 17 (Wed)</h2>
+        </div>
+        
+        <!-- Top Buttons -->
+        <div class="top-buttons">
+            <button id="home-btn">Home</button>
+            <button id="signout-btn">Sign Out</button>
+        </div>
+    </div>
+
+    <!-- Horizonatal Line -->
+    <hr id="hr_line">
+
+    <!-- Option Inputs -->
+    <div class="option-inputs">
+
+        <!-- Description -->
+        <h1>Which date and time of record do you look for?</h1>
+
+        <!-- Date Option -->
+        <div class="date-input">
+            <h1>Date: </h1>
+
+            <details class="user-select">
+                <summary class="radios">
+                    <input type="radio" name="date-key" id="default" title="Choose date and time" checked>
+                    <input type="radio" name="date-key" id="item1" title="July-10 (Wed)">
+                    <input type="radio" name="date-key" id="item2" title="July-15 (Sat)">
+                    <input type="radio" name="date-key" id="item3" title="July-20 (Tue)">
+                    <input type="radio" name="date-key" id="item4" title="July-23 (Fri)">
+                    <input type="radio" name="date-key" id="item5" title="July-27 (Sun)">
+                </summary>
+        
+                <ul class="list">
+                    <li>
+                        <label for="item1">
+                            July-10 (Wed)
+                            <span></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="item2">July-15 (Sat)</label>
+                    </li>
+                    <li>
+                        <label for="item3">July-20 (Tue)</label>
+                    </li>
+                    <li>
+                        <label for="item4">July-23 (Fri)</label>
+                    </li>
+                    <li>
+                        <label for="item5">July-27 (Sun)</label>
+                    </li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- Time Option -->
+        <div class="time-input">
+            <h1>Time: </h1>
+
+            <details class="user-select">
+                <summary class="radios">
+                    <input type="radio" name="time-key" id="default" title="Choose a time" checked>
+                    <input type="radio" name="time-key" id="time1" title="All">
+                    <input type="radio" name="time-key" id="time2" title="Lunch">
+                    <input type="radio" name="time-key" id="time3" title="Night">
+                </summary>
+        
+                <ul class="list">
+                    <li>
+                        <label for="time1">
+                            All
+                            <span></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="time2">Lunch</label>
+                    </li>
+                    <li>
+                        <label for="time3">Night</label>
+                    </li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- Next Button -->
+        <div class="next-btn">
+            <button id="next-button">Next</button>
+        </div>
+    </div>
+</body>
+</html>

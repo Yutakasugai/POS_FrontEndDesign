@@ -1,0 +1,109 @@
+body {
+    background: white;
+    /* I think this can lock the window swipped up and down */
+    /* overflow-y: hidden;
+    overflow-x: hidden; */
+    padding: 1.5rem calc((100vw - 1200px) / 2);
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* User name and Date */
+.page-info {
+    padding-left: 10px;
+}
+.page-info h1 {
+    font-size: 1.6rem;
+}
+.page-info h2 {
+    font-size: 1.4rem;
+}
+
+/* Top Buttons */
+.top-buttons {
+    align-self: center;
+    text-align: end;
+    padding-right: 3.5rem;
+}
+#back-btn {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    margin-right: 30px;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    background-color: lightgoldenrodyellow;
+}
+#signout-btn {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    background-color: lightgray;
+}
+
+/* Horizontal Line */
+#hr_line {
+    background: black;
+    font-size: small;
+}
+
+/* Record Table */
+.table-container {
+    margin-top: 20px;
+}
+.table-title {
+    text-align: center;
+}
+.table-title h1{
+    font-size: 1.5rem;
+}
+.table-title h2{
+    font-size: 1.2rem;
+}
+
+/* Table Set */
+.table {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.table-desc table {
+    border: 0.5px;
+    border-color: black;
+}
+.table-desc th {
+    width: 200px;
+    height: 30px;
+}
+#desc-rows {
+    background-color: lightskyblue;
+}
+#item-rows{
+    background-color: lightpink;
+}
+#table-total {
+    background-color: lightcyan;
+}
+#empty-box {
+    border: none;
+}
+
+/* All total panel */
+.all-total {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.alltotal-panel {
+    width: 350px;
+    height: 50px;
+}
+#all-total {
+    background-color: bisque;
+}
