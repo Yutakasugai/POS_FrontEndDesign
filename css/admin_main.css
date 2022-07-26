@@ -1,0 +1,107 @@
+body {
+    background: white;
+    /* I think this can lock the window swipped up and down */
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 1.5rem calc((100vw - 1200px) / 2);
+    background-color: lightsteelblue;
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* User name and Date */
+.page-info {
+    padding-left: 30px;
+}
+.page-info h1 {
+    font-size: 1.6rem;
+}
+.page-info h2 {
+    font-size: 1.4rem;
+}
+
+/* Top Buttons */
+.top-button {
+    align-self: center;
+    text-align: end;
+    padding-right: 4rem;
+}
+#signout-btn {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    background-color: lightgray;
+}
+
+/* Add User Box */
+.box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 27rem;
+    justify-items: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+.addUser-box, 
+.data-box,
+.start-box{
+    width: 90%; 
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* inside box */
+.inside-box {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 21.5rem 3.5rem;
+    align-self: center;
+    justify-items: center;
+}
+
+/* addUser box inside */
+#addUser-img {
+    width: 17rem;
+    height: 22rem;
+}
+#addUser-btn {
+    font-size: 1rem;
+    padding: 8px 25px;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    background-color: lightgreen;
+}
+
+/* view data box inside */
+#viewdata-img {
+    width: 17rem;
+    height: 22rem;
+}
+#viewdata-btn {
+    font-size: 1rem;
+    padding: 8px 25px;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    background-color: lightgreen;
+}
+
+/* Start btn box inside */
+#startBtn-img {
+    width: 17rem;
+    height: 22rem;
+}
+#start-btn {
+    font-size: 1rem;
+    padding: 8px 40px;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    background-color: lightgreen;
+}

@@ -10,15 +10,16 @@ body {
 .page-container {
     display: grid;
     grid-template-columns: 0.5fr 0.35fr 0.2fr 0.60fr 0.15fr;
+    margin-top: 30px;
 }
 .page-info {
     margin-top: -15px;
 }
 .page-info h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 .page-info h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 #page-time {
     margin-top: -10px;
@@ -35,6 +36,8 @@ body {
     font-size: 1.8rem;
     padding: 23px 30px;
     border-radius: 40px;
+    border-width: 2.5px;
+    border-color: black;
 }
 #table-btn {
     background-color: lightyellow;
@@ -54,6 +57,8 @@ body {
     width: 150px;
     height: 70px;
     font-size: 1.2rem;
+    border-width: 2.5px;
+    border-color: black;
 }
 #history-btn {
     border-radius: 10px;
@@ -68,14 +73,17 @@ body {
 /* Order Box */
 .box-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 30.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 26rem;
     justify-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .order-box {
     width: 96%; 
     background-color: white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2rem 21.5rem 2.5rem;
     /* border-radius: 10px; */
 }
 
@@ -105,23 +113,18 @@ body {
     padding-left: 10px;
 }
 
-
 /* Done Btn at each boxes */
-.done-btn {
-    position: absolute;
-    bottom: 6rem;
-    padding-left: 10.5rem;
-}
 #done-button {
-    padding: 8px 20px;
     background: lightgreen;
-    border-radius: 10px;
-}
+    width: 100%;
+    height: 100%;
+} 
 
 /* Bottom Line */
 .bottom-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 .home-button {
     padding-left: 5px;
@@ -131,8 +134,9 @@ body {
     padding: 12px 30px;
     border-radius: 10px;
     background: lightgoldenrodyellow;
+    border-width: 2.5px;
+    border-color: black;
 }
-
 
 /* Two Boxes and Number Plates*/
 .moreOrder-container {
@@ -163,6 +167,233 @@ body {
     align-self: center;
     font-size: 1.3rem;
 }
+
+/* Table Modal */
+.table-modal {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal-content-table {
+    background: #f4f4f4;
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0, 7px 20px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 3px;
+    min-height: 500px;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+}
+
+.close-btn {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    color: var(--brightred);
+    transition: 0.2s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+/* Squezed the screen and no need to display the image */
+    .modal-content-table {
+        grid-template-columns: auto;
+        margin: 15% auto;
+        width: 70%;
+        height: 75%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .modal-content-table {
+        margin: 20% auto;
+        width: 90%;
+        height: 80%;
+    }
+}
+
+/* Table Modal Inside */
+.table-container {
+    /* margin-top: rem; */
+    padding-top: 60px;
+}
+.table-box {
+    width: 7rem;
+    height: 7rem;
+    background-color: yellow;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 8px;
+    text-align: center;
+}
+.table-box p {
+    margin-top: 35%;
+    font-size: 1.6rem;
+}
+
+/* Table Position 3,4,5 */
+.table-345 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Table Position 6,7,8 */
+.table-678 {
+    display: flex;
+    justify-content: end;
+    padding: 30px 5rem;
+}
+.table-box2 {
+    width: 7rem;
+    height: 7rem;
+    margin-right: 25px;
+    background-color: yellow;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 8px;
+    text-align: center;
+}
+.table-box2 p {
+    margin-top: 35%;
+    font-size: 1.6rem;
+}
+
+/* Table 1,2 and front */
+.table-12 {
+    display: flex;
+    justify-content: start;
+    padding: 5px 5rem;
+}
+.table-box3 {
+    width: 7rem;
+    height: 7rem;
+    margin-left: 25px;
+    background-color: yellow;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 8px;
+    text-align: center;
+}
+.table-box3 p {
+    margin-top: 35%;
+    font-size: 1.6rem;
+}
+.front-box {
+    width: 12rem;
+    height: 5rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    background-color: lightgrey;
+    border-width: 0.5px;
+    border-style: solid;
+    text-align: center;
+}
+
+
+/* Modal for close btn */
+.closeBtn-modal {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal-content-closeBtn {
+    background: #f4f4f4;
+    margin: 15% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0, 7px 20px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 3px;
+    min-height: 300px;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+}
+
+.close-btn-2 {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.close-btn-2:hover {
+    cursor: pointer;
+    color: var(--brightred);
+    transition: 0.2s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+/* Squezed the screen and no need to display the image */
+    .modal-content-closeBtn {
+        grid-template-columns: auto;
+        margin: 15% auto;
+        width: 70%;
+        height: 75%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .modal-content-closeBtn {
+        margin: 20% auto;
+        width: 90%;
+        height: 80%;
+    }
+}
+
+/* Modal for Close btn inside */
+.closeText-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 12rem 3rem;
+}
+.closeText-container p {
+    align-self: center;
+    font-size: 1.7rem;
+}
+.yesno-btn {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+#no-btn {
+    font-size: 1.1rem;
+    padding: 12px 40px;
+    background: lightcoral;
+    border-radius: 5px;
+    border-width: 2.5px;
+    border-color: black;
+}
+#yes-btn {
+    font-size: 1.1rem;
+    padding: 12px 35px;
+    background: lightgreen;
+    border-radius: 5px;
+    border-width: 2.5px;
+    border-color: black;
+}
+
+
 
 
 

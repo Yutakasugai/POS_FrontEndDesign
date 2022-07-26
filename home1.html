@@ -135,16 +135,108 @@
   </div>
 
   <!-- Sign out Btn and Close Btn -->
-  <div class="button-container">
-    <div class="signout-btn">
-      <button>Sign Out</button>
-    </div>
+  <div class="btn-container">
+      <button id="signout-btn">Sign Out</button>
+      <button id="close-btn">Close</button>
+  </div>
 
-    <div class="close-btn">
-      <button>Close</button>
+  <!-- Update Modal -->
+  <div class="updateBtn-modal" id="updateBtn-modal">
+      <div class="modal-content-updateBtn">
+
+          <span class="close-btn-updateBtn">&times;</span>
+
+          <div class="table-updateBox">
+            <!-- Table Panel -->
+            <h1>{if table}</h1>
+
+            <!-- Customer Number Panel -->
+            <div class="customerCheck">
+              <h1>Customer: </h1>
+
+              <div id="button_wrapper">
+                  <button id="button_decrease">-</button>
+                  <h1 id="counter">0</h1>
+                  <button id="button_increase">+</button>
+              </div>
+
+            </div>
+
+            <!-- Table Switch Panel -->
+            <div class="table-switch">
+              <h1>Switch: </h1>
+
+              <div id="s-button_wrapper">
+                  <button id="s-button_decrease">-</button>
+                  <h4>Table<h1 id="s-counter" style="display: none;">0</h1></h4>
+                  <button id="s-button_increase">+</button>
+              </div>
+            </div>
+
+            <!-- Cancel and Confirm Button -->
+            <div class="button-container">
+              <button id="cancel-btn">Cancel</button>
+              <button id="confirm-btn">Confirm</button>
+            </div>
+
+          </div>
+      </div>
+  </div>
+
+  <!-- addBtn Modal -->
+  <div class="addBtn-modal" id="addBtn-modal">
+    <div class="modal-content-addBtn">
+      <span class="close-btn-addBtn">&times;</span>
+
+      <div class="table-addBox">
+        <!-- Table Panel -->
+        <h1>{if table}</h1>
+
+        <!-- Customer Number Panel -->
+        <div class="customerCheck_add">
+          <h1>Customer: </h1>
+
+          <div id="add_button_wrapper">
+              <button id="add_button_decrease">-</button>
+              <h1 id="add_counter">0</h1>
+              <button id="add_button_increase">+</button>
+          </div>
+
+        </div>
+
+        <!-- Cancel and Confirm Button -->
+        <div class="add_button-container">
+          <button id="back-btn">Back</button>
+          <button id="next-btn">Next</button>
+        </div>
+
+      </div>
     </div>
   </div>
 
+  <!-- Close Btn Modal -->
+  <div class="closeBtn-modal" id="closeBtn-modal">
+    <div class="modal-content-closeBtn">
+      <span class="close-btn-closeBtn">&times;</span>
+
+      <!-- close modal inside -->
+      <div class="table-closeBox">
+
+        <h1>Are you sure to finish and leave?</h1>
+        
+        <!-- Yes or No Buttons -->
+        <div class="close_button-container">
+          <button id="no-btn">No</button>
+          <button id="yes-btn">Yes</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="js/server-home.js"></script>
 
 </body>
