@@ -2,12 +2,14 @@
 .modal_bg {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  opacity: /*0/*; /*hide this line*/
-  visibility: /* hidden */; /*hide this line*/
+  opacity: 0; /*hide this line*/
+  visibility:  hidden; /*hide this line*/
   transition: visibility 0s opacity 0, 5s;
+  z-index: 20;
 }
 .bg-active{
   visibility: visible;
@@ -29,61 +31,246 @@
   display: flex;
   flex-direction: column;
 }
-
-.slide-title {
-  text-align: left;
+/* Modal slide 1 */
+.slide-header {
+  background: linear-gradient(rgb(86, 84, 84),rgb(144, 135, 135));
+  border-radius: 10px;
+  margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-left: 20px;
-  font-weight: 700;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slide-title {
+  padding-left: 0px;
   font-size: 60px;
   border-radius: 15px;
-  background-color: white;
+  color: rgb(234, 234, 233);
 }
+.close_button {
+  border: none;
+  color: rgb(234, 234, 233);
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 60px;
+}
+
 .slide-item {
-  position: fixed;
-  left: 2%;
-  width: 96%;
-  height: 350px;
+  margin-left: 8px;
+  width: 98%;
+  height: 240px;
+  margin-bottom: 60px;
 }
 .item-name {
+  color: rgb(103, 103, 103);
+  font-weight: 500;
   text-align: left;
-  margin-left: 20px;
+  margin-left: 35px;
   height: 40px;
+  margin-bottom: -15px;
 }
-.preference-container {
-  height: 310px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.containerFor2items {
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-top: 50px;
 }
-.item-preference1 {
+.item-preference {
   height: 100%;
-  width: 100px;
   margin-left: 20px;
   margin-right: 20px;
-  background-color: white;
-  flex: 1;
+}
+.item-button {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  background: linear-gradient(rgb(136, 128, 128),rgb(190, 163, 163));
+  color: rgb(0, 0, 0);
+}
+.item-button:active {
+  opacity: 0.7;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
-.item-preference2 {
+.containerFor3items {
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 50px;
+}
+.item_multiplied {
+  height: 140px;
+}
+.cancelOrAdd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.cancelButton{
+  background: linear-gradient(rgb(253, 213, 213),rgb(246, 142, 142));
+  padding: 10px 30px;
+  width: 250px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px rgb(137, 79, 79);
+}
+
+.addButton {
+  background: linear-gradient(rgb(195, 225, 195), rgb(146, 197, 146));
+  padding: 10px 30px;
+  width: 250px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px rgb(79, 107, 79);
+}
+
+.cancelButton:active,
+.addButton:active {
+  box-shadow: none;
+  transform: translateY(5px);
+  opacity: 0.5;
+}
+
+.section-content {
   height: 100%;
-  width: 100px;
+}
+
+/* Modal slide 2 */
+.section1{
+  height: 70%;
+  width: 98%;
+  margin-left: 1%;
+} 
+
+.section-title{
+  background: linear-gradient(rgb(86, 84, 84),rgb(144, 135, 135));
+  border-radius: 10px;
+  margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  background-color: white;
-  flex: 1;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+  color: rgb(234, 234, 233);
 }
 
-
+.section-row {
+  height: 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+.left-item{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin-left: -20px;
+}
+.right-item{
+  display: flex;
+  justify-content: space-evenly;
+  height: 80px;
+  width: 100%;
+}
+.item-name2 {
+  margin-top: 15px;
+  margin-right: 25px;
+  font-size: 40px;
+  text-align: right;
+  width: 200px;
 }
 
+/* topping counter button */
+.toppingCounter {
+  display: flex;
+  justify-content: center;
+  height: 90px;
+  margin-left: -10px;
+}
+#counter {
+  font-size: 1rem;
+  padding-bottom: 40px;
+}
+#button_wrapper {
+  border: 2px solid;
+  height: 100%;
+  width: 200px;
+  border-radius: 10px;
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 50px lightgrey;
+  background-color: rgb(240, 240, 240);
+}
+#button_wrapper button {
+  border: 1px solid;
+  outline: none; 
+  box-shadow: 0px 0px 50px lightgrey;
+  font-weight: bold;
+  font-size: 30px; 
+  color: inherit;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background-color: rgb(226, 226, 226);
+  box-shadow: 0 5px rgb(119, 119, 119);
+}
 
+#button_decrease:hover,
+#button_increase:hover {
+  background-color: lightgreen;
+}
+#button_decrease:active,
+#button_increase:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
 
+/* Remove toppings section */
+.section2 {
+  padding-top: 100px;
+  height: 30%;
+}
 
+.r-or-sButton {
+  height: 120px;
+  margin-top: 10px;
+}
+
+.rButton,
+.sButton {
+  height: 80px;
+  width: 80px;
+  border: 2px solid;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px lightgrey;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 5px rgb(119, 119, 119);
+}
+
+.rButton:active,
+.sButton:active {
+  box-shadow: none;
+  transform: translateY(5px);
+  opacity: 0.5;
+  background-color: aquamarine;
+}
+/*
+  padding-top: 5px;
+  padding-bottom: 3px;
+*/
 /*
 .modal_header {
   padding: 10px 30px;
