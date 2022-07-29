@@ -179,3 +179,34 @@ tomatoSB_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
 });
+
+
+
+// Topping counter button
+let decreaseBtn = document.getElementById('button_decrease');
+let increaseBtn = document.getElementById('button_increase'); 
+let counter = document.getElementById('counter');
+let count = 0;
+
+// - btn: Increase num of topping 
+decreaseBtn.addEventListener('click', () => {
+  count --; 
+  counter.innerHTML = count; 
+  if(count < 0) {
+      count = 0;
+      counter.innerHTML = count; 
+  } else {
+      counter.innerHTML = count; 
+  }
+})
+// + btn: Decrease num of topping
+increaseBtn.addEventListener('click', () => {
+  count ++; 
+  counter.innerHTML = count;
+  if(count >= 11) {
+      count = 0;
+      counter.innerHTML = count; 
+  } else {
+      counter.innerHTML = count; 
+  }
+})
