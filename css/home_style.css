@@ -163,7 +163,7 @@ tr {
 }
 
 .modalButton {
-  width: 100%;
+  width: 99%;
   height: 100%;
   border: none;
   text-align: left;
@@ -281,6 +281,21 @@ button:hover {
   border-radius: 15px;
   height: 100%;
   margin: 5px;
+}
+#topping_yellow {
+  background-color: rgb(252, 207, 84);
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #676767;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  height: 100%;
+  width: 99%;
+  margin-left: 5px;
+  font-weight: 700;
+  text-align: left;
 }
 
 #dri_des_box {
