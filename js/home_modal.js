@@ -558,6 +558,36 @@ gOnion_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg_chashu').classList.add('bg-active-chashu');
 });
 
+// Button to add/reduce a number of Chashu related item (plate, burger, don)
+let chashu_decreaseBtn = document.getElementById('chashu_decrease');
+let chashu_increaseBtn = document.getElementById('chashu_increase'); 
+let chashu_counter = document.getElementById('chashu_counter');
+let chashu_count = 0;
+
+// - btn: Increase num of topping 
+chashu_decreaseBtn.addEventListener('click', () => {
+  chashu_count --; 
+  chashu_counter.innerHTML = chashu_count; 
+  if(chashu_count < 0) {
+    chashu_count = 0;
+    chashu_counter.innerHTML = chashu_count; 
+  } else {
+    chashu_counter.innerHTML = chashu_count; 
+  }
+})
+// + btn: Decrease num of topping
+chashu_increaseBtn.addEventListener('click', () => {
+  chashu_count ++; 
+  chashu_counter.innerHTML = chashu_count;
+  if(chashu_count >= 11) {
+    chashu_count = 0;
+    chashu_counter.innerHTML = chashu_count; 
+  } else {
+    chashu_counter.innerHTML = chashu_count; 
+  }
+})
+
+
 // Side Dishes Modal
 const side_Modal = document.getElementById('side_dishes_modal');
 
@@ -570,6 +600,216 @@ side_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg_dishes').classList.add('bg-active-dishes');
 });
 
+// other side dishes counter button
+// for gyoza
+let gyoza_decreaseBtn = document.getElementById('gyoza_decrease');
+let gyoza_increaseBtn = document.getElementById('gyoza_increase'); 
+let gyoza_counter = document.getElementById('gyoza_counter');
+let gyoza_count = 0;
+
+// - btn: Increase num of topping 
+gyoza_decreaseBtn.addEventListener('click', () => {
+  gyoza_count --; 
+  gyoza_counter.innerHTML = gyoza_count; 
+  if(gyoza_count < 0) {
+    gyoza_count = 0;
+    gyoza_counter.innerHTML = gyoza_count; 
+  } else {
+    gyoza_counter.innerHTML = gyoza_count; 
+  }
+})
+// + btn: Decrease num of topping
+gyoza_increaseBtn.addEventListener('click', () => {
+  gyoza_count ++; 
+  gyoza_counter.innerHTML = gyoza_count;
+  if(gyoza_count >= 11) {
+    gyoza_count = 0;
+    gyoza_counter.innerHTML = gyoza_count; 
+  } else {
+    gyoza_counter.innerHTML = gyoza_count; 
+  }
+})
+
+// other side dishes counter button
+// for steamed bann
+let steamedBan_decreaseBtn = document.getElementById('steamedBan_decrease');
+let steamedBan_increaseBtn = document.getElementById('steamedBan_increase'); 
+let steamedBan_counter = document.getElementById('steamedBan_counter');
+let steamedBan_count = 0;
+
+// - btn: Increase num of topping 
+steamedBan_decreaseBtn.addEventListener('click', () => {
+  steamedBan_count --; 
+  steamedBan_counter.innerHTML = steamedBan_count; 
+  if(steamedBan_count < 0) {
+    steamedBan_count = 0;
+    steamedBan_counter.innerHTML = steamedBan_count; 
+  } else {
+    steamedBan_counter.innerHTML = steamedBan_count; 
+  }
+})
+// + btn: Decrease num of topping
+steamedBan_increaseBtn.addEventListener('click', () => {
+  steamedBan_count ++; 
+  steamedBan_counter.innerHTML = steamedBan_count;
+  if(steamedBan_count >= 11) {
+    steamedBan_count = 0;
+    steamedBan_counter.innerHTML = steamedBan_count; 
+  } else {
+    steamedBan_counter.innerHTML = steamedBan_count; 
+  }
+})
+
+// other side dishes counter button
+// for Kimchi Small
+let kimchiS_decreaseBtn = document.getElementById('kimchiS_decrease');
+let kimchiS_increaseBtn = document.getElementById('kimchiS_increase'); 
+let kimchiS_counter = document.getElementById('kimchiS_counter');
+let kimchiS_count = 0;
+
+// - btn: Increase num of topping 
+kimchiS_decreaseBtn.addEventListener('click', () => {
+  kimchiS_count --; 
+  kimchiS_counter.innerHTML = kimchiS_count; 
+  if(kimchiS_count < 0) {
+    kimchiS_count = 0;
+    kimchiS_counter.innerHTML = kimchiS_count; 
+  } else {
+    kimchiS_counter.innerHTML = kimchiS_count; 
+  }
+})
+// + btn: Decrease num of topping
+kimchiS_increaseBtn.addEventListener('click', () => {
+  kimchiS_count ++; 
+  kimchiS_counter.innerHTML = kimchiS_count;
+  if(kimchiS_count >= 11) {
+    kimchiS_count = 0;
+    kimchiS_counter.innerHTML = kimchiS_count; 
+  } else {
+    kimchiS_counter.innerHTML = kimchiS_count; 
+  }
+})
+
+// other side dishes counter button
+// for Kimchi Large
+let kimchiL_decreaseBtn = document.getElementById('kimchiL_decrease');
+let kimchiL_increaseBtn = document.getElementById('kimchiL_increase'); 
+let kimchiL_counter = document.getElementById('kimchiL_counter');
+let kimchiL_count = 0;
+
+// - btn: Increase num of topping 
+kimchiL_decreaseBtn.addEventListener('click', () => {
+  kimchiL_count --; 
+  kimchiL_counter.innerHTML = kimchiL_count; 
+  if(kimchiL_count < 0) {
+    kimchiL_count = 0;
+    kimchiL_counter.innerHTML = kimchiL_count; 
+  } else {
+    kimchiL_counter.innerHTML = kimchiL_count; 
+  }
+})
+// + btn: Decrease num of topping
+kimchiL_increaseBtn.addEventListener('click', () => {
+  kimchiL_count ++; 
+  kimchiL_counter.innerHTML = kimchiL_count;
+  if(kimchiL_count >= 11) {
+    kimchiL_count = 0;
+    kimchiL_counter.innerHTML = kimchiL_count; 
+  } else {
+    kimchiL_counter.innerHTML = kimchiL_count; 
+  }
+})
+
+// other side dishes counter button
+// for white rice
+let rice_decreaseBtn = document.getElementById('rice_decrease');
+let rice_increaseBtn = document.getElementById('rice_increase'); 
+let rice_counter = document.getElementById('rice_counter');
+let rice_count = 0;
+
+// - btn: Increase num of topping 
+rice_decreaseBtn.addEventListener('click', () => {
+  rice_count --; 
+  rice_counter.innerHTML = rice_count; 
+  if(rice_count < 0) {
+    rice_count = 0;
+    rice_counter.innerHTML = rice_count; 
+  } else {
+    rice_counter.innerHTML = rice_count; 
+  }
+})
+// + btn: Decrease num of topping
+rice_increaseBtn.addEventListener('click', () => {
+  rice_count ++; 
+  rice_counter.innerHTML = rice_count;
+  if(rice_count >= 11) {
+    rice_count = 0;
+    rice_counter.innerHTML = rice_count; 
+  } else {
+    rice_counter.innerHTML = rice_count; 
+  }
+})
+
+// other side dishes counter button
+// for matcha ice cream
+let matcha_decreaseBtn = document.getElementById('matcha_decrease');
+let matcha_increaseBtn = document.getElementById('matcha_increase'); 
+let matcha_counter = document.getElementById('matcha_counter');
+let matcha_count = 0;
+
+// - btn: Increase num of topping 
+matcha_decreaseBtn.addEventListener('click', () => {
+  matcha_count --; 
+  matcha_counter.innerHTML = matcha_count; 
+  if(matcha_count < 0) {
+    matcha_count = 0;
+    matcha_counter.innerHTML = matcha_count; 
+  } else {
+    matcha_counter.innerHTML = matcha_count; 
+  }
+})
+// + btn: Decrease num of topping
+matcha_increaseBtn.addEventListener('click', () => {
+  matcha_count ++; 
+  matcha_counter.innerHTML = matcha_count;
+  if(matcha_count >= 11) {
+    matcha_count = 0;
+    matcha_counter.innerHTML = matcha_count; 
+  } else {
+    matcha_counter.innerHTML = matcha_count; 
+  }
+})
+
+// button to add/reduce a num of other side dish
+let otherSide_decreaseBtn = document.getElementById('otherSide_decrease');
+let otherSide_increaseBtn = document.getElementById('otherSide_increase'); 
+let otherSide_counter = document.getElementById('otherSide_counter');
+let otherSide_count = 0;
+
+// - btn: Increase num of topping 
+otherSide_decreaseBtn.addEventListener('click', () => {
+  otherSide_count --; 
+  otherSide_counter.innerHTML = otherSide_count; 
+  if(otherSide_count < 0) {
+    otherSide_count = 0;
+    otherSide_counter.innerHTML = otherSide_count; 
+  } else {
+    otherSide_counter.innerHTML = otherSide_count; 
+  }
+})
+// + btn: Decrease num of topping
+otherSide_increaseBtn.addEventListener('click', () => {
+  otherSide_count ++; 
+  otherSide_counter.innerHTML = otherSide_count;
+  if(otherSide_count >= 11) {
+    otherSide_count = 0;
+    otherSide_counter.innerHTML = otherSide_count; 
+  } else {
+    otherSide_counter.innerHTML = otherSide_count; 
+  }
+})
+
+
 // Toppings Modal (directly from top menu)
 const toppings_Modal = document.getElementById('topping_yellow');
 
@@ -580,30 +820,6 @@ document.querySelector('#close_toppings_modal').addEventListener('click', () => 
 toppings_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg_toppings').style.display = 'block';
   document.querySelector('.modal_bg_toppings').classList.add('bg-active-toppings');
-});
-
-// Soft Drinks Modal
-const softDrink_Modal = document.getElementById('soft_dri_modal');
-
-document.querySelector('#close_softDrink_modal').addEventListener('click', () => {
-  document.querySelector('.modal_bg_softDrink').style.display = 'none';
-});
-
-softDrink_Modal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_softDrink').style.display = 'block';
-  document.querySelector('.modal_bg_softDrink').classList.add('bg-active-softDrink');
-});
-
-// Beer Modal
-const beer_Modal = document.getElementById('beer_modal');
-
-document.querySelector('#close_beer_modal').addEventListener('click', () => {
-  document.querySelector('.modal_bg_beer').style.display = 'none';
-});
-
-beer_Modal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_beer').style.display = 'block';
-  document.querySelector('.modal_bg_beer').classList.add('bg-active-beer');
 });
 
 
@@ -1026,5 +1242,241 @@ exNoodlesTop_increaseBtn.addEventListener('click', () => {
     exNoodlesTop_counter.innerHTML = exNoodlesTop_count; 
   } else {
     exNoodlesTop_counter.innerHTML = exNoodlesTop_count; 
+  }
+})
+
+// button to add/reduce a num of toppings (from top menu)
+let toppingTop_decreaseBtn = document.getElementById('toppingTop_decrease');
+let toppingTop_increaseBtn = document.getElementById('toppingTop_increase'); 
+let toppingTop_counter = document.getElementById('toppingTop_counter');
+let toppingTop_count = 0;
+
+// - btn: Increase num of topping 
+toppingTop_decreaseBtn.addEventListener('click', () => {
+  toppingTop_count --; 
+  toppingTop_counter.innerHTML = toppingTop_count; 
+  if(toppingTop_count < 0) {
+    toppingTop_count = 0;
+    toppingTop_counter.innerHTML = toppingTop_count; 
+  } else {
+    toppingTop_counter.innerHTML = toppingTop_count; 
+  }
+})
+// + btn: Decrease num of topping
+toppingTop_increaseBtn.addEventListener('click', () => {
+  toppingTop_count ++; 
+  toppingTop_counter.innerHTML = toppingTop_count;
+  if(toppingTop_count >= 11) {
+    toppingTop_count = 0;
+    toppingTop_counter.innerHTML = toppingTop_count; 
+  } else {
+    toppingTop_counter.innerHTML = toppingTop_count; 
+  }
+})
+
+
+// Soft Drinks Modal
+const softDrink_Modal = document.getElementById('soft_dri_modal');
+
+document.querySelector('#close_softDrink_modal').addEventListener('click', () => {
+  document.querySelector('.modal_bg_softDrink').style.display = 'none';
+});
+
+softDrink_Modal.addEventListener('click', () => {
+  document.querySelector('.modal_bg_softDrink').style.display = 'block';
+  document.querySelector('.modal_bg_softDrink').classList.add('bg-active-softDrink');
+});
+
+// Soft Drink counter button
+// for coke
+let coke_decreaseBtn = document.getElementById('coke_decrease');
+let coke_increaseBtn = document.getElementById('coke_increase'); 
+let coke_counter = document.getElementById('coke_counter');
+let coke_count = 0;
+
+// - btn: Increase num of topping 
+coke_decreaseBtn.addEventListener('click', () => {
+  coke_count --; 
+  coke_counter.innerHTML = coke_count; 
+  if(coke_count < 0) {
+    coke_count = 0;
+    coke_counter.innerHTML = coke_count; 
+  } else {
+    coke_counter.innerHTML = coke_count; 
+  }
+})
+// + btn: Decrease num of topping
+ coke_increaseBtn.addEventListener('click', () => {
+  coke_count ++; 
+  coke_counter.innerHTML = coke_count;
+  if(coke_count >= 11) {
+    coke_count = 0;
+    coke_counter.innerHTML = coke_count; 
+  } else {
+    coke_counter.innerHTML = coke_count; 
+  }
+})
+
+// Soft Drink counter button
+// for sprite
+let sprite_decreaseBtn = document.getElementById('sprite_decrease');
+let sprite_increaseBtn = document.getElementById('sprite_increase'); 
+let sprite_counter = document.getElementById('sprite_counter');
+let sprite_count = 0;
+
+// - btn: Increase num of topping 
+sprite_decreaseBtn.addEventListener('click', () => {
+  sprite_count --; 
+  sprite_counter.innerHTML = sprite_count; 
+  if(sprite_count < 0) {
+    sprite_count = 0;
+    sprite_counter.innerHTML = sprite_count; 
+  } else {
+    sprite_counter.innerHTML = sprite_count; 
+  }
+})
+// + btn: Decrease num of topping
+sprite_increaseBtn.addEventListener('click', () => {
+  sprite_count ++; 
+  sprite_counter.innerHTML = sprite_count;
+  if(sprite_count >= 11) {
+    sprite_count = 0;
+    sprite_counter.innerHTML = sprite_count; 
+  } else {
+    sprite_counter.innerHTML = sprite_count; 
+  }
+})
+
+// Soft Drink counter button
+// for Iced tea
+let icedTea_decreaseBtn = document.getElementById('icedTea_decrease');
+let icedTea_increaseBtn = document.getElementById('icedTea_increase'); 
+let icedTea_counter = document.getElementById('icedTea_counter');
+let icedTea_count = 0;
+
+// - btn: Increase num of topping 
+icedTea_decreaseBtn.addEventListener('click', () => {
+  icedTea_count --; 
+  icedTea_counter.innerHTML = icedTea_count; 
+  if(icedTea_count < 0) {
+    icedTea_count = 0;
+    icedTea_counter.innerHTML = icedTea_count; 
+  } else {
+    icedTea_counter.innerHTML = icedTea_count; 
+  }
+})
+// + btn: Decrease num of topping
+icedTea_increaseBtn.addEventListener('click', () => {
+  icedTea_count ++; 
+  icedTea_counter.innerHTML = icedTea_count;
+  if(icedTea_count >= 11) {
+    icedTea_count = 0;
+    icedTea_counter.innerHTML = icedTea_count; 
+  } else {
+    icedTea_counter.innerHTML = icedTea_count; 
+  }
+})
+
+
+// Beer Modal
+const beer_Modal = document.getElementById('beer_modal');
+
+document.querySelector('#close_beer_modal').addEventListener('click', () => {
+  document.querySelector('.modal_bg_beer').style.display = 'none';
+});
+
+beer_Modal.addEventListener('click', () => {
+  document.querySelector('.modal_bg_beer').style.display = 'block';
+  document.querySelector('.modal_bg_beer').classList.add('bg-active-beer');
+});
+
+// Beer counter button
+// for asahi
+let asahi_decreaseBtn = document.getElementById('asahi_decrease');
+let asahi_increaseBtn = document.getElementById('asahi_increase'); 
+let asahi_counter = document.getElementById('asahi_counter');
+let asahi_count = 0;
+
+// - btn: Increase num of topping 
+asahi_decreaseBtn.addEventListener('click', () => {
+  asahi_count --; 
+  asahi_counter.innerHTML = asahi_count; 
+  if(asahi_count < 0) {
+    asahi_count = 0;
+    asahi_counter.innerHTML = asahi_count; 
+  } else {
+    asahi_counter.innerHTML = asahi_count; 
+  }
+})
+// + btn: Decrease num of topping
+asahi_increaseBtn.addEventListener('click', () => {
+  asahi_count ++; 
+  asahi_counter.innerHTML = asahi_count;
+  if(asahi_count >= 11) {
+    asahi_count = 0;
+    asahi_counter.innerHTML = asahi_count; 
+  } else {
+    asahi_counter.innerHTML = asahi_count; 
+  }
+})
+
+// Beer counter button
+// for sapporo
+let sapporo_decreaseBtn = document.getElementById('sapporo_decrease');
+let sapporo_increaseBtn = document.getElementById('sapporo_increase'); 
+let sapporo_counter = document.getElementById('sapporo_counter');
+let sapporo_count = 0;
+
+// - btn: Increase num of topping 
+sapporo_decreaseBtn.addEventListener('click', () => {
+  sapporo_count --; 
+  sapporo_counter.innerHTML = sapporo_count; 
+  if(sapporo_count < 0) {
+    sapporo_count = 0;
+    sapporo_counter.innerHTML = sapporo_count; 
+  } else {
+    sapporo_counter.innerHTML = sapporo_count; 
+  }
+})
+// + btn: Decrease num of topping
+sapporo_increaseBtn.addEventListener('click', () => {
+  sapporo_count ++; 
+  sapporo_counter.innerHTML = sapporo_count;
+  if(sapporo_count >= 11) {
+    sapporo_count = 0;
+    sapporo_counter.innerHTML = sapporo_count; 
+  } else {
+    sapporo_counter.innerHTML = sapporo_count; 
+  }
+})
+
+
+// Beer counter button
+// for kokanee
+let kokanee_decreaseBtn = document.getElementById('kokanee_decrease');
+let kokanee_increaseBtn = document.getElementById('kokanee_increase'); 
+let kokanee_counter = document.getElementById('kokanee_counter');
+let kokanee_count = 0;
+
+// - btn: Increase num of topping 
+kokanee_decreaseBtn.addEventListener('click', () => {
+  kokanee_count --; 
+  kokanee_counter.innerHTML = kokanee_count; 
+  if(kokanee_count < 0) {
+    kokanee_count = 0;
+    kokanee_counter.innerHTML = kokanee_count; 
+  } else {
+    kokanee_counter.innerHTML = kokanee_count; 
+  }
+})
+// + btn: Decrease num of topping
+kokanee_increaseBtn.addEventListener('click', () => {
+  kokanee_count ++; 
+  kokanee_counter.innerHTML = kokanee_count;
+  if(kokanee_count >= 11) {
+    kokanee_count = 0;
+    kokanee_counter.innerHTML = kokanee_count; 
+  } else {
+    kokanee_counter.innerHTML = kokanee_count; 
   }
 })
