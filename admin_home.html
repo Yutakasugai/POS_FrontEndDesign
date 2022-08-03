@@ -14,7 +14,7 @@
 
         <!-- User and Date -->
         <div class="page-info">
-            <h1>Name: Sample Yuta</h1>
+            <!-- <h1>Name: Sample Yuta</h1> -->
             <h2>Date: July 17 (Wed)</h2>
             <h2 id="page-time">Time: Lunch</h2>
         </div>
@@ -25,15 +25,11 @@
             <button id="userCheck-btn">U</button>
         </div>
 
-        <div></div>
-
         <!-- square buttons at the top -->
         <div class="square-buttons">
             <button id="history-btn">History</button>
             <button id="close-btn">Close</button>
         </div>
-
-        <div></div>
 
     </div>
 
@@ -47,13 +43,7 @@
             </div>
 
             <div class="order-items">
-                <p id="ramen">Miso R/S</p>
-                <p id="add-toppings">+ 2(Ex</p>
-                <p id="add-toppings">+ S</p>
-                <p id="add-toppings">+ 3(Egg</p>
-
-                <p id="side-order">C.Don</p>
-                <p id="side-order">C.plate S</p>
+            
             </div>
 
             <div class="done-btn">
@@ -68,16 +58,7 @@
             </div>
 
             <div class="order-items">
-                <p id="ramen">Miso R/S</p>
-                <p id="add-toppings">+ 2(Ex</p>
-                <p id="add-toppings">+ S</p>
-                <p id="add-toppings">+ 3(Egg</p>
-
-                <p id="ramen">Shi R/S</p>
-                <p id="add-toppings">+ S</p>
-        
-                <p id="set-menu">SetB => Shio R/S</p>
-                <p id="add-toppings">+ Ex</p>
+                
             </div>
 
             <div class="done-btn">
@@ -92,13 +73,7 @@
             </div>
 
             <div class="order-items">
-                <p id="ramen">Miso R/S</p>
-                <p id="add-toppings">+ 2(Ex</p>
-                <p id="add-toppings">+ S</p>
-                <p id="add-toppings">+ 3(Egg</p>
-
-                <p id="side-order">C.Don</p>
-                <p id="side-order">C.plate S</p>
+                
             </div>
 
             <div class="done-btn">
@@ -113,35 +88,7 @@
             </div>
 
             <div class="order-items">
-                <p id="ramen">Miso R/S</p>
-                <p id="add-toppings">+ 2(Ex</p>
-                <p id="add-toppings">+ S</p>
-                <p id="add-toppings">+ 3(Egg</p>
-
-                <p id="side-order">C.Don</p>
-                <p id="side-order">C.plate S</p>
-            </div>
-
-            <div class="done-btn">
-                <button id="done-button">Done</button>
-            </div>
-        </div>
-
-        <!-- Box-5 -->
-        <div class="order-box">
-            <div class="box-title">
-                <p>T - 2</p>
-            </div>
-
-            <div class="order-items">
-                <p id="ramen">HOT L/S</p>
-                <p id="add-toppings">+ 2(Ex</p>
-                <p id="remove-top">(No beans)</p>
-                <p id="remove-top">(No G.onion)</p>
-                <p id="remove-top">(No Egg)</p>
-        
-                <p id="side-order">Kimchi (s)</p>
-                <p id="side-order">G.Don</p>
+                
             </div>
 
             <div class="done-btn">
@@ -164,8 +111,8 @@
             </div>
     
             <div class="two-boxes">
-                <div class="box-1"></div>
-                <div class="box-2"></div>
+                <button class="box-1" id="box-btn"></button>
+                <button class="box-2" id="box-btn"></button>
             </div>
         </div>
     </div>
@@ -241,6 +188,145 @@
         </div>
     </div>
 
+    <!-- Modal Page for Box Btn -->
+    <div class="boxBtn-modal" id="boxBtn-modal">
+        <div class="modal-content-boxBtn">
+            <span class="close-btn-boxBtn">&times;</span>
+
+            <div class="extraBox_container">
+
+                <!-- Extra Box 1 -->
+                <div class="extraBox">
+                    <div class="box-title">
+                        <p>T - 3</p>
+                    </div>
+        
+                    <div class="order-items">
+                        
+                    </div>
+        
+                    <div class="done-btn">
+                        <button id="done-button">Done</button>
+                    </div>
+                </div>
+
+                <!-- Extra Box 2 -->
+                <div class="extraBox">
+                    <div class="box-title">
+                        <p>T - 8</p>
+                    </div>
+        
+                    <div class="order-items">
+                        
+                    </div>
+        
+                    <div class="done-btn">
+                        <button id="done-button">Done</button>
+                    </div>
+                </div>
+
+                <!-- Extra Box 3 -->
+                <div class="extraBox">
+                    <div class="box-title">
+                        <p>T - 5</p>
+                    </div>
+        
+                    <div class="order-items">
+                        
+                    </div>
+        
+                    <div class="done-btn">
+                        <button id="done-button">Done</button>
+                    </div>
+                </div>
+
+                <!-- Extra Box 4 -->
+                <div class="extraBox">
+                    <div class="box-title">
+                        <p>ToGo</p>
+                    </div>
+        
+                    <div class="order-items">
+                        
+                    </div>
+        
+                    <div class="done-btn">
+                        <button id="done-button">Done</button>
+                    </div>
+                </div>
+
+                <!-- Extra Box 5 -->
+                <div class="extraBox">
+                    <div class="box-title">
+                        <p>Phone</p>
+                    </div>
+        
+                    <div class="order-items">
+                        
+                    </div>
+        
+                    <div class="done-btn">
+                        <button id="done-button">Done</button>
+                    </div>
+                </div>
+
+                <!-- Extra Box 6 -->
+                <div class="extraBox">
+                    <div class="box-title">
+                        <p>T - 4</p>
+                    </div>
+        
+                    <div class="order-items">
+                        
+                    </div>
+        
+                    <div class="done-btn">
+                        <button id="done-button">Done</button>
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+    </div>
+
+    <!-- Hostory Btn Modal -->
+    <div class="historyBtn-modal" id="historyBtn-modal">
+        <div class="modal-content-historyBtn">
+            <span class="close-btn-historyBtn">&times;</span>
+
+            <div class="historyBtn-textBox">
+
+                <div class="historyBtn-title">
+                    <h1>View Histroy</h1>
+                    <h2>July 16th - Lunch</h2>
+                </div>
+
+                <div class="review-container">
+
+                    <table border cellspacing="0">
+
+                        <!-- table desc rows -->
+                        <tr class="reviewBox-container"> 
+                            <th id="tableNum-row">Table Number</th>
+                            <th id="doneTime-row">Done Time</th>
+                            <th>Item Name</th>
+                    
+                            <tr class="addedInfo-container">
+                                <th>Table1</th>
+                                <th>12:34 PM</th>
+                                <th>2(Shio(R)/(S)</th>
+                            </tr>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 
     <!-- Attached Js file -->
     <script type="text/javascript" src="js/admin_home.js"></script>
