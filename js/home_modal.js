@@ -15,8 +15,16 @@ const misoSB_Modal = document.getElementById('misoSB_Modal');
 const shoyuSB_Modal = document.getElementById('shoyuSB_Modal');
 const shioSB_Modal = document.getElementById('shioSB_Modal');
 
-
+//close ramen  modal from the preference mdal page
 document.querySelector('#close_ramen_modal').addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'none';
+});
+
+document.querySelector('#close_addToppings_modal').addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'none';
+});
+
+document.querySelector('#close_removeItems_modal').addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'none';
 });
 
