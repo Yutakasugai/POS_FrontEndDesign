@@ -353,7 +353,7 @@
             <div class="modal_content">
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                        <!--modal 1 (Preferences) -->
+                        <!-- modal slide 1 (Preferences) -->
                         <div class="swiper-slide">
                             <div class="pref-section-content">
                                 <div class="slide-header">
@@ -477,7 +477,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--modal 2-->
+                        <!-- modal slide 2 -->
                         <div class="swiper-slide">
                             <div class="addToppings-section-content">
                                 <div class="slide-header">
@@ -680,7 +680,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--modal 3-->
+                        <!--modal slide 3-->
                         <div class="swiper-slide">
                             <!--Remove Toppings section-->
                             <div class="rToppings-section-content">
@@ -803,22 +803,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="not_req_sign">Not Required</div>
-                    <div class="chashu_specification">
-                        <div class="spec_row">
-                            <div id="g_oni_option">
-                                <input type="checkbox" id="no_g_onion">
-                                <label for="no_g_onion">No G.onion</label>
+                    <div class="other_options">
+                        <div class="not_req_sign">Not Required</div>
+                        <div class="chashu_specification">
+                            <div class="spec_row">
+                                <div id="g_oni_option">
+                                    <input type="checkbox" id="no_g_onion">
+                                    <label for="no_g_onion">No G.onion</label>
+                                </div>
+                                <div id="g_oni_option">
+                                    <input type="checkbox" id="no_g_onion">
+                                    <label for="no_sauce">No Sauce</label>
+                                </div>
                             </div>
-                            <div id="g_oni_option">
-                                <input type="checkbox" id="no_g_onion">
-                                <label for="no_sauce">No Sauce</label>
-                            </div>
-                        </div>
-                        <div class="spec_row">
-                            <div id="sesamine_option">
-                                <input type="checkbox" id="no_sesamine">
-                                <label for="no_sesamine">No Sesamine</label>
+                            <div class="spec_row">
+                                <div id="sesamine_option">
+                                    <input type="checkbox" id="no_sesamine">
+                                    <label for="no_sesamine">No Sesamine</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -845,13 +847,10 @@
         <div class="modal_bg_dishes">
             <div class="modal_content_dishes">
                 <div class="dishes_header">
-                    <div class="section-title-dishes">
-                        <div>Side Dishes</div>
-                        <button class="close_button" id="close_side_modal">&#x2715</button>
-                    </div>
+                    <div class="slide-title">Side Dishes</div>
+                    <button class="close_button" id="close_side_modal">&#x2715</button>
                 </div>
                 <div class="dishes_content">
-                    <div class="side_item">
                         <div class="section_item">
                             <div class="section_item_name">Gyoza</div>
                             <!-- Section item counter button -->
@@ -863,8 +862,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="side_item">
                         <div class="section_item">
                             <div class="section_item_name">Steamed Ban</div>
                             <!-- Section item counter button -->
@@ -876,8 +873,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="side_item">
                         <div class="section_item">
                             <div class="section_item_name">Kimchi (Small)</div>
                             <!-- Section item counter button -->
@@ -889,8 +884,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="side_item">
                         <div class="section_item">
                             <div class="section_item_name">Kimchi (Large)</div>
                             <!-- Section item counter button -->
@@ -902,8 +895,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="side_item">
                         <div class="section_item">
                             <div class="section_item_name">White Rice</div>
                             <!-- Section item counter button -->
@@ -915,8 +906,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="side_item">
                         <div class="section_item">
                             <div class="section_item_name" id="matcha_ice">Matcha Ice Cream</div>
                             <!-- Section item counter button -->
@@ -928,22 +917,21 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="side_footer">
-                        <div class="menuItem_multiplied">
-                            <div class="item_counter">
-                                <div class="item_button_wrapper">               
-                                    <button class="menu_item_increase" id="otherSide_increase">+</button>
-                                    <p class="item_count" id="otherSide_counter">0</p>
-                                    <button class="menu_item_decrease" id="otherSide_decrease">-</button>                  
+                        <div class="side_footer">
+                            <div class="menuItem_multiplied">
+                                <div class="item_counter">
+                                    <div class="item_button_wrapper">               
+                                        <button class="menu_item_increase" id="otherSide_increase">+</button>
+                                        <p class="item_count" id="otherSide_counter">0</p>
+                                        <button class="menu_item_decrease" id="otherSide_decrease">-</button>                  
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cancelOrAdd">
-                            <button class="cancelButton" id="side_cancel">Cancel</button>
-                            <button class="addButton" id="side_add">Add</button>
-                        </div>
-                    </div> 
+                            <div class="cancelOrAdd">
+                                <button class="cancelButton" id="side_cancel">Cancel</button>
+                                <button class="addButton" id="side_add">Add</button>
+                            </div>
+                        </div> 
                 </div>
             </div>
         </div>
@@ -952,12 +940,10 @@
         <div class="modal_bg_toppings">
             <div class="modal_content_toppings">
                 <div class="toppings_header">
-                    <div class="section-title-toppings">
-                        <div>Toppings</div>
-                        <button class="close_button" id="close_toppings_modal">&#x2715</button>
-                    </div>
+                    <div class="slide-title">Toppings</div>
+                    <button class="close_button" id="close_toppings_modal">&#x2715</button>
                 </div>
-                <div class="section-topping-content">
+                <div class="toppings-body">
                     <div class="section-row">
                         <div class="left-item">
                             <div class="item-name2">
@@ -1172,10 +1158,8 @@
     <div class="modal_bg_softDrink">
         <div class="modal_content_softDrink">
             <div class="softDrink_header">
-                <div class="section-title-softDrink">
-                    <div>Drinks</div>
-                    <button class="close_button" id="close_softDrink_modal">&#x2715</button>
-                </div>
+                <div class="slide-title">Drinks</div>
+                <button class="close_button" id="close_softDrink_modal">&#x2715</button>
             </div>
             <div class="softDrink_body">
                 <div class="section_item">
@@ -1227,10 +1211,8 @@
     <div class="modal_bg_beer">
         <div class="modal_content_beer">
             <div class="beer_header">
-                <div class="section-title-beer">
-                    <div>Beers</div>
-                    <button class="close_button" id="close_beer_modal">&times;</button>
-                </div>
+                <div class="slide-title">Beers</div>
+                <button class="close_button" id="close_beer_modal">&#x2715</button>
             </div>
             <div class="beer_body">
                 <div class="section_item">
