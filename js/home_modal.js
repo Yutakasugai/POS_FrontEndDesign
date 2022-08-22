@@ -28,6 +28,19 @@ document.querySelector('#close_removeItems_modal').addEventListener('click', () 
   document.querySelector('.modal_bg').style.display = 'none';
 });
 
+// close modal for vege and shrimp ramen
+document.querySelector('#close_ramen_modal_shrimp').addEventListener('click', () => {
+  document.querySelector('.modal_bg_shrimp').style.display = 'none';
+});
+document.querySelector('#close_addToppings_modal_shrimp').addEventListener('click', () => {
+  document.querySelector('.modal_bg_shrimp').style.display = 'none';
+});
+
+document.querySelector('#close_removeItems_modal_shrimp').addEventListener('click', () => {
+  document.querySelector('.modal_bg_shrimp').style.display = 'none';
+});
+
+
 //miso
 misoModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
@@ -48,8 +61,8 @@ shioModal.addEventListener('click', () => {
 
 //shrimp
 shrimpModal.addEventListener('click', () => {
-  document.querySelector('.modal_bg').style.display = 'block';
-  document.querySelector('.modal_bg').classList.add('bg-active');
+  document.querySelector('.modal_bg_shrimp').style.display = 'block';
+  document.querySelector('.modal_bg_shrimp').classList.add('bg-active');
 });
 
 //Hot Miso
@@ -66,8 +79,8 @@ curryModal.addEventListener('click', () => {
 
 //Vegetable
 vegeModal.addEventListener('click', () => {
-  document.querySelector('.modal_bg').style.display = 'block';
-  document.querySelector('.modal_bg').classList.add('bg-active');
+  document.querySelector('.modal_bg_shrimp').style.display = 'block';
+  document.querySelector('.modal_bg_shrimp').classList.add('bg-active');
 });
 
 //tomato
