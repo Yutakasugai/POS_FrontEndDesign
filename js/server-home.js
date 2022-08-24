@@ -1,45 +1,158 @@
-const phoneBtn = document.getElementById('phone-button');
-const takeoutBtn = document.getElementById('takeout-button');
-const extraBox_1 = document.getElementById('colunm-1'); 
-const extraBox_2 = document.getElementById('colunm-2');
-const controller_1and2 = document.querySelector('.togo-phone'); 
+const controller_1 = document.querySelector('.ex1');
+const controller_2 = document.querySelector('.ex2');
+const controller_3 = document.querySelector('.ex3');
+const controller_4 = document.querySelector('.ex4');
 
-const doneBtn_1 = document.getElementById('doneBtn_1'); 
-const doneBtn_2 = document.getElementById('doneBtn_2'); 
+const controller_5and6 = document.querySelector('.ex5');
+const controller_7and8 = document.querySelector('.ex7');
+
 
 // From nothing to displaying 1st box
-phoneBtn.onclick = () => {
-    if (extraBox_1.style.display === 'block'){
-        console.log("Now box1 displayed"); 
-        extraBox_2.style.display = 'block'; 
-        extraBox_2.style.marginLeft = '10px'; 
-        controller_1and2.style.width = '100%'; 
+let phoneBtn = document.getElementById('phone-button');
+let click_count = 1;
+var hide = true;
+phoneBtn.addEventListener("click", function(){
+    console.log(click_count);
+    switch(click_count){
+        case 1:
+            var order = document.getElementById("ex_table1");
+            if(hide == true){
+                controller_1.style.width = "49%";
+                order.style.display = "block";
+                click_count++;
+                order.style.marginBottom = "10px";
+            }
+            break;
+        case 2:
+            var order = document.getElementById("ex_table2"); 
+            if(hide == true){
+                order.style.display = "block";
+                controller_2.style.width = "49%";
+                click_count++;
+                order.style.marginBottom = "10px";
+    
+            }
+            break;
+        case 3:
+            var order = document.getElementById("ex_table3");
+            if(hide == true){
+                order.style.display = "block";
+                controller_3.style.width = "49%";
+                click_count++;
+                order.style.marginBottom = "10px";
+            }
+            break;
+        case 4:
+            var order = document.getElementById("ex_table4");
+            if(hide == true){
+                order.style.display = "block";
+                controller_4.style.width = "49%";
+                click_count++;
+                order.style.marginBottom = "10px";
 
-    } else {
-        extraBox_1.style.display = 'block'; 
-        controller_1and2.style.width = '49%'; 
+            }
+            break;            
     }
 }
+);
 
-doneBtn_1.onclick = () => {
-    if (extraBox_2.style.display === 'block') {
-        extraBox_1.style.display = 'none';
-        extraBox_2.style.marginLeft = '0px'; 
-        controller_1and2.style.width = '49%'; 
-    } else {
-        extraBox_1.style.display = 'none'; 
+let takeoutBtn = document.getElementById('takeout-button');
+let take_count = 1;
+var take_hide = true;
+takeoutBtn.addEventListener("click", function(){
+    switch(take_count){
+        case 1:
+            var order = document.getElementById("ex_table5");
+            if(take_hide == true){
+                order.style.display = "block";
+                controller_5and6.style.width = "49%";
+                take_count++;
+            }
+            break;
+        case 2:
+            var order = document.getElementById("ex_table6");
+            if(take_hide == true){
+                order.style.display = "block";
+                controller_5and6.style.width = "100%";
+                take_count++;
+            }
+            break;
+        case 3:
+            var order = document.getElementById("ex_table7");
+            if(take_hide == true){
+                order.style.display = "block";
+                controller_7and8.style.width = "49%";
+                take_count++;
+            }
+            break;
+        case 4:
+            var order = document.getElementById("ex_table8");
+            if(take_hide == true){
+                order.style.display = "block";
+                controller_7and8.style.width = "100%";
+                take_count++;
+            }
+            break;            
     }
 }
+);
 
-doneBtn_2.onclick = () => {
-    if (extraBox_1.style.display === 'block') {
-        extraBox_2.style.display = 'none';
-        extraBox_2.style.marginLeft = '0px'; 
-        controller_1and2.style.width = '49%'; 
-    } else {
-        extraBox_2.style.display = 'none'; 
+doneBtn1.addEventListener("click", function(){
+    console.log("DONE1" + click_count);
+    var order = document.getElementById("ex_table1");
+    if(order.style.display === "block"){
+        order.style.display = "none";
+        click_count = 1;
+        controller_1and2.style.width = "49%";
+        document.getElementById("ex_table2").style.marginLeft = "20px";
+    }
+    if(order.style.display === "none"){
+        document.getElementById("ex_table2").style.marginLeft = "0px";
     }
 }
+);
+
+doneBtn2.addEventListener("click", function(){
+    console.log("DONE2" + click_count);
+    var order = document.getElementById("ex_table2");
+    if(order.style.display === "block"){
+        order.style.display = "none";
+        click_count = 1;
+        controller_1and2.style.width = "49%";
+    }
+          
+}
+);
+
+doneBtn3.addEventListener("click", function(){
+    console.log("DONE3" + click_count);
+    var order = document.getElementById("ex_table3");
+    if(order.style.display === "block"){
+        order.style.display = "none";
+        click_count = 1;
+        controller_3and4.style.width = "49%";
+        document.getElementById("ex_table4").style.marginLeft = "20px";
+    }
+    if(order.style.display === "none"){
+        document.getElementById("ex_table4").style.marginLeft = "0px";
+    }
+
+}            
+);
+
+doneBtn4.addEventListener("click", function(){
+    console.log("DONE4" + click_count);
+    var order = document.getElementById("ex_table4");
+    if(order.style.display === "block"){
+        order.style.display = "none";
+        click_count = 1;
+        document.getElementById("ex_table3").style.width = "49%";
+        controller_3and4.style.width = "49%";
+    }
+           
+}
+);
+
 
 // UpdateBtn Modal Set 
 const updateBtnModal = document.getElementById('updateBtn-modal'); 

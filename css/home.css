@@ -1,8 +1,15 @@
+
 body {
-    background: white;
-    font-family: "Myriad Pro", 
-    "Helvetica Neue", Helvetica, 
-    Arial, Sans-Serif;
+    background: black;
+    font-family: "Kaisei Tokumin", Sans-Serif;
+}
+
+.title{
+    text-align: center;
+    font-size: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(248, 248, 187);
+    margin-bottom: -10px;
 }
 
 /* User Info & Phone and Take Out buttons */
@@ -10,6 +17,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 0.1fr 1fr;
     height: auto;
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding: 10px;
 }
 .page-container button{
     margin-top: 4px;
@@ -26,14 +36,14 @@ body {
     text-align: end;
 }
 #phone-button {
-    background-color: lightpink;
+    background-color: gold;
     padding: 8px 35px;
     border-radius: 10px;
     border-width: 2.5px;
     border-color: black;
 }
 #takeout-button {
-    background-color: lightblue;
+    background-color: ivory;
     padding: 8px 28px;
     border-radius: 10px;
     border-width: 2.5px;
@@ -51,6 +61,7 @@ body {
     padding-left: 10px;
     margin: 5px;
 }
+
 .table{
     flex: 1;
     border: 1px;
@@ -63,14 +74,14 @@ body {
     margin-top: 10px;
 }
 .update-button{
-    background-color: lightcoral;
+    background-color:lightcoral;
     padding: 10px 12px;
     border-radius: 10px;
     border-width: 2.5px;
     border-color: black;
 }
 .add-button{
-    background-color: aqua;
+    background-color: lightcyan;
     padding: 10px 21px;
     border-radius: 10px;
     border-width: 2.5px;
@@ -122,30 +133,116 @@ body {
     text-align: center;
     margin-top: 10px;
 }
+.update-view{
+    text-align: center;
+    margin-top: 10px;
+}
 .done-button{
     background-color: lightgreen;
-    padding: 10px 18px;
+    padding: 10px 19px;
     border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
 }
 .view-button{
-    background-color: lightblue;
+    background-color: lightcyan;
     padding: 10px 18px;
     border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
 }
+.take-update-button{
+    background-color:lightcoral;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+}
+
+
 /* Take Out and Phone Box - 1 row*/
-.togo-phone {
-    width: none;
+.extra_container{
+    display: flex;
+}
+
+.extra_container2{
+    margin-top: -10px;
+    display: flex;
+} 
+
+.extra_container3{
+    margin-top: -10px;
+} 
+.extra_container4{
+    margin-top: 10px;
+} 
+
+.extra_phone{
+    flex: 1;
+    border: 1px;
+    border-style: solid;
+    background-color: gold;
+    height: 90px;
+    display:none;
+    
+}
+.extra_takeout{
+    flex: 1;
+    border: 1px;
+    border-style: solid;
+    background-color: ivory;
+    height: 90px;
+    display:none;
+}
+
+.table-container {
+    margin-top: 10px;
+}
+
+/* Tabel-1 and Table-2 */
+.ex1 {
+    display: flex;
+    margin-top: 10px;
+}
+
+.ex2 {
+    display: flex;
+    margin-top: 10px;;
+    margin-left: 10px;
+}
+
+/* Table-3 and Table-4 */
+.ex3 {
+    display: flex;
+    margin-top: 10px;;
+}
+
+.ex4{
+    display: flex;
+    margin-top: 10px;;
+    margin-left: 10px;
+}
+
+/* Table-5 and Table-6 */
+.ex5 {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
 }
-#colunm-2 {
-    margin-left: 0px;
-    display: none;
+#ex_table6 {
+    margin-left: 10px;
 }
-#colunm-1 {
-    display: none;
+
+/* Table-7 and Table-8 */
+.ex7 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
 }
+#ex_table8 {
+    margin-left: 10px;
+}
+
 
 /* Display: 0; does not do anything else
 width: none; does not do anything as well */
