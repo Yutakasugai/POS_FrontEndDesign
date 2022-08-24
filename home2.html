@@ -160,33 +160,7 @@
                 <button class="modalButton" id="shioSA_Modal">Shio SET A</button>
             </td>
         </tr>
-        <!--
-        <tr id="row_shrimpSA" class="hidden_row">
-            <td colspan=4>
-                <button class="modalButton" id="shrimpSA_Modal">Shrimp SET A</button>
-            </td>
-        </tr>
-        <tr id="row_hotMisoSA" class="hidden_row">
-            <td colspan=4>
-                <button class="modalButton" id="hotMisoSA_Modal">Hot Miso SET A</button>
-            </td>
-        </tr>
-        <tr id="row_currySA" class="hidden_row">
-            <td colspan=4>
-                <button class="modalButton" id="currySA_Modal">Curry SET A</button>
-            </td>
-        </tr>
-        <tr id="row_vegeSA" class="hidden_row">
-            <td colspan=4>
-                <button class="modalButton" id="vegeSA_Modal">Vegetable SET A</button>
-            </td>
-        </tr>
-        <tr id="row_tomatoSA" class="hidden_row">
-            <td colspan=4>
-                <button class="modalButton" id="tomatoSA_Modal">Tomato SET A</button>
-            </td>
-        </tr>
-        -->
+
 
         <tr id="set_B_row" 
         class="hidden_row"
@@ -260,67 +234,6 @@
                 </div>
             </th>
         </tr>
-        <!--
-        onclick="
-        showRow('row_top1', 'row_top2', 'row_top3', 'row_top4', 'row_top5', 'row_top6', 'row_top7', 'row_top8', 'row_top9', 'row_top10');
-        hideRow('ramen_row', 'set_row', 'side_dish_row', 'dri_des_row')
-        ">
-            <th colspan=4>
-                <div id="topping_box">Topping</div>
-            </th>
-        </tr>
-        <tr id="row_top1" class="hidden_row">
-            <td colspan=4>
-                <div class="simple_box">Chashu (shoulder or belly)</div> 
-            </td>
-        </tr>
-        <tr id="row_top2" class="hidden_row">
-            <td colspan=4>
-                <div class="simple_box">Shrimp Cakes (2 pcs)</div>              
-            </td>
-        </tr>
-        <tr id="row_top3" class="hidden_row">
-            <td colspan=4>
-                <div class="simple_box">Boiled Egg</div>                
-            </td>
-        </tr>
-        <tr id="row_top4" class="hidden_row">
-            <td colspan=4>
-                <div class="simple_box">Green Onion</div>
-                
-            </td>
-        </tr>
-        <tr id="row_top5" class="hidden_row">
-            <td colspan=4>
-                <div class="simple_box">Menma</div>               
-            </td>
-        </tr>
-        <tr id="row_top6" class="hidden_row">
-            <td colspan=4>
-                <div class="simple_box">Wet Seaweed</div>                 
-            </td>
-        </tr>
-        <tr id="row_top7" class="hidden_row">
-            <td colspan=4>
-                <div class="simple_box">Dried Seaweed</div>                
-            </td>
-        </tr>
-        <tr id="row_top8" class="hidden_row">
-            <td colspan=4>
-                <div class="simple_box">Bean Sprouts</div>
-            </td>
-        </tr>
-        <tr id="row_top9" class="hidden_row">
-            <td colspan=4>
-                <div class="simple_box">Butter</div>             
-            </td>
-        </tr>
-        <tr id="row_top10" class="hidden_row">
-            <td colspan=4>
-                <div class="simple_box">Sweet Corn</div>               
-            </td>
-        </tr>
-        -->
 
         <!-- Drink and dessert row -->
         <tr id="dri_des_row" onclick="
@@ -778,6 +691,426 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+
+         <!-- Modal for shrimp and vegetable ramen -->
+         <div class="modal_bg_shrimp">
+            <div class="modal_content">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- modal slide 1 (Preferences) -->
+                        <div class="swiper-slide">
+                            <div class="pref-section-content">
+                                <div class="slide-header">
+                                    <div class="slide-title">
+                                        Preferences
+                                      </div>
+                                    <button class="close_button" id="close_ramen_modal_shrimp">&#x2715</button>
+                                </div>
+                                <div class="pref-section-body">
+                                    <div class="slide-item">
+                                        <div class="containerFor3items">
+                                            <div class="item-name">Soup:</div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref" id="rich_soup">
+                                                <label for="rich_soup">Rich</label>
+                                            </div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref" id="regular_soup">
+                                                <label for="rich_soup">Regular</label>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="slide-item">
+                                        <div class="containerFor3items">
+                                            <div class="item-name">Noodles:</div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref" id="noodles_ex_hard">
+                                                <label for="noodles_ex_hard">Ex Hard</label>
+                                            </div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref" id="noodles_hard">
+                                                <label for="noodles_hard">Hard</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide-item">
+                                        <div class="containerFor3items">
+                                            <div class="item-name"></div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref" id="noodles_soft">
+                                                <label for="noodles_soft">Soft</label>
+                                            </div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref" id="noodles_ex_soft">
+                                                <label for="noodles_ex_soft">Ex Soft</label>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="slide-item">
+                                        <div class="containerFor3items">
+                                            <div class="item-name">Saltiness:</div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref" id="salty_soup">
+                                                <label for="salty_soup">More</label>
+                                            </div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref" id="less_salty_soup">
+                                                <label for="less_salty_soup">Less</label>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="slide-item">
+                                        <div class="containerFor3items">
+                                            <div class="item-name">Oil:</div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref" id="ex_oil">
+                                                <label for="ex_oil">More</label>
+                                            </div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref"  id="less_oil">
+                                                <label for="less_oil">Less</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-item">
+                                        <div class="containerFor3items">
+                                            <div class="item-name">Garlic:</div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref" id="house_chili">
+                                                <label for="ex_oil">Chili</label>
+                                            </div>
+                                            <div class="item-preference">
+                                                <input type="checkbox" class="checkboxForPref"  id="grounded">
+                                                <label for="less_oil">Grounded</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ramen_pref_footer">
+                                        <div class="menuItem_multiplied">
+                                            <div class="item_counter">
+                                                <div class="item_button_wrapper">               
+                                                    <button class="menu_item_increase" id="toppingTop_increase">+</button>
+                                                    <p class="item_count" id="toppingTop_counter">0</p>
+                                                    <button class="menu_item_decrease" id="toppingTop_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cancelOrAdd">
+                                            <button class="cancelButton" id="topping_cancel">Cancel</button>
+                                            <button class="addButton" id="topping_add">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- modal slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="addToppings-section-content">
+                                <div class="slide-header">
+                                    <div class="slide-title">
+                                        Add Toppings
+                                      </div>
+                                    <button class="close_button" id="close_addToppings_modal_shrimp">&#x2715</button>
+                                </div>
+                                <div class="addToppings-section-body">
+                                    <div class="section-row">
+                                        <div class="left-item">
+                                            <div class="item-name2">
+                                                Beans
+                                            </div>
+                                            <!-- Topping counter button -->
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="beans_increase">+</button>
+                                                    <h1 class="topping_counter" id="beans_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="beans_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right-item">
+                                            <div class="item-name2">
+                                                Eggs
+                                            </div>
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="eggs_increase">+</button>
+                                                    <h1 class="topping_counter" id="eggs_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="eggs_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-row">
+                                        <div class="left-item">
+                                            <div class="item-name2">
+                                                Belly
+                                            </div>
+                                            <!-- Topping counter button -->
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="belly_increase">+</button>
+                                                    <h1 class="topping_counter" id="belly_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="belly_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right-item">
+                                            <div class="item-name2">
+                                                Shoulder
+                                            </div>
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="shoulder_increase">+</button>
+                                                    <h1 class="topping_counter" id="shoulder_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="shoulder_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-row">
+                                        <div class="left-item">
+                                            <div class="item-name2">
+                                                S.Cake
+                                            </div>
+                                            <!-- Topping counter button -->
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="sCake_increase">+</button>
+                                                    <h1 class="topping_counter" id="sCake_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="sCake_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right-item">
+                                            <div class="item-name2">
+                                                Wakame
+                                            </div>
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="wakame_increase">+</button>
+                                                    <h1 class="topping_counter" id="wakame_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="wakame_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-row">
+                                        <div class="left-item">
+                                            <div class="item-name2">
+                                                Nori
+                                            </div>
+                                            <!-- Topping counter button -->
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="nori_increase">+</button>
+                                                    <h1 class="topping_counter" id="nori_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="nori_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right-item">
+                                            <div class="item-name2">
+                                                G.Oninion
+                                            </div>
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="gOni_increase">+</button>
+                                                    <h1 class="topping_counter" id="gOni_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="gOni_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-row">
+                                        <div class="left-item">
+                                            <div class="item-name2">
+                                                Cheese
+                                            </div>
+                                            <!-- Topping counter button -->
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="cheese_increase">+</button>
+                                                    <h1 class="topping_counter" id="cheese_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="cheese_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right-item">
+                                            <div class="item-name2">
+                                                Butter
+                                            </div>
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="butter_increase">+</button>
+                                                    <h1 class="topping_counter" id="butter_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="butter_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-row">
+                                        <div class="left-item">
+                                            <div class="item-name2">
+                                                Corn
+                                            </div>
+                                            <!-- Topping counter button -->
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="corn_increase">+</button>
+                                                    <h1 class="topping_counter" id="corn_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="corn_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right-item">
+                                            <div class="item-name2">
+                                                Fish.C
+                                            </div>
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="fCake_increase">+</button>
+                                                    <h1 class="topping_counter" id="fCake_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="fCake_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-row">
+                                        <div class="left-item">
+                                            <div class="item-name2">
+                                                Bloccoli
+                                            </div>
+                                            <!-- Topping counter button -->
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="bloccoli_increase">+</button>
+                                                    <h1 class="topping_counter" id="bloccoli_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="bloccoli_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right-item">
+                                            <div class="item-name2">
+                                                Ex.Noodles
+                                            </div>
+                                            <div class="toppingCounter">
+                                                <div class="topping_button_wrapper">               
+                                                    <button class="topping_button_increase" id="exNoodles_increase">+</button>
+                                                    <h1 class="topping_counter" id="exNoodles_counter">0</h1>
+                                                    <button class="topping_button_decrease" id="exNoodles_decrease">-</button>                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--modal slide 3-->
+                        <div class="swiper-slide">
+                            <!--Remove Toppings section-->
+                            <div class="rToppings-section-content">
+                                <div class="slide-header">
+                                    <div class="slide-title">
+                                        Remove Toppings
+                                    </div>
+                                    <button class="close_button" id="close_removeItems_modal_shrimp">&#x2715</button>
+                                </div>
+                                <div class="rToppings-section-body">
+                                    <div class="section-row">
+                                        <div class="left-item">
+                                            <div class="item-name2">
+                                                G.onion
+                                            </div>
+                                            <div class="r-or-sButton">
+                                                <button class="rButton">R</button>
+                                                <button class="sButton">S</button>
+                                            </div>
+                                        </div>
+                                        <div class="right-item">
+                                            <div class="item-name2">
+                                                Onion
+                                            </div>
+                                            <div class="r-or-sButton">
+                                                <button class="rButton">R</button>
+                                                <button class="sButton">S</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-row">
+                                        <div class="left-item">
+                                            <div class="item-name2">
+                                                Beans
+                                            </div>
+                                            <div class="r-or-sButton">
+                                                <button class="rButton">R</button>
+                                                <button class="sButton">S</button>
+                                            </div>
+                                        </div>
+                                        <div class="right-item">
+                                            <div class="item-name2">
+                                                Egg
+                                            </div>
+                                            <div class="r-or-sButton">
+                                                <button class="rButton">R</button>
+                                                <button class="sButton">S</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-row">
+                                        <div class="left-item">
+                                            <div class="item-name2">
+                                                Noodle
+                                            </div>
+                                            <div class="r-or-sButton">
+                                                <button class="rButton">R</button>
+                                                <button class="sButton">S</button>
+                                            </div>
+                                        </div>
+                                        <div class="right-item">
+                                            <div class="item-name2">
+                                                Fish.C
+                                            </div>
+                                            <div class="r-or-sButton">
+                                                <button class="rButton">R</button>
+                                                <button class="sButton">S</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-row">
+                                        <div class="left-item">
+                                            <div class="item-name2">
+                                                Lettuce
+                                            </div>
+                                            <div class="r-or-sButton">
+                                                <button class="rButton">R</button>
+                                                <button class="sButton">S</button>
+                                            </div>
+                                        </div>
+                                        <!--no item here-->
+                                        <div class="right-item">
+                                            <div class="item-name2">
+                                            </div>
+                                            <div class="r-or-sButton">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+
+
 
         <!-- Modal for Chashu & Don -->
         <div class="modal_bg_chashu">
