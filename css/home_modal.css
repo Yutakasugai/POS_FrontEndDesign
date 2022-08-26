@@ -657,6 +657,10 @@
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
 }
+.topping_footer {
+  margin-top: 10vh;
+}
+
 
 /* modal for drink*/
 .modal_bg_softDrink {
