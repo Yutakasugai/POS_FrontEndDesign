@@ -8,150 +8,148 @@ const controller_7and8 = document.querySelector('.ex7');
 
 
 // From nothing to displaying 1st box
-let phoneBtn = document.getElementById('phone-button');
-let click_count = 1;
-var hide = true;
-phoneBtn.addEventListener("click", function(){
-    console.log(click_count);
-    switch(click_count){
-        case 1:
-            var order = document.getElementById("ex_table1");
-            if(hide == true){
-                controller_1.style.width = "49%";
-                order.style.display = "block";
-                click_count++;
-                order.style.marginBottom = "10px";
-            }
-            break;
-        case 2:
-            var order = document.getElementById("ex_table2"); 
-            if(hide == true){
-                order.style.display = "block";
-                controller_2.style.width = "49%";
-                click_count++;
-                order.style.marginBottom = "10px";
+// S
+// phoneBtn.addEventListener("click", function(){
+//     console.log(click_count);
+//     switch(click_count){
+//         case 1:
+//             var order = document.getElementById("ex_table1");
+//             if(hide == true){
+//                 controller_1.style.width = "49%";
+//                 order.style.display = "block";
+//                 click_count++;
+//                 order.style.marginBottom = "10px";
+//             }
+//             break;
+//         case 2:
+//             var order = document.getElementById("ex_table2"); 
+//             if(hide == true){
+//                 order.style.display = "block";
+//                 controller_2.style.width = "49%";
+//                 click_count++;
+//                 order.style.marginBottom = "10px";
     
-            }
-            break;
-        case 3:
-            var order = document.getElementById("ex_table3");
-            if(hide == true){
-                order.style.display = "block";
-                controller_3.style.width = "49%";
-                click_count++;
-                order.style.marginBottom = "10px";
-            }
-            break;
-        case 4:
-            var order = document.getElementById("ex_table4");
-            if(hide == true){
-                order.style.display = "block";
-                controller_4.style.width = "49%";
-                click_count++;
-                order.style.marginBottom = "10px";
+//             }
+//             break;
+//         case 3:
+//             var order = document.getElementById("ex_table3");
+//             if(hide == true){
+//                 order.style.display = "block";
+//                 controller_3.style.width = "49%";
+//                 click_count++;
+//                 order.style.marginBottom = "10px";
+//             }
+//             break;
+//         case 4:
+//             var order = document.getElementById("ex_table4");
+//             if(hide == true){
+//                 order.style.display = "block";
+//                 controller_4.style.width = "49%";
+//                 click_count++;
+//                 order.style.marginBottom = "10px";
 
-            }
-            break;            
-    }
-}
-);
+//             }
+//             break;            
+//     }
+// }
+// );
 
-let takeoutBtn = document.getElementById('takeout-button');
-let take_count = 1;
-var take_hide = true;
-takeoutBtn.addEventListener("click", function(){
-    switch(take_count){
-        case 1:
-            var order = document.getElementById("ex_table5");
-            if(take_hide == true){
-                order.style.display = "block";
-                controller_5and6.style.width = "49%";
-                take_count++;
-            }
-            break;
-        case 2:
-            var order = document.getElementById("ex_table6");
-            if(take_hide == true){
-                order.style.display = "block";
-                controller_5and6.style.width = "100%";
-                take_count++;
-            }
-            break;
-        case 3:
-            var order = document.getElementById("ex_table7");
-            if(take_hide == true){
-                order.style.display = "block";
-                controller_7and8.style.width = "49%";
-                take_count++;
-            }
-            break;
-        case 4:
-            var order = document.getElementById("ex_table8");
-            if(take_hide == true){
-                order.style.display = "block";
-                controller_7and8.style.width = "100%";
-                take_count++;
-            }
-            break;            
-    }
-}
-);
+// let takeoutBtn = document.getElementById('takeout-button');
+// let take_count = 1;
+// var take_hide = true;
+// takeoutBtn.addEventListener("click", function(){
+//     switch(take_count){
+//         case 1:
+//             var order = document.getElementById("ex_table5");
+//             if(take_hide == true){
+//                 order.style.display = "block";
+//                 controller_5and6.style.width = "49%";
+//                 take_count++;
+//             }
+//             break;
+//         case 2:
+//             var order = document.getElementById("ex_table6");
+//             if(take_hide == true){
+//                 order.style.display = "block";
+//                 controller_5and6.style.width = "100%";
+//                 take_count++;
+//             }
+//             break;
+//         case 3:
+//             var order = document.getElementById("ex_table7");
+//             if(take_hide == true){
+//                 order.style.display = "block";
+//                 controller_7and8.style.width = "49%";
+//                 take_count++;
+//             }
+//             break;
+//         case 4:
+//             var order = document.getElementById("ex_table8");
+//             if(take_hide == true){
+//                 order.style.display = "block";
+//                 controller_7and8.style.width = "100%";
+//                 take_count++;
+//             }
+//             break;            
+//     }
+// }
+// );
 
-doneBtn1.addEventListener("click", function(){
-    console.log("DONE1" + click_count);
-    var order = document.getElementById("ex_table1");
-    if(order.style.display === "block"){
-        order.style.display = "none";
-        click_count = 1;
-        controller_1and2.style.width = "49%";
-        document.getElementById("ex_table2").style.marginLeft = "20px";
-    }
-    if(order.style.display === "none"){
-        document.getElementById("ex_table2").style.marginLeft = "0px";
-    }
-}
-);
+// doneBtn1.addEventListener("click", function(){
+//     console.log("DONE1" + click_count);
+//     var order = document.getElementById("ex_table1");
+//     if(order.style.display === "block"){
+//         order.style.display = "none";
+//         click_count = 1;
+//         controller_1and2.style.width = "49%";
+//         document.getElementById("ex_table2").style.marginLeft = "20px";
+//     }
+//     if(order.style.display === "none"){
+//         document.getElementById("ex_table2").style.marginLeft = "0px";
+//     }
+// }
+// );
 
-doneBtn2.addEventListener("click", function(){
-    console.log("DONE2" + click_count);
-    var order = document.getElementById("ex_table2");
-    if(order.style.display === "block"){
-        order.style.display = "none";
-        click_count = 1;
-        controller_1and2.style.width = "49%";
-    }
+// doneBtn2.addEventListener("click", function(){
+//     console.log("DONE2" + click_count);
+//     var order = document.getElementById("ex_table2");
+//     if(order.style.display === "block"){
+//         order.style.display = "none";
+//         click_count = 1;
+//         controller_1and2.style.width = "49%";
+//     }
           
-}
-);
+// }
+// );
 
-doneBtn3.addEventListener("click", function(){
-    console.log("DONE3" + click_count);
-    var order = document.getElementById("ex_table3");
-    if(order.style.display === "block"){
-        order.style.display = "none";
-        click_count = 1;
-        controller_3and4.style.width = "49%";
-        document.getElementById("ex_table4").style.marginLeft = "20px";
-    }
-    if(order.style.display === "none"){
-        document.getElementById("ex_table4").style.marginLeft = "0px";
-    }
+// doneBtn3.addEventListener("click", function(){
+//     console.log("DONE3" + click_count);
+//     var order = document.getElementById("ex_table3");
+//     if(order.style.display === "block"){
+//         order.style.display = "none";
+//         click_count = 1;
+//         controller_3and4.style.width = "49%";
+//         document.getElementById("ex_table4").style.marginLeft = "20px";
+//     }
+//     if(order.style.display === "none"){
+//         document.getElementById("ex_table4").style.marginLeft = "0px";
+//     }
 
-}            
-);
+// }            
+// );
 
-doneBtn4.addEventListener("click", function(){
-    console.log("DONE4" + click_count);
-    var order = document.getElementById("ex_table4");
-    if(order.style.display === "block"){
-        order.style.display = "none";
-        click_count = 1;
-        document.getElementById("ex_table3").style.width = "49%";
-        controller_3and4.style.width = "49%";
-    }
+// doneBtn4.addEventListener("click", function(){
+//     console.log("DONE4" + click_count);
+//     var order = document.getElementById("ex_table4");
+//     if(order.style.display === "block"){
+//         order.style.display = "none";
+//         click_count = 1;
+//         document.getElementById("ex_table3").style.width = "49%";
+//         controller_3and4.style.width = "49%";
+//     }
            
-}
-);
+// }
+// );
 
 
 // UpdateBtn Modal Set 

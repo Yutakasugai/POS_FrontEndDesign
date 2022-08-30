@@ -1,26 +1,36 @@
 
-body {
-    background: black;
+html, body {
+    background: #585858;
     font-family: "Kaisei Tokumin", Sans-Serif;
+    position: fixed;
+    overflow-y: scroll;
+    height: 100%;
+    width: auto;
 }
 
-.title{
-    text-align: center;
-    font-size: 15px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(248, 248, 187);
-    margin-bottom: -10px;
+
+
+.wrapper{
+    height:100%;
+    width: 100%;
+    position: sticky;
+    display: grid;
+    grid-template-rows: 125px auto 90px;
 }
 
 /* User Info & Phone and Take Out buttons */
 .page-container {
+    grid-row: 1;
     display: grid;
     grid-template-columns: 1fr 0.1fr 1fr;
-    height: auto;
-    background-color: lightgrey;
+    background-color: #343434;
     border-radius: 20px;
     padding: 10px;
+    color: #c3c3c3;
+    align-self: flex-start;
 }
+
+
 .page-container button{
     margin-top: 4px;
 }
@@ -32,8 +42,9 @@ body {
     /* padding: 3px; */
 }
 .page-buttons {
-    align-self: center;
+    align-self: right;
     text-align: end;
+    margin-top: 10px;
 }
 #phone-button {
     background-color: gold;
@@ -42,12 +53,32 @@ body {
     border-width: 2.5px;
     border-color: black;
 }
+#phone-button:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
+
 #takeout-button {
     background-color: ivory;
     padding: 8px 28px;
     border-radius: 10px;
     border-width: 2.5px;
     border-color: black;
+}
+
+#takeout-button:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
+
+#scrollable{
+    grid-row:2;
+    flex: 1;
+    overflow:auto;
+    overflow-y: scroll;
+    position:relative;
 }
 
 
@@ -80,6 +111,11 @@ body {
     border-width: 2.5px;
     border-color: black;
 }
+.update-button:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
 .add-button{
     background-color: lightcyan;
     padding: 10px 21px;
@@ -87,12 +123,18 @@ body {
     border-width: 2.5px;
     border-color: black;
 }
-
+.add-button:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
 /* Tabel-1 and Table-2 */
 
 .table1and2 {
     display: flex;
     flex-direction: row;
+    overflow-y: scroll;
+    max-height: 100%;
 }
 #table2 {
     margin-left: 10px;
@@ -103,6 +145,8 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
+    overflow-y: scroll;
+    max-height: 100%;
 }
 #table4 {
     margin-left: 10px;
@@ -113,6 +157,8 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
+    overflow-y: scroll;
+    max-height: 100%;
 }
 #table6 {
     margin-left: 10px;
@@ -123,6 +169,8 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
+    overflow-y: scroll;
+    max-height: 100%;
 }
 #table8 {
     margin-left: 10px;
@@ -162,19 +210,30 @@ body {
 
 /* Take Out and Phone Box - 1 row*/
 .extra_container{
+    margin-top: 10px;
     display: flex;
+    overflow-y: scroll;
+    max-height: 100%;
 }
 
 .extra_container2{
-    margin-top: -10px;
+    margin-top: 10px;
     display: flex;
+    overflow-y: scroll;
+    max-height: 100%;
 } 
 
 .extra_container3{
-    margin-top: -10px;
+    margin-top: 10px;
+    display: flex;
+    overflow-y: scroll;
+    max-height: 100%;
 } 
 .extra_container4{
     margin-top: 10px;
+    display: flex;
+    overflow-y: scroll;
+    max-height: 100%;
 } 
 
 .extra_phone{
@@ -183,7 +242,7 @@ body {
     border-style: solid;
     background-color: gold;
     height: 90px;
-    display:none;
+
     
 }
 .extra_takeout{
@@ -192,55 +251,61 @@ body {
     border-style: solid;
     background-color: ivory;
     height: 90px;
-    display:none;
 }
 
-.table-container {
-    margin-top: 10px;
-}
 
 /* Tabel-1 and Table-2 */
 .ex1 {
     display: flex;
-    margin-top: 10px;
+    flex-direction: row;
+    width: 50%;
 }
 
 .ex2 {
     display: flex;
-    margin-top: 10px;;
+    flex-direction: row;
     margin-left: 10px;
+    width: 50%;
 }
 
 /* Table-3 and Table-4 */
 .ex3 {
     display: flex;
-    margin-top: 10px;;
+    flex-direction: row;
+    width: 50%;
 }
 
 .ex4{
     display: flex;
-    margin-top: 10px;;
+    flex-direction: row;
     margin-left: 10px;
+    width: 50%;
 }
 
 /* Table-5 and Table-6 */
 .ex5 {
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
+    width: 50%;
 }
-#ex_table6 {
+.ex6 {
+    display: flex;
+    flex-direction: row;
     margin-left: 10px;
+    width: 50%;
 }
 
 /* Table-7 and Table-8 */
 .ex7 {
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
+    width: 50%;
 }
-#ex_table8 {
+.ex8 {
+    display: flex;
+    flex-direction: row;
     margin-left: 10px;
+    width: 50%;
 }
 
 
@@ -248,25 +313,52 @@ body {
 width: none; does not do anything as well */
 
 /* Close btn and Sign Out btn */
-.btn-container {
-    display: flex;
-    justify-content: center;
-    gap: 10rem;
-    margin-top: 30px;
+#footer{
+    grid-row: 3;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+    align-self: flex-end;
 }
+
+
+.btn-container {
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 1fr;
+    background-color: #343434;
+    border-radius: 20px;
+    padding: 10px;
+    color: #c3c3c3;
+}
+
+
+
 #signout-btn{
     padding: 9px 16px;
     border-radius: 10px;
     border-width: 2.5px;
     border-color: black;
+    background-color: ivory;
+    float: left;
 }
+#signout-btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
 #close-btn{
     padding: 9px 21px;
-    background-color: lightgray;
+    background-color: ivory;
     border-radius: 10px;
     border-width: 2.5px;
     border-color: black;
+    float: right;
 }
+#close-btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
 
 /* I gotta consider the different screen size */
 /* UpdateBtn Modal */
@@ -288,7 +380,6 @@ width: none; does not do anything as well */
     height: 50%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0, 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
-    
 }
 .close-btn-updateBtn {
     /* position: relative;
@@ -616,3 +707,66 @@ width: none; does not do anything as well */
     background-color: lightgreen;
 }
 
+@media (orientation: landscape){
+    body{
+        width: 98%;
+    }
+    /*Main Buttons only - ADD UPDATE CLOSE*/
+    .updateBtn-modal {
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+    .modal-content-updateBtn {
+        background: #f4f4f4;
+        margin: 2.5% 25%;
+        width: 50%;
+        height: 90%;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0, 7px 20px 0 rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+    .addBtn-modal {
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+    .modal-content-addBtn {
+        background: #f4f4f4;
+        margin: 2.5% 25%;
+        width: 50%;
+        height: 90%;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0, 7px 20px 0 rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+    .closeBtn-modal {
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+    .modal-content-closeBtn {
+        background: #f4f4f4;
+        margin: 12.5% 25%;
+        width: 50%;
+        height: 50%;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0, 7px 20px 0 rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+}
