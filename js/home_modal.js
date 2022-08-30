@@ -1,128 +1,233 @@
+// Regular Ramen Options
 const misoModal = document.getElementById('misoModal');
 const shoyuModal = document.getElementById('shoyuModal');
 const shioModal = document.getElementById('shioModal');
 const shrimpModal = document.getElementById('shrimpModal');
 const hotMisoModal = document.getElementById('hotMisoModal');
 const curryModal = document.getElementById('curryModal');
-const vegeModal = document.getElementById('vegeModal');
 const tomatoModal = document.getElementById('tomatoModal');
 
+// Vegetable Ramen - Falvour options
+const vmisoModal = document.getElementById('vege_miso');
+const vshoyuModal = document.getElementById('vege_shoyu');
+const vshioModal = document.getElementById('vege_shio');
+const vhotModal = document.getElementById('vege_hot');
+const vtomatoModal = document.getElementById('vege_tomato');
+
+// Set A 
 const misoSA_Modal = document.getElementById('misoSA_Modal');
 const shoyuSA_Modal = document.getElementById('shoyuSA_Modal');
 const shioSA_Modal = document.getElementById('shioSA_Modal');
 
+// Set B
 const misoSB_Modal = document.getElementById('misoSB_Modal');
 const shoyuSB_Modal = document.getElementById('shoyuSB_Modal');
 const shioSB_Modal = document.getElementById('shioSB_Modal');
 
+
+
 //close ramen  modal from the preference mdal page
 document.querySelector('#close_ramen_modal').addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'none';
+
+  document.getElementById('remove-id').innerText = '';
+  document.getElementById('text-box').innerText = '';
 });
 
 document.querySelector('#close_addToppings_modal').addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'none';
+
+  document.getElementById('remove-id').innerText = '';
+  document.getElementById('text-box').innerText = '';
 });
 
 document.querySelector('#close_removeItems_modal').addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'none';
+
+  document.getElementById('remove-id').innerText = '';
+  document.getElementById('text-box').innerText = '';
 });
 
-// close modal for vege and shrimp ramen
-document.querySelector('#close_ramen_modal_shrimp').addEventListener('click', () => {
-  document.querySelector('.modal_bg_shrimp').style.display = 'none';
-});
-document.querySelector('#close_addToppings_modal_shrimp').addEventListener('click', () => {
-  document.querySelector('.modal_bg_shrimp').style.display = 'none';
-});
-
-document.querySelector('#close_removeItems_modal_shrimp').addEventListener('click', () => {
-  document.querySelector('.modal_bg_shrimp').style.display = 'none';
-});
 
 
 //miso
 misoModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Soup:");
+
+  $("input#rich_soup:checkbox").on('click', function() {
+    document.getElementById("regular_soup").checked = false;
+  }); 
+  $("input#regular_soup:checkbox").on('click', function() {
+    document.getElementById("rich_soup").checked = false;
+  }); 
 });
 
 //shoyu
 shoyuModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Soup:");
 });
 
 //shio
 shioModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Soup:");
 });
 
 //shrimp
 shrimpModal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_shrimp').style.display = 'block';
-  document.querySelector('.modal_bg_shrimp').classList.add('bg-active');
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Soup:");
+  document.getElementById("rich_soup").disabled = true;
+  document.getElementById("regular_soup").disabled = true;
+
 });
 
 //Hot Miso
 hotMisoModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Soup:"); 
 });
 
 //curry
 curryModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
-});
 
-//Vegetable
-vegeModal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_shrimp').style.display = 'block';
-  document.querySelector('.modal_bg_shrimp').classList.add('bg-active');
+  document.getElementById('text-box').append("Soup:");
 });
 
 //tomato
 tomatoModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Soup:");
+});
+
+// Vegetable Ramen Flavour
+// shoyu
+vshoyuModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Soup:");
+  document.getElementById("rich_soup").disabled = true;
+  document.getElementById("regular_soup").disabled = true;
+});
+
+// shio
+vshioModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Soup:");
+  document.getElementById("rich_soup").disabled = true;
+  document.getElementById("regular_soup").disabled = true;
+});
+
+// miso
+vmisoModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Soup:");
+  document.getElementById("rich_soup").disabled = true;
+  document.getElementById("regular_soup").disabled = true;
+});
+
+// hot 
+vhotModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Soup:");
+  document.getElementById("rich_soup").disabled = true;
+  document.getElementById("regular_soup").disabled = true;
+});
+
+// tomato
+vtomatoModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Soup:");
+  document.getElementById("rich_soup").disabled = true;
+  document.getElementById("regular_soup").disabled = true;
 });
 
 
 // SET A
-
 //miso A
 misoSA_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Soup:");
 });
 
 //shoyu A
 shoyuSA_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Soup:");
 });
 
 // SET B
-
 //miso B
 misoSB_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Soup:");
 });
 
 //shoyu B
 shoyuSB_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Soup:");
 });
 
 //shio B
 shioSB_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Soup:");
 });
+
+// Cancel Btn on the preference modal
+const cancelBtn = document.getElementById('topping_cancel'); 
+
+cancelBtn.onclick = () => {
+  document.querySelector('.modal_bg').style.display = 'none';
+
+  document.getElementById('remove-id').innerText = '';
+  document.getElementById('text-box').innerText = '';
+}
+
+
+
 
 
 
@@ -1501,3 +1606,6 @@ kokanee_increaseBtn.addEventListener('click', () => {
     kokanee_counter.innerHTML = kokanee_count; 
   }
 })
+
+// Test to control ramen row 
+//const ramen_row = document.getElementById('ramen_row'); 
