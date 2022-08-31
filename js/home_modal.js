@@ -1,43 +1,172 @@
+// Regular Ramen Options
 const misoModal = document.getElementById('misoModal');
 const shoyuModal = document.getElementById('shoyuModal');
 const shioModal = document.getElementById('shioModal');
 const shrimpModal = document.getElementById('shrimpModal');
 const hotMisoModal = document.getElementById('hotMisoModal');
 const curryModal = document.getElementById('curryModal');
-const vegeModal = document.getElementById('vegeModal');
 const tomatoModal = document.getElementById('tomatoModal');
 
+// Vegetable Ramen - Falvour options
+const vmisoModal = document.getElementById('vege_miso');
+const vshoyuModal = document.getElementById('vege_shoyu');
+const vshioModal = document.getElementById('vege_shio');
+const vhotModal = document.getElementById('vege_hot');
+const vtomatoModal = document.getElementById('vege_tomato');
+
+// Set A 
 const misoSA_Modal = document.getElementById('misoSA_Modal');
 const shoyuSA_Modal = document.getElementById('shoyuSA_Modal');
 const shioSA_Modal = document.getElementById('shioSA_Modal');
 
+// Set B
 const misoSB_Modal = document.getElementById('misoSB_Modal');
 const shoyuSB_Modal = document.getElementById('shoyuSB_Modal');
 const shioSB_Modal = document.getElementById('shioSB_Modal');
 
+// Modal Swiper Js
+function recall_swiper() {
+  //swiper js
+  const swiper = new Swiper('.swiper', {
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+  });
+}
+
+// Block other chceckboxes if one of them is checked
+// disable checkbox for chashu
+$("input#chashu_belly_choice:checkbox").on('click', function() {
+  document.getElementById("chashu_shoulder_choice").checked = false;
+}); 
+$("input#chashu_shoulder_choice:checkbox").on('click', function() {
+  document.getElementById("chashu_belly_choice").checked = false;
+}); 
+
+// disable checkbox for saltness
+$("input#salty_soup:checkbox").on('click', function() {
+  document.getElementById("less_salty_soup").checked = false;
+}); 
+$("input#less_salty_soup:checkbox").on('click', function() {
+  document.getElementById("salty_soup").checked = false;
+}); 
+
+// disable checkbox for soup
+$("input#rich_soup:checkbox").on('click', function() {
+  document.getElementById("regular_soup").checked = false;
+}); 
+$("input#regular_soup:checkbox").on('click', function() {
+  document.getElementById("rich_soup").checked = false;
+}); 
+
+// disable checkbox for oil
+$("input#ex_oil:checkbox").on('click', function() {
+  document.getElementById("less_oil").checked = false;
+}); 
+$("input#less_oil:checkbox").on('click', function() {
+  document.getElementById("ex_oil").checked = false;
+}); 
+
+ // disable checkbox for noodle
+$("input#noodles_ex_hard:checkbox").on('click', function() {
+  document.getElementById("noodles_hard").checked = false;
+  document.getElementById("noodles_soft").checked = false;
+}); 
+$("input#noodles_hard:checkbox").on('click', function() {
+  document.getElementById("noodles_ex_hard").checked = false;
+  document.getElementById("noodles_soft").checked = false;
+}); 
+$("input#noodles_soft:checkbox").on('click', function() {
+  document.getElementById("noodles_ex_hard").checked = false;
+  document.getElementById("noodles_hard").checked = false;
+}); 
+
+recall_swiper();
+
+
 //close ramen  modal from the preference mdal page
 document.querySelector('#close_ramen_modal').addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'none';
+
+  // Clear a title text not to doplicate same text 
+  document.getElementById('remove-id').innerText = '';
+  document.getElementById('text-box').innerText = '';
+
+  // Back to enable chashu checkboxes to click
+  document.getElementById("chashu_belly_choice").disabled = false;
+  document.getElementById("chashu_shoulder_choice").disabled = false;
+
+  // Make all checkbox unchecked when user back to home
+  $('input[name="pref_check"]').each(function() {
+    this.checked = false;
+  });
+
+  // Make total number of items reset to 0
+  toppingTop_count = 1; 
+  toppingTop_counter.innerHTML = toppingTop_count; 
+
+  // Make add topping count number reset to 0
+  $('h1[name="addTop_count"]').each(function(){
+    this.innerHTML = 0; 
+  })
+
 });
 
 document.querySelector('#close_addToppings_modal').addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'none';
+
+  document.getElementById('remove-id').innerText = '';
+  document.getElementById('text-box').innerText = '';
+
+  // Back to enable chashu checkboxes to click
+  document.getElementById("chashu_belly_choice").disabled = false;
+  document.getElementById("chashu_shoulder_choice").disabled = false;
+
+  // Make all checkbox unchecked when user back to home
+  $('input[name="pref_check"]').each(function() {
+    this.checked = false;
+  });
+
+  // Make total number of items reset to 0
+  toppingTop_count = 1; 
+  toppingTop_counter.innerHTML = toppingTop_count; 
+
+  // Make add topping count number reset to 0
+  $('h1[name="addTop_count"]').each(function(){
+    this.innerHTML = 0; 
+  })
+
+  // Back to a first modal 
+  recall_swiper(); 
 });
 
 document.querySelector('#close_removeItems_modal').addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'none';
-});
 
-// close modal for vege and shrimp ramen
-document.querySelector('#close_ramen_modal_shrimp').addEventListener('click', () => {
-  document.querySelector('.modal_bg_shrimp').style.display = 'none';
-});
-document.querySelector('#close_addToppings_modal_shrimp').addEventListener('click', () => {
-  document.querySelector('.modal_bg_shrimp').style.display = 'none';
-});
+  document.getElementById('remove-id').innerText = '';
+  document.getElementById('text-box').innerText = '';
 
-document.querySelector('#close_removeItems_modal_shrimp').addEventListener('click', () => {
-  document.querySelector('.modal_bg_shrimp').style.display = 'none';
+  // Back to enable chashu checkboxes to click
+  document.getElementById("chashu_belly_choice").disabled = false;
+  document.getElementById("chashu_shoulder_choice").disabled = false;
+
+  // Make all checkbox unchecked when user back to home
+  $('input[name="pref_check"]').each(function() {
+    this.checked = false;
+  });
+
+  // Make total number of items reset to 0
+  toppingTop_count = 1; 
+  toppingTop_counter.innerHTML = toppingTop_count; 
+
+  // Make add topping count number reset to 0
+  $('h1[name="addTop_count"]').each(function(){
+    this.innerHTML = 0; 
+  })
+
+  // Back to a first modal 
+  recall_swiper(); 
 });
 
 
@@ -45,87 +174,209 @@ document.querySelector('#close_removeItems_modal_shrimp').addEventListener('clic
 misoModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Chashu:");
 });
 
 //shoyu
 shoyuModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Chashu:");
 });
 
 //shio
 shioModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Chashu:");
 });
 
 //shrimp
 shrimpModal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_shrimp').style.display = 'block';
-  document.querySelector('.modal_bg_shrimp').classList.add('bg-active');
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Chashu:");
+  document.getElementById("chashu_belly_choice").disabled = true;
+  document.getElementById("chashu_shoulder_choice").disabled = true;
 });
 
 //Hot Miso
 hotMisoModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Chashu:"); 
 });
 
 //curry
 curryModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
-});
 
-//Vegetable
-vegeModal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_shrimp').style.display = 'block';
-  document.querySelector('.modal_bg_shrimp').classList.add('bg-active');
+  document.getElementById('text-box').append("Chashu:");
 });
 
 //tomato
 tomatoModal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Chashu:");
 });
 
 
-// SET A
 
+
+// Vegetable Ramen Flavour
+// shoyu
+vshoyuModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Chashu:");
+  document.getElementById("chashu_belly_choice").disabled = true;
+  document.getElementById("chashu_shoulder_choice").disabled = true;
+
+});
+
+// shio
+vshioModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Chashu:");
+  document.getElementById("chashu_belly_choice").disabled = true;
+  document.getElementById("chashu_shoulder_choice").disabled = true;
+
+});
+
+// miso
+vmisoModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Chashu:");
+  document.getElementById("chashu_belly_choice").disabled = true;
+  document.getElementById("chashu_shoulder_choice").disabled = true;
+
+});
+
+// hot 
+vhotModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Chashu:");
+  document.getElementById("chashu_belly_choice").disabled = true;
+  document.getElementById("chashu_shoulder_choice").disabled = true;
+
+});
+
+// tomato
+vtomatoModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  // Remove an option for chashu
+  document.getElementById('remove-id').append("Chashu:");
+  document.getElementById("chashu_belly_choice").disabled = true;
+  document.getElementById("chashu_shoulder_choice").disabled = true;
+
+});
+
+
+
+
+// SET A
 //miso A
 misoSA_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Chashu:");
 });
 
 //shoyu A
 shoyuSA_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Chashu:");
 });
 
-// SET B
+shioSA_Modal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
 
+  document.getElementById('text-box').append("Chashu:");
+})
+
+
+
+
+// SET B
 //miso B
 misoSB_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Chashu:");
 });
 
 //shoyu B
 shoyuSB_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Chashu:");
 });
 
 //shio B
 shioSB_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg').style.display = 'block';
   document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Chashu:");
 });
 
 
 
+// Cancel Btn on the preference modal
+const cancelBtn = document.getElementById('topping_cancel'); 
+
+cancelBtn.onclick = () => {
+  document.querySelector('.modal_bg').style.display = 'none';
+
+  document.getElementById('remove-id').innerText = '';
+  document.getElementById('text-box').innerText = '';
+
+  // Back to enable chashu checkboxes to click
+  document.getElementById("chashu_belly_choice").disabled = false;
+  document.getElementById("chashu_shoulder_choice").disabled = false;
+
+  // Make all checkbox unchecked when user back to home
+  $('input[name="pref_check"]').each(function() {
+    this.checked = false;
+  });
+
+  // Make total number of items reset to 0
+  toppingTop_count = 1; 
+  toppingTop_counter.innerHTML = toppingTop_count; 
+
+}
+
+
+// Making an array and insert each values to it 
+let addTop_array = []; 
 
 // Topping counter button
 // for Beans
@@ -1270,14 +1521,14 @@ exNoodlesTop_increaseBtn.addEventListener('click', () => {
 let toppingTop_decreaseBtn = document.getElementById('toppingTop_decrease');
 let toppingTop_increaseBtn = document.getElementById('toppingTop_increase'); 
 let toppingTop_counter = document.getElementById('toppingTop_counter');
-let toppingTop_count = 0;
+let toppingTop_count = 1;
 
 // - btn: Increase num of topping 
 toppingTop_decreaseBtn.addEventListener('click', () => {
   toppingTop_count --; 
   toppingTop_counter.innerHTML = toppingTop_count; 
-  if(toppingTop_count < 0) {
-    toppingTop_count = 0;
+  if(toppingTop_count === 0) {
+    toppingTop_count = 1;
     toppingTop_counter.innerHTML = toppingTop_count; 
   } else {
     toppingTop_counter.innerHTML = toppingTop_count; 
@@ -1501,3 +1752,6 @@ kokanee_increaseBtn.addEventListener('click', () => {
     kokanee_counter.innerHTML = kokanee_count; 
   }
 })
+
+// Test to control ramen row 
+//const ramen_row = document.getElementById('ramen_row'); 

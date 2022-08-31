@@ -12,20 +12,6 @@
   z-index: 20;
 }
 
-/* modal for shrimp and vege ramen */
-.modal_bg_shrimp {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0; /*hide this line*/
-  visibility:  hidden; /*hide this line*/
-  transition: visibility 0s opacity 0, 5s;
-  z-index: 20;
-}
-
 .bg-active{
   visibility: visible;
   opacity: 1;
@@ -97,7 +83,7 @@
   border-radius: 15px;
   background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .slide-item {
   width: 98%;
@@ -124,15 +110,14 @@
   grid-template-columns: 1fr 1.5fr 1.5fr;
 }
 .ramen_pref_footer {
-}
-.item_multiplied {
-  height: 2em;
+  /* margin-top: -50px; */
 }
 
 /* same code for ramen preference, other side dishes, toppings, drinks, beer */
 .menuItem_multiplied {
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: -15px;
+  /* margin-bottom: 40px; */ 
+  padding: 35px 50px;
 }
 /* chashu counter button */
 .item_counter {
@@ -788,57 +773,3 @@
 .beer_footer {
   margin-top: 60px;
 }
-
-/*
-.modal_header {
-  padding: 10px 30px;
-  display: flex;
-  /*border-bottom: 5px solid rgb(252, 195, 130);
-  justify-content: space-between;
-  align-items: center;
-  font-size: 35px;
-  font-weight: 700;
-  background-color: aliceblue;
-}
-
-.close_button {
-  border: none;
-  color: black;
-  background: none;
-  outline: none;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-input.largerCheckbox{
-  width: 50px;
-  height: 50px;
-}
-
-.modal_row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /*border-bottom: 5px solid rgb(252, 195, 130);
-  flex: 1;
-  align-items: center;
-}
-
-.preference_item{
-  text-align: left;
-  padding-left: 20px;
-}
-
-.modal_header2 {
-  padding: 10px 30px;
-  text-align: left;
-  /*border-bottom: 5px solid rgb(252, 195, 130);
-  font-size: 35px;
-  font-weight: 700;
-  background-color: aliceblue;
-}
-
-.topping_item{
-  text-align: left;
-  padding-left: 20px;
-}
-*/
