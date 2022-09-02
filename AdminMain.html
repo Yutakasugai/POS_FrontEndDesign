@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://css.gg/copy.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Kaisei+Tokumin:wght@500&family=Raleway&family=Share&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/AdminMain.css">
     <title>Control Site</title>
 
@@ -38,8 +40,7 @@
 
             <!-- Icon Button -->
             <div class="user-notice">
-                <button type="button" class="icon-button" id="userCheck-btn">
-                    U
+                <button type="button" class="icon-button" id="userCheck-btn"> U
                     <!-- This number 25 is just demo -->
                     <span class="num_notice_badge">25</span> 
                 </button>
@@ -48,11 +49,8 @@
         </div>
 
         <!-- square buttons at the top -->
-        <div class="square-buttons">
-            <button id="history-btn">History</button>
-
-            <!-- Close Btn -->
-            <button id="systemClose-btn">Close</button>
+        <div class="square-button">
+            <button id="history-btn"> View History</button>
         </div>
 
     </div>
@@ -65,9 +63,13 @@
             <div class="box-title">
                 <p id="Box1_title">{{Box_1}}</p>
             </div>
+            <div class="scrollable">
+                <div class="order-items" id="text_box1" box1_text="{{Box1_Item}}">
+                    <p id="itemBox1"></p>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
-            <div class="order-items" id="text_box1" box1_text="{{Box1_Item}}">
-                <p id="itemBox1"></p>
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                </div>
             </div>
 
             <form action="/auth/admin/doneBtn" method="POST" class="done-btn">
@@ -86,9 +88,10 @@
             <div class="box-title">
                 <p id="Box2_title">{{Box_2}}</p>
             </div>
-
-            <div class="order-items" id="text_box2" box2_text="{{Box2_Item}}">
-                <p id="itemBox2"></p>
+            <div class="scrollable">
+                <div class="order-items" id="text_box2" box2_text="{{Box2_Item}}">
+                    <p id="itemBox2"></p>
+                </div>
             </div>
 
             <form action="/auth/admin/doneBtn" method="POST" class="done-btn">
@@ -107,9 +110,10 @@
             <div class="box-title">
                 <p id="Box3_title">{{Box_3}}</p>
             </div>
-
-            <div class="order-items" id="text_box3" box3_text="{{Box3_Item}}">
-                <p id="itemBox3"></p>
+            <div class="scrollable">
+                <div class="order-items" id="text_box3" box3_text="{{Box3_Item}}">
+                    <p id="itemBox3"></p>
+                </div>
             </div>
 
             <form action="/auth/admin/doneBtn" method="POST" class="done-btn">
@@ -129,9 +133,10 @@
             <div class="box-title">
                 <p id="Box4_title">{{Box_4}}</p>
             </div>
-
-            <div class="order-items" id="text_box4" box4_text="{{Box4_Item}}">
-                <p id="itemBox4"></p>
+            <div class="scrollable">
+                <div class="order-items" id="text_box4" box4_text="{{Box4_Item}}">
+                    <p id="itemBox4"></p>
+                </div>
             </div>
 
             <form action="/auth/admin/doneBtn" method="POST" class="done-btn">
@@ -155,7 +160,11 @@
             <input type="hidden" name="adminName" value="{{name}}">
             <input type="hidden" name="data_key" value="{{date}}">
             <input type="hidden" name="time_key" value="{{time}}">
-            <button id="home-btn">Home</button>
+            <div class="footer-buttons">
+                <button id="home-btn">Home</button>
+                <!-- Close Btn -->
+                <button id="systemClose-btn">Close</button>
+            </div>
         </form>
 
         <div class="moreOrder-container">
@@ -164,8 +173,9 @@
             </div>
     
             <div class="two-boxes">
-                <button class="box-1" id="box-btn"></button>
-                <button class="box-2" id="box-btn"></button>
+                <button class="box-1" id="box-btn"><i class="gg-copy"></i>
+                    <span class="num_notice_badge_orders">6</span> 
+                </button>
             </div>
         </div>
     </div>
@@ -231,7 +241,7 @@
             <span class="close-btn-closeBtn">&times;</span>
 
             <div class="closeText-container">
-                <p>Are you sure to close this page?</p>
+                <p>Are you sure to Exit?</p>
                 
                 <div class="yesno-btn">
                     <button id="no-btn">No</button>
@@ -252,9 +262,18 @@
     <!-- Pop up modal for checking user login -->
     <div class="userLog-modal" id='userLog-modal'>
         <div class="modal-content">
-
+            <h1>Check UserLog</h1>
             <span class="close-btn-userlogBtn">&times;</span>
-            <div class="userCheck"></div>
+            <div class="line"></div>
+
+            <div class="permissions">
+                <div id="name">
+                    <p>Yuta is requesting: </p>
+                </div>
+                <div id="allow-button">
+                    <button id="allow-btn"> Allow</button>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -272,9 +291,10 @@
                     <div class="box-title">
                         <p id="subBox1_title">{{Box_5}}</p>
                     </div>
-        
-                    <div class="order-items" id="text_subox1" subBox1_text="{{Box5_Item}}">
-                        <p id="itemBox5"></p>
+                    <div class="scrollable">
+                        <div class="order-items" id="text_subox1" subBox1_text="{{Box5_Item}}">
+                            <p id="itemBox5"></p>
+                        </div>
                     </div>
 
                     <form action="/auth/admin/doneBtn" method="POST" class="done-btn">
@@ -294,9 +314,10 @@
                     <div class="box-title">
                         <p id="subBox2_title">{{Box_6}}</p>
                     </div>
-        
-                    <div class="order-items" id="text_subox2" subBox2_text="{{Box6_Item}}">
-                        <p id="itemBox6"></p>
+                    <div class="scrollable">
+                        <div class="order-items" id="text_subox2" subBox2_text="{{Box6_Item}}">
+                            <p id="itemBox6"></p>
+                        </div>
                     </div>
 
                     <form action="/auth/admin/doneBtn" method="POST" class="done-btn">
@@ -315,9 +336,10 @@
                     <div class="box-title">
                         <p id="subBox3_title">{{Box_7}}</p>
                     </div>
-        
-                    <div class="order-items" id="text_subox3" subBox3_text="{{Box7_Item}}">
-                        <p id="itemBox7"></p>
+                    <div class="scrollable">
+                        <div class="order-items" id="text_subox3" subBox3_text="{{Box7_Item}}">
+                            <p id="itemBox7"></p>
+                        </div>
                     </div>
         
                     <form action="/auth/admin/doneBtn" method="POST" class="done-btn">
@@ -337,9 +359,10 @@
                     <div class="box-title">
                         <p id="subBo4_title">{{Box_8}}</p>
                     </div>
-        
-                    <div class="order-items" id="text_subox4" subBox4_text="{{Box8_Item}}">
-                        <p id="itemBox8"></p>
+                    <div class="scrollable">
+                        <div class="order-items" id="text_subox4" subBox4_text="{{Box8_Item}}">
+                            <p id="itemBox8"></p>
+                        </div>
                     </div>
         
                     <form action="/auth/admin/doneBtn" method="POST" class="done-btn">
@@ -358,9 +381,10 @@
                     <div class="box-title">
                         <p id="subBox5_title">{{Box_9}}</p>
                     </div>
-        
-                    <div class="order-items" id="text_subox5" subBox5_text="{{Box9_Item}}">
-                        <p id="itemBox9"></p>
+                    <div class="scrollable">
+                        <div class="order-items" id="text_subox5" subBox5_text="{{Box9_Item}}">
+                            <p id="itemBox9"></p>
+                        </div>
                     </div>
         
                     <form action="/auth/admin/doneBtn" method="POST" class="done-btn">
@@ -380,9 +404,13 @@
                     <div class="box-title">
                         <p id="subBox6_title">{{Box_10}}</p>
                     </div>
-        
-                    <div class="order-items" id="text_subox6" subBox6_text="{{Box10_Item}}">
-                        <p id="itemBox10"></p>
+                    <div class="scrollable">
+                        <div class="order-items" id="text_subox6" subBox6_text="{{Box10_Item}}">
+                            <p id="itemBox10"></p>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+                                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                        </div>
                     </div>
         
                     <form action="/auth/admin/doneBtn" method="POST" class="done-btn">
@@ -410,35 +438,105 @@
             <div class="historyBtn-textBox">
 
                 <div class="historyBtn-title">
-                    <h1>View Histroy</h1>
+                    <h1>View History</h1>
                     <h2>{{date}} - {{time}}</h2>
                 </div>
+                <div class="scrollable">
+                    <div class="review-container">
 
-                <div class="review-container">
+                        <table border cellspacing="0">
 
-                    <table border cellspacing="0">
+                            <!-- table desc rows -->
+                            <tr class="reviewBox-container"> 
+                                <tr class="reviewBox-header">
+                                    <th id="tableNum-row">Table Number</th>
+                                    <th id="togoPerson-row">Order By</th>
+                                    <th id="itemName-row">Item Name</th>
+                                </tr>
+                                
+                                
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
 
-                        <!-- table desc rows -->
-                        <tr class="reviewBox-container"> 
-                            <tr class="reviewBox-header">
-                                <th id="tableNum-row">Table Number</th>
-                                <th id="togoPerson-row">Order By</th>
-                                <th id="itemName-row">Item Name</th>
                             </tr>
-                            
-                            
-                            <tr class="addedInfo-container">
-                                <th>{{table_id}}</th>
-                                <th>{{order_by}}</th>
-                                <th>{{item_name}}</th>
-                            </tr>
 
-                        </tr>
+                        </table>
 
-                    </table>
-
+                    </div>
                 </div>
-
             </div>
 
         </div>
