@@ -7,6 +7,9 @@ const hotMisoModal = document.getElementById('hotMisoModal');
 const curryModal = document.getElementById('curryModal');
 const tomatoModal = document.getElementById('tomatoModal');
 
+// Season Special Ramen
+const coldModal = document.getElementById('coldModal'); 
+
 // Vegetable Ramen - Falvour options
 const vmisoModal = document.getElementById('vege_miso');
 const vshoyuModal = document.getElementById('vege_shoyu');
@@ -14,15 +17,18 @@ const vshioModal = document.getElementById('vege_shio');
 const vhotModal = document.getElementById('vege_hot');
 const vtomatoModal = document.getElementById('vege_tomato');
 
+
 // Set A 
 const misoSA_Modal = document.getElementById('misoSA_Modal');
 const shoyuSA_Modal = document.getElementById('shoyuSA_Modal');
 const shioSA_Modal = document.getElementById('shioSA_Modal');
 
+
 // Set B
 const misoSB_Modal = document.getElementById('misoSB_Modal');
 const shoyuSB_Modal = document.getElementById('shoyuSB_Modal');
 const shioSB_Modal = document.getElementById('shioSB_Modal');
+
 
 // Modal Swiper Js
 function recall_swiper() {
@@ -34,6 +40,7 @@ function recall_swiper() {
     },
   });
 }
+
 
 // Block other chceckboxes if one of them is checked
 // disable checkbox for chashu
@@ -82,7 +89,100 @@ $("input#noodles_soft:checkbox").on('click', function() {
   document.getElementById("noodles_hard").checked = false;
 }); 
 
+
+// Remove or Side Toppings
+// Enable only one of two checkbox can be checked 
+// Beans 
+$("input#remove_beans:checkbox").on('click', function() {
+  document.getElementById("side_beans").checked = false;
+}); 
+$("input#side_beans:checkbox").on('click', function() {
+  document.getElementById("remove_beans").checked = false;
+}); 
+
+// G.Onion
+$("input#remove_gonion:checkbox").on('click', function() {
+  document.getElementById("side_gonion").checked = false;
+}); 
+$("input#side_gonion:checkbox").on('click', function() {
+  document.getElementById("remove_gonion").checked = false;
+}); 
+
+// Onion
+$("input#remove_onion:checkbox").on('click', function() {
+  document.getElementById("side_onion").checked = false;
+}); 
+$("input#side_onion:checkbox").on('click', function() {
+  document.getElementById("remove_onion").checked = false;
+}); 
+
+// F.Cake
+$("input#remove_fcake:checkbox").on('click', function() {
+  document.getElementById("side_fcake").checked = false;
+}); 
+$("input#side_fcake:checkbox").on('click', function() {
+  document.getElementById("remove_fcake").checked = false;
+}); 
+
+// Corn
+$("input#remove_corn:checkbox").on('click', function() {
+  document.getElementById("side_corn").checked = false;
+}); 
+$("input#side_corn:checkbox").on('click', function() {
+  document.getElementById("remove_corn").checked = false;
+}); 
+
+// Noodle
+$("input#remove_noodle:checkbox").on('click', function() {
+  document.getElementById("side_noodle").checked = false;
+}); 
+$("input#side_noodle:checkbox").on('click', function() {
+  document.getElementById("remove_noodle").checked = false;
+}); 
+
+// Chashu
+$("input#remove_chashu:checkbox").on('click', function() {
+  document.getElementById("side_chashu").checked = false;
+}); 
+$("input#side_chashu:checkbox").on('click', function() {
+  document.getElementById("remove_chashu").checked = false;
+});
+
+// Potato
+$("input#remove_nori:checkbox").on('click', function() {
+  document.getElementById("side_nori").checked = false;
+}); 
+$("input#side_nori:checkbox").on('click', function() {
+  document.getElementById("remove_nori").checked = false;
+}); 
+
+// S.Cake
+$("input#remove_scake:checkbox").on('click', function() {
+  document.getElementById("side_scake").checked = false;
+}); 
+$("input#side_scake:checkbox").on('click', function() {
+  document.getElementById("remove_scake").checked = false;
+}); 
+
+// All Veg
+$("input#remove_allveg:checkbox").on('click', function() {
+  document.getElementById("side_allveg").checked = false;
+}); 
+$("input#side_allveg:checkbox").on('click', function() {
+  document.getElementById("remove_allveg").checked = false;
+}); 
+
+// All Top
+$("input#remove_alltop:checkbox").on('click', function() {
+  document.getElementById("side_alltop").checked = false;
+}); 
+$("input#side_alltop:checkbox").on('click', function() {
+  document.getElementById("remove_alltop").checked = false;
+}); 
+
+// Enable preference modal slide to work with three pages in it
 recall_swiper();
+
 
 
 //close ramen  modal from the preference mdal page
@@ -100,6 +200,7 @@ document.querySelector('#close_ramen_modal').addEventListener('click', () => {
   // Make all checkbox unchecked when user back to home
   $('input[name="pref_check"]').each(function() {
     this.checked = false;
+    this.disabled = false; 
   });
 
   // Make total number of items reset to 0
@@ -110,6 +211,16 @@ document.querySelector('#close_ramen_modal').addEventListener('click', () => {
   $('h1[name="addTop_count"]').each(function(){
     this.innerHTML = 0; 
   })
+
+  // Make remove topping checkboxes unchecked 
+  $('input[name="remove_check"]').each(function() {
+    this.checked = false;
+  });
+
+  // Make add toppings reset rest to 0
+  beans_count = 0; eggs_count = 0; belly_count = 0; shoulder_count = 0; sCake_count = 0; 
+  wakame_count = 0; nori_count = 0; gOni_count = 0; cheese_count = 0; butter_count = 0; 
+  corn_count = 0; fCake_count = 0; bloccoli_count = 0; exNoodles_count = 0; 
 
 });
 
@@ -126,16 +237,27 @@ document.querySelector('#close_addToppings_modal').addEventListener('click', () 
   // Make all checkbox unchecked when user back to home
   $('input[name="pref_check"]').each(function() {
     this.checked = false;
+    this.disabled = false;
   });
 
   // Make total number of items reset to 0
   toppingTop_count = 1; 
   toppingTop_counter.innerHTML = toppingTop_count; 
 
+  // Make remove topping checkboxes unchecked 
+  $('input[name="remove_check"]').each(function() {
+    this.checked = false;
+  });
+
   // Make add topping count number reset to 0
   $('h1[name="addTop_count"]').each(function(){
     this.innerHTML = 0; 
-  })
+  }); 
+
+  // Make add toppings reset rest to 0
+  beans_count = 0; eggs_count = 0; belly_count = 0; shoulder_count = 0; sCake_count = 0; 
+  wakame_count = 0; nori_count = 0; gOni_count = 0; cheese_count = 0; butter_count = 0; 
+  corn_count = 0; fCake_count = 0; bloccoli_count = 0; exNoodles_count = 0; 
 
   // Back to a first modal 
   recall_swiper(); 
@@ -154,6 +276,7 @@ document.querySelector('#close_removeItems_modal').addEventListener('click', () 
   // Make all checkbox unchecked when user back to home
   $('input[name="pref_check"]').each(function() {
     this.checked = false;
+    this.disabled = false;
   });
 
   // Make total number of items reset to 0
@@ -164,6 +287,16 @@ document.querySelector('#close_removeItems_modal').addEventListener('click', () 
   $('h1[name="addTop_count"]').each(function(){
     this.innerHTML = 0; 
   })
+
+  // Make remove topping checkboxes unchecked 
+  $('input[name="remove_check"]').each(function() {
+    this.checked = false;
+  });
+
+  // Make add toppings reset rest to 0
+  beans_count = 0; eggs_count = 0; belly_count = 0; shoulder_count = 0; sCake_count = 0; 
+  wakame_count = 0; nori_count = 0; gOni_count = 0; cheese_count = 0; butter_count = 0; 
+  corn_count = 0; fCake_count = 0; bloccoli_count = 0; exNoodles_count = 0; 
 
   // Back to a first modal 
   recall_swiper(); 
@@ -229,6 +362,31 @@ tomatoModal.addEventListener('click', () => {
   document.getElementById('text-box').append("Chashu:");
 });
 
+// Cold
+coldModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg').style.display = 'block';
+  document.querySelector('.modal_bg').classList.add('bg-active');
+
+  document.getElementById('text-box').append("Chashu:");
+
+  // Block unnecessary checkbox options 
+  document.getElementById("rich_soup").disabled = true;
+  document.getElementById("regular_soup").disabled = true;
+
+  document.getElementById("chashu_belly_choice").disabled = true;
+  document.getElementById("chashu_shoulder_choice").disabled = true;
+
+  document.getElementById("noodles_ex_hard").disabled = true;
+  document.getElementById("noodles_hard").disabled = true;
+  document.getElementById("noodles_soft").disabled = true;
+
+  document.getElementById("salty_soup").disabled = true;
+  document.getElementById("less_salty_soup").disabled = true;
+
+  document.getElementById("ex_oil").disabled = true;
+  document.getElementById("less_oil").disabled = true;
+
+}) 
 
 
 
@@ -350,6 +508,7 @@ shioSB_Modal.addEventListener('click', () => {
 
 
 
+
 // Cancel Btn on the preference modal
 const cancelBtn = document.getElementById('topping_cancel'); 
 
@@ -366,17 +525,106 @@ cancelBtn.onclick = () => {
   // Make all checkbox unchecked when user back to home
   $('input[name="pref_check"]').each(function() {
     this.checked = false;
+    this.disabled = false; 
   });
 
   // Make total number of items reset to 0
   toppingTop_count = 1; 
   toppingTop_counter.innerHTML = toppingTop_count; 
 
+  // Make add topping count number reset to 0
+  $('h1[name="addTop_count"]').each(function(){
+    this.innerHTML = 0; 
+  })
+
+  // Make remove topping checkboxes unchecked 
+  $('input[name="remove_check"]').each(function() {
+    this.checked = false;
+  });
+
+  // Make add toppings reset rest to 0
+  beans_count = 0; eggs_count = 0; belly_count = 0; shoulder_count = 0; sCake_count = 0; 
+  wakame_count = 0; nori_count = 0; gOni_count = 0; cheese_count = 0; butter_count = 0; 
+  corn_count = 0; fCake_count = 0; bloccoli_count = 0; exNoodles_count = 0; 
+
 }
 
 
-// Making an array and insert each values to it 
-let addTop_array = []; 
+
+// Chashu Preferences Modal
+const chashuP_Modal = document.getElementById('chashu_p_modal');
+const chashuB_Modal = document.getElementById('chashu_b_modal');
+const chashuD_Modal = document.getElementById('chashu_d_modal');
+const gOnion_Modal = document.getElementById('gOnion_modal');
+
+document.querySelector('#close_chashu_modal').addEventListener('click', () => {
+  document.querySelector('.modal_bg_chashu').style.display = 'none';
+});
+
+chashuP_Modal.addEventListener('click', () => {
+  document.querySelector('.modal_bg_chashu').style.display = 'block';
+  document.querySelector('.modal_bg_chashu').classList.add('bg-active-chashu');
+});
+
+chashuB_Modal.addEventListener('click', () => {
+  document.querySelector('.modal_bg_chashu').style.display = 'block';
+  document.querySelector('.modal_bg_chashu').classList.add('bg-active-chashu');
+});
+
+chashuD_Modal.addEventListener('click', () => {
+  document.querySelector('.modal_bg_chashu').style.display = 'block';
+  document.querySelector('.modal_bg_chashu').classList.add('bg-active-chashu');
+});
+
+gOnion_Modal.addEventListener('click', () => {
+  document.querySelector('.modal_bg_chashu').style.display = 'block';
+  document.querySelector('.modal_bg_chashu').classList.add('bg-active-chashu');
+});
+
+
+
+// Side Dishes Modal
+const side_Modal = document.getElementById('side_dishes_modal');
+
+document.querySelector('#close_side_modal').addEventListener('click', () => {
+  document.querySelector('.modal_bg_dishes').style.display = 'none';
+});
+
+side_Modal.addEventListener('click', () => {
+  document.querySelector('.modal_bg_dishes').style.display = 'block';
+  document.querySelector('.modal_bg_dishes').classList.add('bg-active-dishes');
+});
+
+
+
+// Soft Drinks Modal
+const softDrink_Modal = document.getElementById('soft_dri_modal');
+
+document.querySelector('#close_softDrink_modal').addEventListener('click', () => {
+  document.querySelector('.modal_bg_softDrink').style.display = 'none';
+});
+
+softDrink_Modal.addEventListener('click', () => {
+  document.querySelector('.modal_bg_softDrink').style.display = 'block';
+  document.querySelector('.modal_bg_softDrink').classList.add('bg-active-softDrink');
+});
+
+
+
+// Beer Modal
+const beer_Modal = document.getElementById('beer_modal');
+
+document.querySelector('#close_beer_modal').addEventListener('click', () => {
+  document.querySelector('.modal_bg_beer').style.display = 'none';
+});
+
+beer_Modal.addEventListener('click', () => {
+  document.querySelector('.modal_bg_beer').style.display = 'block';
+  document.querySelector('.modal_bg_beer').classList.add('bg-active-beer');
+});
+
+
+
 
 // Topping counter button
 // for Beans
@@ -800,35 +1048,7 @@ exNoodles_increaseBtn.addEventListener('click', () => {
 })
 
 
-// Chashu Preferences Modal
-const chashuP_Modal = document.getElementById('chashu_p_modal');
-const chashuB_Modal = document.getElementById('chashu_b_modal');
-const chashuD_Modal = document.getElementById('chashu_d_modal');
-const gOnion_Modal = document.getElementById('gOnion_modal');
 
-document.querySelector('#close_chashu_modal').addEventListener('click', () => {
-  document.querySelector('.modal_bg_chashu').style.display = 'none';
-});
-
-chashuP_Modal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_chashu').style.display = 'block';
-  document.querySelector('.modal_bg_chashu').classList.add('bg-active-chashu');
-});
-
-chashuB_Modal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_chashu').style.display = 'block';
-  document.querySelector('.modal_bg_chashu').classList.add('bg-active-chashu');
-});
-
-chashuD_Modal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_chashu').style.display = 'block';
-  document.querySelector('.modal_bg_chashu').classList.add('bg-active-chashu');
-});
-
-gOnion_Modal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_chashu').style.display = 'block';
-  document.querySelector('.modal_bg_chashu').classList.add('bg-active-chashu');
-});
 
 // Button to add/reduce a number of Chashu related item (plate, burger, don)
 let chashu_decreaseBtn = document.getElementById('chashu_decrease');
@@ -859,18 +1079,6 @@ chashu_increaseBtn.addEventListener('click', () => {
   }
 })
 
-
-// Side Dishes Modal
-const side_Modal = document.getElementById('side_dishes_modal');
-
-document.querySelector('#close_side_modal').addEventListener('click', () => {
-  document.querySelector('.modal_bg_dishes').style.display = 'none';
-});
-
-side_Modal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_dishes').style.display = 'block';
-  document.querySelector('.modal_bg_dishes').classList.add('bg-active-dishes');
-});
 
 // other side dishes counter button
 // for gyoza
@@ -1547,18 +1755,6 @@ toppingTop_increaseBtn.addEventListener('click', () => {
 })
 
 
-// Soft Drinks Modal
-const softDrink_Modal = document.getElementById('soft_dri_modal');
-
-document.querySelector('#close_softDrink_modal').addEventListener('click', () => {
-  document.querySelector('.modal_bg_softDrink').style.display = 'none';
-});
-
-softDrink_Modal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_softDrink').style.display = 'block';
-  document.querySelector('.modal_bg_softDrink').classList.add('bg-active-softDrink');
-});
-
 // Soft Drink counter button
 // for coke
 let coke_decreaseBtn = document.getElementById('coke_decrease');
@@ -1650,18 +1846,6 @@ icedTea_increaseBtn.addEventListener('click', () => {
 })
 
 
-// Beer Modal
-const beer_Modal = document.getElementById('beer_modal');
-
-document.querySelector('#close_beer_modal').addEventListener('click', () => {
-  document.querySelector('.modal_bg_beer').style.display = 'none';
-});
-
-beer_Modal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_beer').style.display = 'block';
-  document.querySelector('.modal_bg_beer').classList.add('bg-active-beer');
-});
-
 // Beer counter button
 // for asahi
 let asahi_decreaseBtn = document.getElementById('asahi_decrease');
@@ -1752,6 +1936,3 @@ kokanee_increaseBtn.addEventListener('click', () => {
     kokanee_counter.innerHTML = kokanee_count; 
   }
 })
-
-// Test to control ramen row 
-//const ramen_row = document.getElementById('ramen_row'); 

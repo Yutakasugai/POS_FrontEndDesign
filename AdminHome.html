@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Kaisei+Tokumin:wght@500&family=Raleway&family=Share&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/AdminHome.css">
     <title>Document</title>
 </head>
@@ -30,8 +31,7 @@
 
             <div class="inside-box">
                 <!-- addUser image -->
-                <img id="addUser-img" src="/images/pic-addUser.svg">
-
+                <img id="addUser-img" src="images/pic-addUser.svg">
                 <!-- Add User Btn function  -->
                 <form action="/auth/admin/addUser" method="POST">
                     <input type="hidden" name="adminName" value="{{name}}">
@@ -48,7 +48,7 @@
 
             <div class="inside-box">
                 <!-- data image -->
-                <img id="viewdata-img" src="/images/pic-record.svg">
+                <img id="viewdata-img" src="images/pic-record.svg">
 
                 <!-- Add User Btn function -->
                 <form action="/auth/admin/viewData" method="POST">
@@ -66,7 +66,7 @@
 
             <div class="inside-box" id="key_box" check_id="{{changeBtn}}">
                 <!-- data image -->
-                <img id="startBtn-img" src="/images/pic-startBtn.svg">
+                <img id="startBtn-img" src="images/pic-startBtn.svg">
 
                 <form action="/auth/admin/start" method="POST" id="form-continueBtn" style="display: none;">
                     <input type="hidden" name="adminName" value="{{name}}">
@@ -90,18 +90,17 @@
         <div class="modal-content">
 
             <span class="close-btn">&times;</span>
-            
-            <h3>Are you sure to start?</h3>
-
+            <div class="box-condition">
+                <h3>Are you sure to start?</h3>
+            </div>
             <div class="button-container">
-
                 <button id="cancel-btn">No</button>
 
                 <form action="/auth/admin/start" method="POST">
                     <input type="hidden" name="adminName" value="{{name}}">
                     <input type="hidden" name="data_key" value="{{data}}">
                     <input type="hidden" name="time_key" value="{{time}}">
-                    <button>Yes</button>
+                    <button id="yes-btn">Yes</button>
                 </form>
 
             </div>
