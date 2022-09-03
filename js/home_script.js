@@ -254,13 +254,5 @@ vege_ramen_row.onclick = () => {
     }
 }
 
-// swiper js
-// const swiper = new Swiper('.swiper', {
-//     pagination: {
-//         el: '.swiper-pagination',
-//         type: 'bullets',
-//     },
-// });
-
 
 
