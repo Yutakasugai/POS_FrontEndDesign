@@ -998,69 +998,194 @@
                 </div>
             </div>
 
+
+
             <!-- Modal for Chashu & Don -->
             <div class="modal_bg_chashu">
+
                 <div class="modal_content_chashu">
-                    <div class="chashu_header">
-                        <div class="section-title-chashu">
-                            <div>Chashu Preferences</div>
-                            <button class="close_button" id="close_chashu_modal">&#x2715</button>
-                        </div>
-                        <p id="chashu_subtitle">For Plate, Burger, and Don</p>
-                    </div>
 
-                    <div class="chashu_body">
-                        <div class="chashu_option">
-                            <div class="required_sign">Required</div>
-                            <div class="option_choice">
-                                <div id="shoulder_option">
-                                    <input type="checkbox" id="chashu_shoulder">
-                                    <label for="chashu_shoulder">Shoulder</label>
-                                </div>
-                                <div id="belly_option">
-                                    <input type="checkbox" id="chashu_belly">
-                                    <label for="chashu_belly">Belly</label>
-                                </div>
-                            </div>
+                    <div class="chashu_modal_container">
+
+                        <!-- Chashu Modal Title Line -->
+                        <div class="chashu_header">
+                                            
+                            <div class="slide-title-chashu">Preferences</div>
+                            <button class="close_button-chashu" id="close_chashu_modal">&#x2715</button>
+
                         </div>
 
-                        <div class="other_options">
-                            <div class="not_req_sign">Not Required</div>
-                            <div class="chashu_specification">
-                                <div class="spec_row">
-                                    <div id="g_oni_option">
-                                        <input type="checkbox" id="no_g_onion">
-                                        <label for="no_g_onion">No G.onion</label>
-                                    </div>
-                                    <div id="g_oni_option">
-                                        <input type="checkbox" id="no_g_onion">
-                                        <label for="no_sauce">No Sauce</label>
-                                    </div>
-                                </div>
-                                <div class="spec_row">
-                                    <div id="sesamine_option">
-                                        <input type="checkbox" id="no_sesamine">
-                                        <label for="no_sesamine">No Sesamine</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Chashu Modal Body Part -->
+                        <div class="chashu-section-body">
 
-                        <div class="chashu_footer">
-                            <div class="menuItem_multiplied">
-                                <div class="item_counter">
-                                    <div class="item_button_wrapper">               
-                                        <button class="menu_item_decrease" id="chashu_decrease">-</button> 
-                                        <p class="item_count" id="chashu_counter">0</p>
-                                        <button class="menu_item_increase" id="chashu_increase">+</button>                
+                            <!-- Chashu Option for only plate and burger -->
+                            <div class="slide-item-chashu">
+                                <div class="containerFor3items-chashu">
+
+                                    <div class="item-name-chashu">
+                                        <del id="check-text" style="text-decoration-color: red"></del>
+                                        <p id="display-text"></p>
                                     </div>
+                                    
+                                    <div class="item-preference-chashu">
+                                        <input type="checkbox" name="chashu_check" class="checkboxForPref-chashu" id="chashu_belly">
+                                        <label for="chashu_belly">Belly</label>
+                                    </div>
+
+                                    <div class="item-preference-chashu">
+                                        <input type="checkbox" name="chashu_check" class="checkboxForPref-chashu" id="chashu_shoulder">
+                                        <label for="chashu_shoulder">Shoulder</label>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="cancelOrAdd">
-                                <button class="cancelButton" id="chashu_cancel">Cancel</button>
-                                <button class="addButton" id="chashu_add">Add</button>
+
+                            <hr id="chashu-section-line">
+
+                            <!-- All options can be removed or side -->
+                            <!-- The must items in the list (g.onion, lettuce, sesamine, sauce, b.flake, all top)-->
+                            <div class="rItems-section-body">
+
+                                <!-- Chashu Modal: 1, G.Onion -->
+                                <div class="rItems-chashu">
+                                    <div class="rItems-containerFor3items">
+
+                                        <div class="rItems-title">G.onion:</div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_gonion">
+                                            <label for="rItems_gonion">Remove</label>
+                                        </div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_gonion">
+                                            <label for="sItems_gonion">Side</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Chashu Modal: 2, sesamine -->
+                                <div class="rItems-chashu">
+                                    <div class="rItems-containerFor3items">
+
+                                        <div class="rItems-title">Sesame:</div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_sesame">
+                                            <label for="rItems_sesame">Remove</label>
+                                        </div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_sesame">
+                                            <label for="sItems_sesame">Side</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Chashu Modal: 3, lettuce -->
+                                <div class="rItems-chashu">
+                                    <div class="rItems-containerFor3items">
+
+                                        <div class="rItems-title">Lettuce:</div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_lettuce">
+                                            <label for="rItems_lettuce">Remove</label>
+                                        </div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_lettuce">
+                                            <label for="sItems_lettuce">Side</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Chashu Modal: 4, B.Flake -->
+                                <div class="rItems-chashu">
+                                    <div class="rItems-containerFor3items">
+
+                                        <div class="rItems-title">B.Flake:</div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_bflake">
+                                            <label for="rItems_bflake">Remove</label>
+                                        </div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_bflake">
+                                            <label for="sItems_bflake">Side</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <!-- Chashu Modal: 5, Sauce -->
+                                <div class="rItems-chashu">
+                                    <div class="rItems-containerFor3items">
+
+                                        <div class="rItems-title">Sauce:</div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_sauce">
+                                            <label for="rItems_sauce">Remove</label>
+                                        </div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_sauce">
+                                            <label for="sItems_sauce">Side</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <!-- Chashu Modal: 6, All Top -->
+                                <div class="rItems-chashu">
+                                    <div class="rItems-containerFor3items">
+
+                                        <div class="rItems-title">All Top:</div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_alltop">
+                                            <label for="rItems_alltop">Remove</label>
+                                        </div>
+
+                                        <div class="rItems-preference">
+                                            <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_alltop">
+                                            <label for="sItems_alltop">Side</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            
                             </div>
-                        </div> 
+
+                            <!-- Multiplier on the chashu modal -->
+                            <div class="chashu_footer">
+
+                                <div class="menuItem_multiplied">
+                                    <div class="item_counter">
+                                        <div class="item_button_wrapper">               
+                                            <button class="menu_item_decrease" id="chashu_decrease">-</button> 
+                                            <p class="item_count" id="chashu_counter">1</p>
+                                            <button class="menu_item_increase" id="chashu_increase">+</button>                
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="chashu-cancelOrAdd">
+                                    <button class="cancelButton" id="chashu_cancel">Cancel</button>
+                                    <button class="addButton" id="chashu_add">Add</button>
+                                </div>
+
+                            </div> 
+
+                        </div>
+                        
                     </div>
                 </div>
             </div>
