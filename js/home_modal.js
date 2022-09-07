@@ -10,6 +10,9 @@ const tomatoModal = document.getElementById('tomatoModal');
 // Season Special Ramen
 const coldModal = document.getElementById('coldModal'); 
 
+// Bowl Soup
+const bowlSoupModal = document.getElementById('bowlSoupModal'); 
+
 // Vegetable Ramen - Falvour options
 const vmisoModal = document.getElementById('vege_miso');
 const vshoyuModal = document.getElementById('vege_shoyu');
@@ -389,7 +392,6 @@ coldModal.addEventListener('click', () => {
 }) 
 
 
-
 // Vegetable Ramen Flavour
 // shoyu
 vshoyuModal.addEventListener('click', () => {
@@ -654,7 +656,7 @@ cancelBtn_chashu.onclick = () => {
   // Reset the major multiplier to 1 again
   chashu_count = 1;
   chashu_counter.innerHTML = chashu_count; 
-  
+
 }
 
 // C.Plate 
@@ -697,11 +699,21 @@ gOnion_Modal.addEventListener('click', () => {
 
 
 
-// Side Dishes Modal
+// Other Side Dishes Modal
 const side_Modal = document.getElementById('side_dishes_modal');
+const cancelBtn_other = document.getElementById('cancelBtn_other'); 
 
 document.querySelector('#close_side_modal').addEventListener('click', () => {
   document.querySelector('.modal_bg_dishes').style.display = 'none';
+
+  // Reset all increment values to 0 
+  $('.counter_section_item').each(function() {
+    this.innerHTML = 0;
+  });
+
+  // Reset all values to 0
+  gyoza_count = 0; steamedBan_count = 0; kimchiS_count = 0; 
+  kimchiL_count = 0; rice_count = 0; matcha_count = 0; 
 });
 
 side_Modal.addEventListener('click', () => {
@@ -709,13 +721,76 @@ side_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg_dishes').classList.add('bg-active-dishes');
 });
 
+// cancel Button
+cancelBtn_other.onclick = () => {
+  document.querySelector('.modal_bg_dishes').style.display = 'none';
+
+  // Reset all increment values to 0 
+  $('.counter_section_item').each(function() {
+    this.innerHTML = 0;
+  });
+
+  // Reset all values to 0
+  gyoza_count = 0; steamedBan_count = 0; kimchiS_count = 0; 
+  kimchiL_count = 0; rice_count = 0; matcha_count = 0; 
+}
+
+
+
+// Toppings Modal (directly from top menu)
+const toppings_Modal = document.getElementById('topping_yellow');
+const cancelBtn_topping = document.getElementById('cancelBtn_topping'); 
+
+document.querySelector('#close_toppings_modal').addEventListener('click', () => {
+  document.querySelector('.modal_bg_toppings').style.display = 'none';
+
+  // Reset all count number to 0
+  $("h1[name='exTopping_count']").each(function(){
+    this.innerHTML = 0; 
+  })
+
+  // Reset each counters to 0
+  beansTop_count = 0; eggsTop_count = 0; bellyTop_count = 0; shoulderTop_count = 0; sCakeTop_count = 0;
+  wakameTop_count = 0; noriTop_count = 0; gOniTop_count = 0; cheeseTop_count = 0;butterTop_count = 0;
+  cornTop_count = 0; fCakeTop_count = 0; bloccoliTop_count = 0; exNoodlesTop_count = 0; 
+});
+
+toppings_Modal.addEventListener('click', () => {
+  document.querySelector('.modal_bg_toppings').style.display = 'block';
+  document.querySelector('.modal_bg_toppings').classList.add('bg-active-toppings');
+});
+
+// Cancel Button
+cancelBtn_topping.onclick = () => {
+  document.querySelector('.modal_bg_toppings').style.display = 'none'; 
+
+  // Reset all count number to 0
+  $("h1[name='exTopping_count']").each(function(){
+    this.innerHTML = 0; 
+  })
+
+  // Reset each counters to 0
+  beansTop_count = 0; eggsTop_count = 0; bellyTop_count = 0; shoulderTop_count = 0; sCakeTop_count = 0;
+  wakameTop_count = 0; noriTop_count = 0; gOniTop_count = 0; cheeseTop_count = 0;butterTop_count = 0;
+  cornTop_count = 0; fCakeTop_count = 0; bloccoliTop_count = 0; exNoodlesTop_count = 0; 
+}; 
 
 
 // Soft Drinks Modal
 const softDrink_Modal = document.getElementById('soft_dri_modal');
+const cancelBtn_softDrinks = document.getElementById('softDrink_cancel'); 
 
 document.querySelector('#close_softDrink_modal').addEventListener('click', () => {
   document.querySelector('.modal_bg_softDrink').style.display = 'none';
+
+  // Reset soft drink count to 0 when close this modal 
+  $('.soft_drink_count').each(function(){
+    this.innerHTML = 0; 
+  }); 
+
+  // Make the js value to 0
+  coke_count = 0; sprite_count = 0; icedTea_count = 0;
+
 });
 
 softDrink_Modal.addEventListener('click', () => {
@@ -723,19 +798,85 @@ softDrink_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg_softDrink').classList.add('bg-active-softDrink');
 });
 
+cancelBtn_softDrinks.onclick = () => {
+  document.querySelector('.modal_bg_softDrink').style.display = 'none';
+
+  // Reset soft drink count to 0 when close this modal 
+  $('.soft_drink_count').each(function(){
+    this.innerHTML = 0; 
+  }); 
+
+  // Make the js value to 0
+  coke_count = 0; sprite_count = 0; icedTea_count = 0;
+}
+
 
 
 // Beer Modal
 const beer_Modal = document.getElementById('beer_modal');
+const cancelBtn_beers = document.getElementById('beer_cancel'); 
 
 document.querySelector('#close_beer_modal').addEventListener('click', () => {
   document.querySelector('.modal_bg_beer').style.display = 'none';
+
+  // Reset soft drink count to 0 when close this modal 
+  $('.drink_beers_count').each(function(){
+    this.innerHTML = 0; 
+  }); 
+
+  asahi_count = 0; sapporo_count = 0; kokanee_count = 0; 
 });
 
 beer_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg_beer').style.display = 'block';
   document.querySelector('.modal_bg_beer').classList.add('bg-active-beer');
 });
+
+cancelBtn_beers.onclick = () => {
+  document.querySelector('.modal_bg_beer').style.display = 'none';
+
+  // Reset soft drink count to 0 when close this modal 
+  $('.drink_beers_count').each(function(){
+    this.innerHTML = 0; 
+  }); 
+
+  asahi_count = 0; sapporo_count = 0; kokanee_count = 0; 
+}
+
+// Bowl　Soup Modal 
+const closeBtn_bowlSoup = document.getElementById('close_bowlSoup_modal'); 
+const cancelBtn_bowlSoup = document.getElementById('cancelBtn_bowlSoup'); 
+
+bowlSoupModal.addEventListener('click', () => {
+  document.querySelector('.modal_bg_bowlSoup').style.display = 'block';
+  document.querySelector('.modal_bg_bowlSoup').classList.add('bg-active-bowlSoup');
+})
+
+closeBtn_bowlSoup.addEventListener('click', () => {
+  document.querySelector('.modal_bg_bowlSoup').style.display = 'none';
+
+  // Reset the counter number to 0
+  $('.num_counter_bowlSoup').each(function() {
+    this.innerHTML = 0; 
+  })
+
+  // Make all counter values to 0
+  BS_Shio_count = 0; BS_Shoyu_count = 0; BS_Miso_count = 0; 
+  BS_hotMiso_count = 0; BS_Curry_count = 0; BS_Tomato_count = 0;
+})
+
+cancelBtn_bowlSoup.onclick = () => {
+  document.querySelector('.modal_bg_bowlSoup').style.display = 'none';
+
+  // Reset the counter number to 0
+  $('.num_counter_bowlSoup').each(function() {
+    this.innerHTML = 0; 
+  })
+
+  // Make all counter values to 0
+  BS_Shio_count = 0; BS_Shoyu_count = 0; BS_Miso_count = 0; 
+  BS_hotMiso_count = 0; BS_Curry_count = 0; BS_Tomato_count = 0;
+}
 
 
 // The Majpr Multiplier
@@ -1120,7 +1261,7 @@ corn_decreaseBtn.addEventListener('click', () => {
   }
 })
 // + btn: Decrease num of topping
- corn_increaseBtn.addEventListener('click', () => {
+corn_increaseBtn.addEventListener('click', () => {
   corn_count ++; 
   corn_counter.innerHTML = corn_count;
   if(corn_count >= 11) {
@@ -1400,48 +1541,6 @@ matcha_increaseBtn.addEventListener('click', () => {
     matcha_counter.innerHTML = matcha_count; 
   }
 })
-
-// button to add/reduce a num of other side dish
-let otherSide_decreaseBtn = document.getElementById('otherSide_decrease');
-let otherSide_increaseBtn = document.getElementById('otherSide_increase'); 
-let otherSide_counter = document.getElementById('otherSide_counter');
-let otherSide_count = 0;
-
-// - btn: Increase num of topping 
-otherSide_decreaseBtn.addEventListener('click', () => {
-  otherSide_count --; 
-  otherSide_counter.innerHTML = otherSide_count; 
-  if(otherSide_count < 0) {
-    otherSide_count = 0;
-    otherSide_counter.innerHTML = otherSide_count; 
-  } else {
-    otherSide_counter.innerHTML = otherSide_count; 
-  }
-})
-// + btn: Decrease num of topping
-otherSide_increaseBtn.addEventListener('click', () => {
-  otherSide_count ++; 
-  otherSide_counter.innerHTML = otherSide_count;
-  if(otherSide_count >= 11) {
-    otherSide_count = 0;
-    otherSide_counter.innerHTML = otherSide_count; 
-  } else {
-    otherSide_counter.innerHTML = otherSide_count; 
-  }
-})
-
-
-// Toppings Modal (directly from top menu)
-const toppings_Modal = document.getElementById('topping_yellow');
-
-document.querySelector('#close_toppings_modal').addEventListener('click', () => {
-  document.querySelector('.modal_bg_toppings').style.display = 'none';
-});
-
-toppings_Modal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_toppings').style.display = 'block';
-  document.querySelector('.modal_bg_toppings').classList.add('bg-active-toppings');
-});
 
 
 // Topping Mdal
@@ -1867,6 +1966,7 @@ exNoodlesTop_increaseBtn.addEventListener('click', () => {
 })
 
 
+
 // Soft Drink counter button
 // for coke
 let coke_decreaseBtn = document.getElementById('coke_decrease');
@@ -2048,3 +2148,191 @@ kokanee_increaseBtn.addEventListener('click', () => {
     kokanee_counter.innerHTML = kokanee_count; 
   }
 })
+
+
+// Bowl Soup Counter
+// for shio soup
+let BS_Shio_decreaseBtn = document.getElementById('BS_Shio_decrease');
+let BS_Shio_increaseBtn = document.getElementById('BS_Shio_increase'); 
+let BS_Shio_counter = document.getElementById('BS_Shio_counter');
+let BS_Shio_count = 0;
+
+// - btn: Decrease num  
+BS_Shio_decreaseBtn.addEventListener('click', () => {
+  BS_Shio_count --; 
+  BS_Shio_counter.innerHTML = BS_Shio_count; 
+  if(BS_Shio_count < 0) {
+    BS_Shio_count = 0;
+    BS_Shio_counter.innerHTML = BS_Shio_count; 
+  } else {
+    BS_Shio_counter.innerHTML = BS_Shio_count; 
+  }
+})
+// + btn: Increase num 
+BS_Shio_increaseBtn.addEventListener('click', () => {
+  BS_Shio_count ++; 
+  BS_Shio_counter.innerHTML = BS_Shio_count; 
+  if(BS_Shio_count >= 11) {
+    BS_Shio_count = 0;
+    BS_Shio_counter.innerHTML = BS_Shio_count; 
+  } else {
+    BS_Shio_counter.innerHTML = BS_Shio_count; 
+  }
+})
+
+
+// for shoyu soup
+let BS_Shoyu_decreaseBtn = document.getElementById('BS_Shoyu_decrease');
+let BS_Shoyu_increaseBtn = document.getElementById('BS_Shoyu_increase'); 
+let BS_Shoyu_counter = document.getElementById('BS_Shoyu_counter');
+let BS_Shoyu_count = 0;
+
+// - btn: Decrease num  
+BS_Shoyu_decreaseBtn.addEventListener('click', () => {
+  BS_Shoyu_count --; 
+  BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
+  if(BS_Shoyu_count < 0) {
+    BS_Shoyu_count = 0;
+    BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
+  } else {
+    BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
+  }
+})
+// + btn: Increase num 
+BS_Shoyu_increaseBtn.addEventListener('click', () => {
+  BS_Shoyu_count ++; 
+  BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
+  if(BS_Shoyu_count >= 11) {
+    BS_Shoyu_count = 0;
+    BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
+  } else {
+    BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
+  }
+})
+
+
+// for miso soup
+let BS_Miso_decreaseBtn = document.getElementById('BS_Miso_decrease');
+let BS_Miso_increaseBtn = document.getElementById('BS_Miso_increase'); 
+let BS_Miso_counter = document.getElementById('BS_Miso_counter');
+let BS_Miso_count = 0;
+
+// - btn: Decrease num  
+BS_Miso_decreaseBtn.addEventListener('click', () => {
+  BS_Miso_count --; 
+  BS_Miso_counter.innerHTML = BS_Miso_count; 
+  if(BS_Miso_count < 0) {
+    BS_Miso_count = 0;
+    BS_Miso_counter.innerHTML = BS_Miso_count; 
+  } else {
+    BS_Miso_counter.innerHTML = BS_Miso_count; 
+  }
+})
+// + btn: Increase num 
+BS_Miso_increaseBtn.addEventListener('click', () => {
+  BS_Miso_count ++; 
+  BS_Miso_counter.innerHTML = BS_Miso_count; 
+  if(BS_Miso_count >= 11) {
+    BS_Miso_count = 0;
+    BS_Miso_counter.innerHTML = BS_Miso_count; 
+  } else {
+    BS_Miso_counter.innerHTML = BS_Miso_count; 
+  }
+})
+
+
+// for hot miso soup
+let BS_hotMiso_decreaseBtn = document.getElementById('BS_hotMiso_decrease');
+let BS_hotMiso_increaseBtn = document.getElementById('BS_hotMiso_increase'); 
+let BS_hotMiso_counter = document.getElementById('BS_hotMiso_counter');
+let BS_hotMiso_count = 0;
+
+// - btn: Decrease num  
+BS_hotMiso_decreaseBtn.addEventListener('click', () => {
+  BS_hotMiso_count --; 
+  BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
+  if(BS_hotMiso_count < 0) {
+    BS_hotMiso_count = 0;
+    BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
+  } else {
+    BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
+  }
+})
+
+// + btn: Increase num 
+BS_hotMiso_increaseBtn.addEventListener('click', () => {
+  BS_hotMiso_count ++; 
+  BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
+  if(BS_hotMiso_count >= 11) {
+    BS_hotMiso_count = 0;
+    BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
+  } else {
+    BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
+  }
+})
+
+// for curry soup
+let BS_Curry_decreaseBtn = document.getElementById('BS_Curry_decrease');
+let BS_Curry_increaseBtn = document.getElementById('BS_Curry_increase'); 
+let BS_Curry_counter = document.getElementById('BS_Curry_counter');
+let BS_Curry_count = 0;
+
+// - btn: Decrease num  
+BS_Curry_decreaseBtn.addEventListener('click', () => {
+  BS_Curry_count --; 
+  BS_Curry_counter.innerHTML = BS_Curry_count; 
+  if(BS_Curry_count < 0) {
+    BS_Curry_count = 0;
+    BS_Curry_counter.innerHTML = BS_Curry_count; 
+  } else {
+    BS_Curry_counter.innerHTML = BS_Curry_count; 
+  }
+})
+
+// + btn: Increase num 
+BS_Curry_increaseBtn.addEventListener('click', () => {
+  BS_Curry_count ++; 
+  BS_Curry_counter.innerHTML = BS_Curry_count; 
+  if(BS_Curry_count >= 11) {
+    BS_Curry_count = 0;
+    BS_Curry_counter.innerHTML = BS_Curry_count; 
+  } else {
+    BS_Curry_counter.innerHTML = BS_Curry_count; 
+  }
+})
+
+// for tomato soup
+let BS_Tomato_decreaseBtn = document.getElementById('BS_Tomato_decrease');
+let BS_Tomato_increaseBtn = document.getElementById('BS_Tomato_increase'); 
+let BS_Tomato_counter = document.getElementById('BS_Tomato_counter');
+let BS_Tomato_count = 0;
+
+// - btn: Decrease num  
+BS_Tomato_decreaseBtn.addEventListener('click', () => {
+  BS_Tomato_count --; 
+  BS_Tomato_counter.innerHTML = BS_Tomato_count; 
+  if(BS_Tomato_count < 0) {
+    BS_Tomato_count = 0;
+    BS_Tomato_counter.innerHTML = BS_Tomato_count; 
+  } else {
+    BS_Tomato_counter.innerHTML = BS_Tomato_count; 
+  }
+})
+
+// + btn: Increase num 
+BS_Tomato_increaseBtn.addEventListener('click', () => {
+  BS_Tomato_count ++; 
+  BS_Tomato_counter.innerHTML = BS_Tomato_count; 
+  if(BS_Tomato_count >= 11) {
+    BS_Tomato_count = 0;
+    BS_Tomato_counter.innerHTML = BS_Tomato_count; 
+  } else {
+    BS_Tomato_counter.innerHTML = BS_Tomato_count; 
+  }
+})
+
+
+
+
+
+

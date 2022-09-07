@@ -208,13 +208,14 @@
 
 .addToppings-section-body {
   box-sizing: border-box;
-  height: 80%;
+  height: 85%;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 15px;
   background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  row-gap: 50px;
 }
 
 .section-row {
@@ -224,24 +225,31 @@
   align-content: center;
 }
 .left-item{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   /* justify-content: space-between; */
   height: 100%;
   width: 100%;
-  margin-left: -20px;
+  margin-left: 10px;
 }
 .right-item{
-  display: flex;
-  justify-content: space-evenly;
+  /* display: flex;
+  justify-content: space-evenly; */
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr;
   height: 100%;
   width: 100%;
 }
 .item-name2 {
-  margin-top: 0.5em;
+  display: flex;
+  justify-content: start;
+  /* margin-top: 0.5em;
   margin-right: 25px;
   font-size: 0.8em;
-  text-align: right;
-  width: 200px;
+  text-align: right;*/
+  width: 120px; 
+  font-size: 0.8em;
+  margin-top: 0.5em;
 }
 
 /* topping counter button */
@@ -506,7 +514,8 @@
 
 /* Chashu Modal Footer Section */
 .chashu_footer {
-  margin-top: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .chashu-cancelOrAdd {
   display: flex;
@@ -516,6 +525,7 @@
   padding-right: 50px;
   margin-top: 20px;
 }
+
 
 
 /* Modal for Other Side Dishes */ 
@@ -566,20 +576,15 @@
   align-items: center;
 }
 .dishes_content {
-  height: 85%;
+  height: 89%;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 15px;
   background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2.5fr;
+  grid-template-rows: auto;
+  
 }
-.section-title-dishes {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-}
-
 /* same format for drinks as well */ 
 .section_item {
   display: flex;
@@ -591,11 +596,10 @@
 }
 .section_item_name {
   padding-top: 30px;
-  font-weight: 500;
+  font-weight: 450;
+  font-size: 3.7rem;
 }
-#matcha_ice {
-  font-size: 45px;
-}
+
 
 /* Section item counter button (used for other side dishes)*/
 /* This code is also used for soft drinks and beers */
@@ -603,6 +607,7 @@
   display: flex;
   justify-content: center;
   margin-left: -10px;
+  margin-top: 20px;
 }
 .counter_section_item {
   font-size: 70px;
@@ -644,6 +649,8 @@
   box-shadow: none;
   transform: translateY(5px);
 }
+
+
 
 /* modal for topping (directly from top menu) */
 .modal_bg_toppings {
@@ -694,20 +701,55 @@
 }
 .toppings-body {
   box-sizing: border-box;
-  height: 85%;
+  height: 89%;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 15px;
   background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+  grid-template-rows: auto;
+  row-gap: 45px;
 }
 .topping_footer {
-  margin-top: 10vh;
+  margin-bottom: 15px;
+}
+.toppings-section-row {
+  display: grid;
+  grid-template-columns: 0.98fr 1.02fr;
+  /* margin-right: 15px; */
+  /* margin-top: 1px; */
+  align-content: center;
+}
+.toppings-left-item{
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  /* justify-content: space-between; */
+  height: 100%;
+  width: 100%;
+  margin-left: 10px;
+}
+.toppings-right-item{
+  /* display: flex;
+  justify-content: space-evenly; */
+  display: grid;
+  grid-template-columns: 1.15fr 1.25fr;
+  height: 100%;
+  width: 100%;
+}
+.toppings-item-name2 {
+  display: flex;
+  justify-content: start;
+  /* margin-top: 0.5em;
+  margin-right: 25px;
+  font-size: 0.8em;
+  text-align: right;*/
+  width: 120px; 
+  font-size: 0.8em;
+  margin-top: 0.5em;
 }
 
 
-/* modal for drink*/
+/* modal for soft drink*/
 .modal_bg_softDrink {
   position: fixed;
   width: 100%;
@@ -755,18 +797,25 @@
   align-items: center;
 }
 .softDrink_body {
-  height: 85%;
-  max-height: 1100px;
+  height:90%;
+  /* max-height: 1100px; */
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 15px;
   background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
 }
 .softDrink_footer {
-  margin-top: 60px;
+  margin-bottom: auto;
+  margin-top: auto;
 }
+.soft_drink_count{
+  font-size: 4.5rem;
+  padding-bottom: 0px;
+  width: 80px;
+}
+
 
 /* Modal for beers */
 .modal_bg_beer {
@@ -821,8 +870,8 @@
   padding-top: 20px;
 }
 .beer_body {
-  height: 85%;
-  max-height: 1100px;
+  height: 90%;
+  /* max-height: 1100px; */
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 15px;
@@ -831,5 +880,104 @@
   grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 .beer_footer {
-  margin-top: 60px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.drink_beers_count {
+  font-size: 4.5rem;
+  padding-bottom: 0px;
+  width: 80px;
+}
+
+
+/* Modal for Bowl Soup */
+.modal_bg_bowlSoup {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  opacity: 0; /*hide this line*/
+  visibility: hidden; /*hide this line*/
+  transition: visibility 0s opacity 0, 5s;
+}
+.bg-active-bowlSoup {
+  visibility: visible;
+  opacity: 1;
+}
+.modal_content_bowlSoup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: rgb(234, 234, 233);
+  width: 90%;
+  height: 90%;
+  z-index: 10;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.bowlSoup_header {
+  height: 10%;
+  max-height: 100px;
+  box-sizing: border-box;
+  background: linear-gradient(rgb(86, 84, 84),rgb(144, 135, 135));
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bowlSoup_content {
+  height: 89%;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 15px;
+  background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
+  display: grid;
+  grid-template-rows: auto;
+  
+}
+/* same format for drinks as well */ 
+.section_item_bowlSoup {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-bottom: 2px solid;
+  align-items: center;
+}
+.title_bowlSoup {
+  padding-top: 30px;
+  font-weight: 450;
+  font-size: 3.7rem;
+}
+.num_counter_bowlSoup {
+  font-size: 70px;
+  padding-bottom: 0px;
+  width: 80px;
+}
+
+/* BowlSoup Modal Footer Section */
+.bowlSoup_footer {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.bowlSoup-cancelOrAdd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 20px;
 }
