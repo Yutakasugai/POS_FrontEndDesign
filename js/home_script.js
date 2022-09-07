@@ -1,5 +1,5 @@
 
-function showHideRow(row1, row2, row3, row4, row5, row6, row7, row8, row9, row10) {
+function showHideRow(row1, row2, row3, row4, row5, row6, row7, row8, row9, row10, row11) {
     $("#" + row1).toggle();
     $("#" + row2).toggle();
     $("#" + row3).toggle();
@@ -10,8 +10,9 @@ function showHideRow(row1, row2, row3, row4, row5, row6, row7, row8, row9, row10
     $("#" + row8).toggle();
     $("#" + row9).toggle();
     $("#" + row10).toggle();
+    $("#" + row11).toggle();
 }
-function hideRow(row1, row2, row3, row4, row5, row6, row7, row8, row9, row10) {
+function hideRow(row1, row2, row3, row4, row5, row6, row7, row8, row9, row10, row11) {
     $("#" + row1).hide();
     $("#" + row2).hide();
     $("#" + row3).hide();
@@ -22,9 +23,10 @@ function hideRow(row1, row2, row3, row4, row5, row6, row7, row8, row9, row10) {
     $("#" + row8).hide();
     $("#" + row9).hide();
     $("#" + row10).hide();
+    $("#" + row11).hide();
 }
 
-function showRow(row1, row2, row3, row4, row5, row6, row7, row8, row9, row10) {
+function showRow(row1, row2, row3, row4, row5, row6, row7, row8, row9, row10, row11) {
     $("#" + row1).show();
     $("#" + row2).show();
     $("#" + row3).show();
@@ -35,6 +37,7 @@ function showRow(row1, row2, row3, row4, row5, row6, row7, row8, row9, row10) {
     $("#" + row8).show();
     $("#" + row9).show();
     $("#" + row10).show();
+    $("#" + row11).show();
 }
 
 
@@ -64,7 +67,7 @@ top_row.onclick = () => {
 
     // Back to default row list
     showRow('ramen_row', 'set_row', 'side_dish_row', 'topping_row', 'dri_des_row');
-    hideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_cold');
+    hideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_soup', 'row_cold');
     hideRow('vege_shoyu', 'vege_shio', 'vege_miso', 'vege_hot', 'vege_tomato');
     hideRow('set_A_row', 'set_B_row');
     hideRow('row_misoSA', 'row_shoyuSA', 'row_shioSA', 'row_shrimpSA', 'row_hotMisoSA', 'row_currySA', 'row_vegeSA', 'row_tomatoSA');
@@ -85,7 +88,7 @@ ramen_row.onclick = () => {
         // Flip the check_id panel from close to open
         ramen_row.setAttribute('checkID_ramen', 'open'); 
 
-        showRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_cold')
+        showRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_soup', 'row_cold')
         hideRow('set_row', 'side_dish_row', 'topping_row', 'dri_des_row')
 
     } else {
@@ -93,7 +96,7 @@ ramen_row.onclick = () => {
         ramen_row.setAttribute('checkID_ramen', 'close'); 
 
         showRow('ramen_row', 'set_row', 'side_dish_row', 'topping_row', 'dri_des_row');
-        hideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_cold');
+        hideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_soup', 'row_cold');
         hideRow('vege_shoyu', 'vege_shio', 'vege_miso', 'vege_hot', 'vege_tomato');
         hideRow('set_A_row', 'set_B_row')
         hideRow('row_misoSA', 'row_shoyuSA', 'row_shioSA', 'row_shrimpSA', 'row_hotMisoSA', 'row_currySA', 'row_vegeSA', 'row_tomatoSA');
@@ -123,7 +126,7 @@ set_row.onclick = () => {
         set_row.setAttribute('checkID_set', 'close'); 
 
         showRow('ramen_row', 'set_row', 'side_dish_row', 'topping_row', 'dri_des_row');
-        hideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_cold');
+        hideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_soup', 'row_cold');
         hideRow('vege_shoyu', 'vege_shio', 'vege_miso', 'vege_hot', 'vege_tomato');
         hideRow('set_A_row', 'set_B_row')
         hideRow('row_misoSA', 'row_shoyuSA', 'row_shioSA', 'row_shrimpSA', 'row_hotMisoSA', 'row_currySA', 'row_vegeSA', 'row_tomatoSA');
@@ -190,7 +193,7 @@ side_dish_row.onclick = () => {
         side_dish_row.setAttribute('checkID_side', 'close');
         
         showRow('ramen_row', 'set_row', 'side_dish_row', 'topping_row', 'dri_des_row');
-        hideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_cold');
+        hideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_soup', 'row_cold');
         hideRow('vege_shoyu', 'vege_shio', 'vege_miso', 'vege_hot', 'vege_tomato');
         hideRow('set_A_row', 'set_B_row')
         hideRow('row_misoSA', 'row_shoyuSA', 'row_shioSA', 'row_shrimpSA', 'row_hotMisoSA', 'row_currySA', 'row_vegeSA', 'row_tomatoSA');
@@ -219,7 +222,7 @@ dri_des_row.onclick = () => {
         dri_des_row.setAttribute('checkID_drink', 'close');
         
         showRow('ramen_row', 'set_row', 'side_dish_row', 'topping_row', 'dri_des_row');
-        hideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_cold');
+        hideRow('row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_soup', 'row_cold');
         hideRow('vege_shoyu', 'vege_shio', 'vege_miso', 'vege_hot', 'vege_tomato');
         hideRow('set_A_row', 'set_B_row')
         hideRow('row_misoSA', 'row_shoyuSA', 'row_shioSA', 'row_shrimpSA', 'row_hotMisoSA', 'row_currySA', 'row_vegeSA', 'row_tomatoSA');
@@ -242,14 +245,14 @@ vege_ramen_row.onclick = () => {
         vege_ramen_btn.style.background = 'yellow'; 
 
         showRow('vege_shoyu', 'vege_shio', 'vege_miso', 'vege_hot', 'vege_tomato'); 
-        hideRow('ramen_row', 'row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_tomato', 'row_cold')
+        hideRow('ramen_row', 'row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_tomato', 'row_soup', 'row_cold')
     
     } else {
 
         vege_ramen_row.setAttribute('checkID_vege', 'close'); 
         vege_ramen_btn.style.background = '#ebebeb'; 
 
-        showRow('ramen_row', 'row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_cold');
+        showRow('ramen_row', 'row_miso', 'row_shoyu', 'row_shio', 'row_shrimp', 'row_hotMiso', 'row_curry', 'row_vege', 'row_tomato', 'row_soup', 'row_cold');
         hideRow('vege_shoyu', 'vege_shio', 'vege_miso', 'vege_hot', 'vege_tomato');
     }
 }
