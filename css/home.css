@@ -79,13 +79,13 @@ html, body {
     overflow:auto;
     overflow-y: scroll;
     position:relative;
+    height: 93%;
+    margin-top: 10px;
 }
 
 
 /* Table Box*/
-.table-container {
-    margin-top: 10px;
-}
+
 .table_num {
     font-size: 17px;
     font-weight: 500;
@@ -258,54 +258,54 @@ html, body {
 .ex1 {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 49%;
 }
 
 .ex2 {
     display: flex;
     flex-direction: row;
     margin-left: 10px;
-    width: 50%;
+    width: 49%;
 }
 
 /* Table-3 and Table-4 */
 .ex3 {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 49%;
 }
 
 .ex4{
     display: flex;
     flex-direction: row;
     margin-left: 10px;
-    width: 50%;
+    width: 49%;
 }
 
 /* Table-5 and Table-6 */
 .ex5 {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 49%;
 }
 .ex6 {
     display: flex;
     flex-direction: row;
     margin-left: 10px;
-    width: 50%;
+    width: 49%;
 }
 
 /* Table-7 and Table-8 */
 .ex7 {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 49%;
 }
 .ex8 {
     display: flex;
     flex-direction: row;
     margin-left: 10px;
-    width: 50%;
+    width: 49%;
 }
 
 
@@ -323,36 +323,71 @@ width: none; does not do anything as well */
 
 
 .btn-container {
-    display: grid;
-    grid-template-columns: 1fr 0.1fr 1fr;
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
     background-color: #343434;
     border-radius: 20px;
     padding: 10px;
     color: #c3c3c3;
+    text-align: center;
 }
 
-
-
 #signout-btn{
-    padding: 9px 16px;
+    padding: 20px 0px;
     border-radius: 10px;
     border-width: 2.5px;
     border-color: black;
-    background-color: ivory;
-    float: left;
+    background-color: lightskyblue;
+    width: 65.5px;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+
+
 }
 #signout-btn:active {
     box-shadow: none;
     transform: translateY(3px);
     opacity: 0.5;
   }
-#close-btn{
-    padding: 9px 21px;
-    background-color: ivory;
+  
+#order-btn{
+    padding: 20px 0px;
     border-radius: 10px;
     border-width: 2.5px;
     border-color: black;
-    float: right;
+    background-color: lightgreen;
+    width: 65.5px;
+    height: 100%;
+    text-align: center;
+}
+#order-btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+}  
+#void-btn{
+    padding: 20px 0px;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    background-color: lightpink;
+    width: 65.5px;
+    height: 100%;
+}
+#void-btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
+#close-btn{
+    padding: 20px 0px;
+    background-color: rgb(238, 38, 38);
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    width: 65.5px;
+    height: 100%;
 }
 #close-btn:active {
     box-shadow: none;
@@ -707,6 +742,113 @@ width: none; does not do anything as well */
     background-color: lightgreen;
 }
 
+/* Order Btn Modal */
+.scrollable-orders{
+    flex: 1;
+    height: 90%;
+    overflow:auto;
+    overflow-y: scroll;
+    position:relative; 
+    margin-top: 10px;
+    margin-bottom: 5px;
+ }
+
+.orderBtn-modal {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.modal-content-orderBtn {
+    background: #f4f4f4;
+    margin: 5% auto;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    border-radius: 5px;
+    /* min-height: 500px; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.close-btn-orderBtn {
+    position: fixed;
+    left: 85%;
+    margin-top: 1%;
+    font-size: 2rem;
+    z-index: 30;
+}
+.close-btn-orderBtn:hover {
+    cursor: pointer;
+    color: var(--brightred);
+    transition: 0.2s ease-out;
+}
+
+
+/* Order Modal Inside */
+.orderBtn-textBox {
+    position: fixed;
+    text-align: center;
+    width: 90%;
+    height:80%;
+    margin-top: 22%;
+    font-size: 0.8rem;
+    z-index: 20;
+}
+.orderBtn-title {
+    position: fixed;
+    text-align: center;
+    font-family: "Kaisei Tokumin", Sans-Serif;
+    background-color: lightgray;
+    width: 90%;
+    font-size: 0.8rem;
+    padding: 5px 0;
+    z-index: 20;
+}
+
+/* Order Modal Table */
+.review-container table{
+    width: 95%;
+    height: 90%;
+    margin-top: 1%;
+    z-index: 10;
+}
+
+.review-container{
+    display: flex;
+    justify-content: center;
+}
+
+.reviewBox-header {
+    height: 2.5rem;
+    font-size: 1.1rem;
+
+}
+
+.reviewBox-container th {
+    height: 2.5rem;
+    font-size: 1.1rem;
+}
+
+#tableNum-row{
+    width: 30%;
+    background-color: lightsalmon;
+}
+
+#order-row {
+    width: 70%;
+}
+
+/* .addedInfo-container th{
+    height: 2rem;
+    font-size: 1.1rem;
+    background: lightcoral;
+} */
+
+
 @media (orientation: landscape){
     body{
         width: 98%;
@@ -769,4 +911,76 @@ width: none; does not do anything as well */
         box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0, 7px 20px 0 rgba(0, 0, 0, 0.2);
         position: relative;
     }
+
+    .btn-container {
+        display:grid;
+        grid-auto-columns: 25%;
+        grid-auto-flow: column;
+        background-color: #343434;
+        border-radius: 20px;
+        padding: 10px;
+        color: #c3c3c3;
+        text-align: center;
+    }
+    
+    #signout-btn{
+        padding: 10px 0px;
+        border-radius: 10px;
+        border-width: 2.5px;
+        border-color: black;
+        background-color: lightskyblue;
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        text-align: center; 
+    }
+    #signout-btn:active {
+        box-shadow: none;
+        transform: translateY(3px);
+        opacity: 0.5;
+      }
+      
+    #order-btn{
+        padding: 10px 0px;
+        border-radius: 10px;
+        border-width: 2.5px;
+        border-color: black;
+        background-color: lightgreen;
+        width: 90%;
+        height: 100%;
+        text-align: center;
+    }
+    #order-btn:active {
+        box-shadow: none;
+        transform: translateY(3px);
+        opacity: 0.5;
+    }  
+    #void-btn{
+        padding: 10px 0px;
+        border-radius: 10px;
+        border-width: 2.5px;
+        border-color: black;
+        background-color: lightpink;
+        width: 90%;
+        height: 100%;
+    }
+    #void-btn:active {
+        box-shadow: none;
+        transform: translateY(3px);
+        opacity: 0.5;
+      }
+    #close-btn{
+        padding: 10px 0px;
+        background-color: rgb(238, 38, 38);
+        border-radius: 10px;
+        border-width: 2.5px;
+        border-color: black;
+        width: 90%;
+        height: 100%;
+    }
+    #close-btn:active {
+        box-shadow: none;
+        transform: translateY(3px);
+        opacity: 0.5;
+      }
 }

@@ -16,6 +16,7 @@ body {
     border-radius: 20px;
     padding: 10px;
     color: white;
+    margin-top: -20px;
 }
 /* .page-info {
     margin-top: -15px;
@@ -120,13 +121,13 @@ body {
     overflow-y: scroll;
     position:relative; 
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .box-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 30rem;
+    height: 29rem;
     justify-items: center;
     margin-top: 10px;
 }
@@ -134,8 +135,8 @@ body {
     width: 94%; 
     background-color: #fffdd0;
     /* display: grid; */
-    grid-template-columns: auto;
-    grid-template-rows: 2rem 25.5rem 2.5rem;
+    grid-template-columns: 100%;
+    grid-template-rows: 2rem 24rem 2.5rem;
     /* border-radius: 10px; */
     border-width: 1.5px;
     border-style: solid;
@@ -172,7 +173,7 @@ body {
 .done-button {
     background: lightgreen;
     width: 100%;
-    height: 100%;
+    height: 120%;
     font-size: 1rem;
     color: black;
     font-weight: 500;
@@ -192,7 +193,7 @@ body {
     justify-content: space-between;
     margin-top: 10px;
     border-radius: 20px;
-    padding: 10px;
+    padding: 5px;
     color: white;
     background-color: #343434;
 }

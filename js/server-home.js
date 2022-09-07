@@ -175,6 +175,8 @@ window.addEventListener('click', (e) => {
         addBtnModal.style.display = 'none'; 
     } else if (e.target === closeBtnModal) {
         closeBtnModal.style.display = 'none'; 
+    } else if (e.target === orderBtnModal) {
+        orderBtnModal.style.display = 'none'; 
     }
 })
 
@@ -292,6 +294,20 @@ closeBtn_close.addEventListener('click', () => {
 noBtn_close.addEventListener('click', () => {
     closeBtnModal.style.display = 'none'; 
 })
+
+// Order Btn Modal 
+const orderBtn = document.getElementById('order-btn');
+const orderBtnModal = document.getElementById('orderBtn-modal'); 
+const orderBtnClose = document.querySelector('.close-btn-orderBtn'); 
+
+// Import jquery function 
+orderBtn.addEventListener('click', () => {
+    orderBtnModal.style.display = 'block'; 
+})
+orderBtnClose.addEventListener('click', () => {
+    orderBtnModal.style.display = 'none'; 
+})
+
 
 
 
