@@ -1,30 +1,29 @@
 html, body {
     background: #585858;
     font-family: "Kaisei Tokumin", Sans-Serif;
-    position: sticky;
-    overflow-y: scroll;
+    position: fixed;
     height: 100%;
+    width: 100%;
 }
 
 .wrapper{
     height:100%;
-    position: sticky;
+    width: 100%;
     display: grid;
-    grid-template-rows: 125px auto auto 90px;
+    grid-template-rows: 125px auto 80px;
 }
 
-/* User Info & Phone and Take Out buttons */
+/* User Info*/
 .page-container {
     grid-row: 1;
     display: grid;
-    grid-template-columns: 1fr 0.1fr 1fr;
     background-color: #343434;
     border-radius: 20px;
     padding: 10px;
     color: #c3c3c3;
     align-self: flex-start;
+    margin-right: 15px;
 }
-
 
 .page-container button{
     margin-top: 4px;
@@ -37,54 +36,54 @@ html, body {
     /* padding: 3px; */
 }
 
-
-
-
-
-
 /* Display: 0; does not do anything else
 width: none; does not do anything as well */
 .customer-orders{
-    width:90%;
-    height: 94%;
+    grid-row: 2;
+    display: grid;
+    height: auto;
     padding: 5px;
     border-radius: 5px;
     border-width: 10px;
-    border: 1px solid black;
-    background-color: beige;
-    margin:auto;
-    flex: 1;
-    overflow:auto;
-    overflow-y: scroll;
-    position:relative;
-    grid-row:2;
+    background-color: #fffdd0;
+    grid-template-columns: 100%;
+    grid-template-rows: 88% 12%;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.customer-container{
+    height: auto;
+
 }
 
 .scrollable{
-    
-    height:88%;
-    margin:auto;
+    grid-row: 1;
+    height: auto;
     color: black;
     font-size: 20px;
-
-    flex: 1;
-    overflow:auto;
     overflow-y: scroll;
-    position:relative;
+    position:relative; 
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: 15px;
 }
 
-
-
 .customer-orders-button {
-    grid-row: 3;
-    display: grid;
-    position: absolute;
-    grid-template-columns: 1fr 0.1fr 1fr;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 95%;
     border-radius: 20px;
     padding: 10px;
     color: #c3c3c3;
     margin: auto;
-    position: sticky;   
+    position: sticky;    
 }
 
 #remove-btn{
@@ -101,7 +100,7 @@ width: none; does not do anything as well */
     opacity: 0.5;
   }
 #bill-btn{
-    padding: 9px 21px;
+    padding: 9px 30px;
     background-color: lightsalmon;
     border-radius: 10px;
     border-width: 2.5px;
@@ -115,42 +114,23 @@ width: none; does not do anything as well */
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Close btn and Sign Out btn */
 #footer{
-    grid-row: 4;
-    overflow-y: scroll;
-    overflow-x: scroll;
+    grid-row: 3;
     margin-bottom: 20px;
-    align-self: flex-end;
+    display: flex;
+    margin-right: 15px;
 }
 
-
 .btn-container {
-    display: grid;
-    grid-template-columns: 1fr 0.1fr 1fr;
+    display: flex;
+    width: 100%;
     background-color: #343434;
     border-radius: 20px;
     padding: 10px;
     color: #c3c3c3;
+    justify-content: space-between;
 }
-
-
 
 #back-btn{
     padding: 9px 16px;
@@ -159,6 +139,7 @@ width: none; does not do anything as well */
     border-color: black;
     background-color: lightcoral;
     float: left;
+    align-items: flex-start;
 }
 #back-btn:active {
     box-shadow: none;
@@ -166,12 +147,13 @@ width: none; does not do anything as well */
     opacity: 0.5;
   }
 #done-btn{
-    padding: 9px 21px;
+    padding: 9px 16px;
     background-color: lightgreen;
     border-radius: 10px;
     border-width: 2.5px;
     border-color: black;
     float: right;
+    align-items: flex-end;
 }
 #done-btn:active {
     box-shadow: none;
