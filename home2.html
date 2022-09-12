@@ -343,7 +343,7 @@
 
                                     <div class="pref-section-body">
 
-                                        <div class="slide-item">
+                                        <div class="slide-item" id="soup_container">
 
                                                 <div class="containerFor3items">
 
@@ -363,7 +363,8 @@
                         
                                         </div>
             
-                                        <div class="slide-item">
+                                        <div class="slide-item" id="chashu_container">
+                                            
                                             <div class="containerFor3items">
 
                                                 <div class="item-name" id="title-chashu">
@@ -388,7 +389,7 @@
                                         <div class="slide-item">
                                             <div class="containerFor3items">
 
-                                                <div class="item-name">Noodles:</div>
+                                                <div class="item-name">Nodle:</div>
 
                                                 <div class="item-preference">
                                                     <input type="checkbox" name="pref_others" value="(Ex Hard)" class="checkboxForPref" id="noodles_ex_hard">
@@ -414,8 +415,8 @@
                                                 </div>
 
                                                 <div class="item-preference">
-                                                    <!-- <input type="checkbox" class="checkboxForPref" id="noodles_ex_soft">
-                                                    <label for="noodles_ex_soft">Ex Soft</label> -->
+                                                    <input type="checkbox" name="pref_others" value="(Half Nodle)" class="checkboxForPref" id="noodles_half">
+                                                    <label for="noodles_half">Half</label>
                                                 </div>
 
                                             </div>
@@ -424,7 +425,7 @@
                                         <div class="slide-item">
                                             <div class="containerFor3items">
 
-                                                <div class="item-name">Saltiness:</div>
+                                                <div class="item-name">Salt:</div>
 
                                                 <div class="item-preference">
                                                     <input type="checkbox" name="pref_others" value="(More Salty)" class="checkboxForPref" id="salty_soup">
@@ -460,17 +461,34 @@
                                         <div class="slide-item">
                                             <div class="containerFor3items">
 
-                                                <div class="item-name">Garlic:</div>
-
-                                                <div class="item-preference">
-                                                    <input type="checkbox" name="pref_others" value="(C.Garlic)" class="checkboxForPref" id="house_chili">
-                                                    <label for="ex_oil">Chili</label>
+                                                <div class="item-name" id="title-spicy">
+                                                    <!-- Use this del element for shrimp and vege ramens -->
+                                                    <del id="remove-id-spicy" style="text-decoration-color: red"></del>
+                                                    <p id="text-box-spicy"></p>
                                                 </div>
 
                                                 <div class="item-preference">
-                                                    <input type="checkbox" name="pref_others" value="(R.Garlic)" class="checkboxForPref"  id="grounded">
-                                                    <label for="less_oil">Ground</label>
+                                                    <input type="checkbox" name="pref_others" value="(More Spicy)" class="checkboxForPref"  id="More_Spicy">
+                                                    <label for="More_Spicy">More</label>
                                                 </div>
+
+                                                <div class="item-preference">
+                                                    <input type="checkbox" name="pref_others" value="(Less Spicy)" class="checkboxForPref" id="Less_Spicy">
+                                                    <label for="Less_Spicy">Less</label>
+                                                </div>
+
+
+                                                <!-- <div class="item-name">Spicy:</div>
+
+                                                <div class="item-preference">
+                                                    <input type="checkbox" name="pref_others" value="(More Spicy)" class="checkboxForPref"  id="More_Spicy">
+                                                    <label for="More_Spicy">More</label>
+                                                </div>
+
+                                                <div class="item-preference">
+                                                    <input type="checkbox" name="pref_others" value="(Less Spicy)" class="checkboxForPref" id="Less_Spicy">
+                                                    <label for="Less_Spicy">Less</label>
+                                                </div> -->
 
                                             </div>
                                         </div>
