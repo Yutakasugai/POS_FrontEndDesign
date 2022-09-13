@@ -12,7 +12,7 @@ $('button.modalButton').click(function(e) {
 });
 
 // I could capture all results of preference lists from this function
-ramen_addBtn.onclick = () => {
+ramen_addBtn.addEventListener('click', function(event){
 
     if (item_container[0].includes("Cold") === true){
 
@@ -33,14 +33,14 @@ ramen_addBtn.onclick = () => {
             if (document.getElementById("chashu_belly_choice").checked === false && document.getElementById("chashu_shoulder_choice").checked === false){   
                 document.getElementById('chashu_container').style.background = '#f56c77'; 
 
-                return; 
+                event.preventDefault(); 
 
             } else {
 
               document.getElementById('chashu_container').style.background = 'transparent'; 
             }
 
-            return; 
+            event.preventDefault();
 
         } else {
 
@@ -48,13 +48,14 @@ ramen_addBtn.onclick = () => {
 
           if (document.getElementById("chashu_belly_choice").checked === false && document.getElementById("chashu_shoulder_choice").checked === false){   
               document.getElementById('chashu_container').style.background = '#f56c77'; 
-              return; 
+              
+              event.preventDefault();
 
           } else {
 
-            document.getElementById('chashu_container').style.background = 'transparent'; 
+              document.getElementById('chashu_container').style.background = 'transparent'; 
           }
-
+          
         }
 
         // Capture the total number counter 
@@ -62,7 +63,7 @@ ramen_addBtn.onclick = () => {
 
         if (total_num > 1) {
 
-            console.log("The total number is more than 2"); 
+            // console.log("The total number is more than 2"); 
 
             item_container[0] = `✕ ${total_num}(` + item_container[0]; 
 
@@ -105,7 +106,8 @@ ramen_addBtn.onclick = () => {
         item_input.setAttribute('value', item_container); 
 
     }
-}
+})
+
 
 // Modal Condition Settings
 // Regular Ramen Options
@@ -2593,9 +2595,3 @@ BS_Tomato_increaseBtn.addEventListener('click', () => {
     BS_Tomato_counter.innerHTML = BS_Tomato_count; 
   }
 })
-
-
-
-
-
-
