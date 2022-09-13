@@ -2331,8 +2331,45 @@ BS_Tomato_increaseBtn.addEventListener('click', () => {
   }
 })
 
+// Check Button
+const checkModal = document.getElementById('checkBtn-modal');
+const checkBtn = document.getElementById('check-button');
+const closeBtn = document.querySelector('.close-btn-checkBtn');
 
+// Set up for user login page 
+checkBtn.addEventListener('click', () => {
+    checkModal.style.display = 'block';
+})
 
+closeBtn.addEventListener('click', () => {
+    checkModal.style.display = 'none';
+})
+
+window.addEventListener('click', (e) => {
+    if(e.target === checkModal){
+        checkModal.style.display = 'none';
+    }
+})
+
+// Edit Button
+const editModal = document.getElementById('editBtn-modal');
+const editBtn = document.getElementById('edit-button');
+const closeEditBtn = document.querySelector('.close-btn-editBtn');
+
+// Set up for user login page 
+editBtn.addEventListener('click', () => {
+    editModal.style.display = 'block';
+})
+
+closeEditBtn.addEventListener('click', () => {
+    editModal.style.display = 'none';
+})
+
+window.addEventListener('click', (e) => {
+    if(e.target === editModal){
+        editModal.style.display = 'none';
+    }
+})
 
 
 

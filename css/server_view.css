@@ -1,14 +1,12 @@
 html, body {
     background: #585858;
     font-family: "Kaisei Tokumin", Sans-Serif;
-    position: sticky;
-    overflow-y: scroll;
-    height: 100%;
 }
 
 .wrapper{
     height:100%;
-    position: sticky;
+    width: 96%;
+    position: fixed;
     display: grid;
     grid-template-rows: 125px auto auto 90px;
 }
@@ -36,11 +34,6 @@ html, body {
     font-size: 0.8rem;
     /* padding: 3px; */
 }
-
-
-
-
-
 
 /* Display: 0; does not do anything else
 width: none; does not do anything as well */
@@ -83,8 +76,7 @@ width: none; does not do anything as well */
     border-radius: 20px;
     padding: 10px;
     color: #c3c3c3;
-    margin: auto;
-    position: sticky;   
+    margin: auto; 
 }
 
 #remove-btn{
