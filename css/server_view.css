@@ -1,6 +1,7 @@
 html, body {
     background: #585858;
     font-family: "Kaisei Tokumin", Sans-Serif;
+    position: fixed;
 }
 
 .wrapper{
@@ -8,7 +9,7 @@ html, body {
     width: 96%;
     position: fixed;
     display: grid;
-    grid-template-rows: 125px auto auto 90px;
+    grid-template-rows: 135px auto 10px 90px;
 }
 
 /* User Info & Phone and Take Out buttons */
@@ -39,7 +40,7 @@ html, body {
 width: none; does not do anything as well */
 .customer-orders{
     width:90%;
-    height: 94%;
+    height: 100%;
     padding: 5px;
     border-radius: 5px;
     border-width: 10px;
@@ -63,24 +64,23 @@ width: none; does not do anything as well */
     flex: 1;
     overflow:auto;
     overflow-y: scroll;
-    position:relative;
+
 }
-
-
 
 .customer-orders-button {
     grid-row: 3;
     display: grid;
-    position: absolute;
-    grid-template-columns: 1fr 0.1fr 1fr;
+    align-self: flex-end;
+    grid-template-columns: 1fr 1fr 1fr;
     border-radius: 20px;
     padding: 10px;
     color: #c3c3c3;
     margin: auto; 
+
 }
 
 #remove-btn{
-    padding: 9px 16px;
+    padding: 9px 21px;
     border-radius: 10px;
     border-width: 2.5px;
     border-color: black;
@@ -145,7 +145,7 @@ width: none; does not do anything as well */
 
 
 #back-btn{
-    padding: 9px 16px;
+    padding: 9px 21px;
     border-radius: 10px;
     border-width: 2.5px;
     border-color: black;
