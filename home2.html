@@ -11,7 +11,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
@@ -1856,6 +1857,7 @@
             </div>  
 
             <!-- Modal for Check Button -->
+            
             <div class="check-modal" id="checkBtn-modal">
 
                 <div class="check-content">
@@ -1881,7 +1883,7 @@
                         <div></div>
 
                         <div class="submit">
-                            <button id="submit-btn">Submit</button>
+                            <button id="submit-btn" type= "button" data-bs-toggle="modal" data-bs-target="#pickupBtn-modal">Submit</button>
                         </div>
 
                     </div>
@@ -1889,6 +1891,80 @@
                 </div>
             </div>
 
+            <!-- Modal for Submit Button using Bootstrap -->
+            <div class="modal fade" id="pickupBtn-modal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" >
+                    <div class="modal-header text-center">
+                            <h2 class="modal-title w-100" id="pickup-title">Pick-Up Time</h2>
+                    </div>
+                    <div class="modal-body modal-body-centered">
+                        <form action="#">
+                            <!-- <label for="time">Pick-Up Time</label> -->
+                            <select name="pickup" id="time">
+
+                                    <option value="10mins" style="font-size: 2rem;">10 Mins</option>
+                                    <option value="15mins" style="font-size: 2rem;">15 Mins</option>
+                                    <option value="20mins" style="font-size: 2rem;">20 Mins</option>
+                                    <option value="30mins" style="font-size: 2rem;">30 Mins</option>
+                                    <option value="45mins" style="font-size: 2rem;">45 Mins</option>
+                                    <option value="60mins" style="font-size: 2rem;">60 Mins</option>
+                                    <option value="90mins" style="font-size: 2rem;">90 Mins</option>
+                                    <option value="120mins" style="font-size: 2rem;">120 Mins</option>
+
+                            </select>
+                            <!-- <input type="next" value="Next"> -->
+                        </form>
+                    </div>
+                    <div class="modal-footer" id="cancel-next-buttons">
+                        <div class="container">
+                            <button type="button" id = "cancel-btn" class="btn btn-primary pull-left" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" id = "next-btn" class="btn btn-success pull-right">Next</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Modal for Pick Up Time after Clicking Submit Button -->
+            <div class="modal fade" id="pickupBtn-modal" tabindex="-1" >
+
+                <div class="modal-dialog" id="pickup-content">
+                
+                        <h2 class="modal-title">Pick-Up Time</h2>
+                    </div>
+                    <div class="pickup-time">
+                        <form action="#">
+                            <!-- <label for="time">Pick-Up Time</label> -->
+                            <select name="pickup" id="time">
+                                <option value="10mins">10 Mins</option>
+                                <option value="15mins">15 Mins</option>
+                                <option value="20mins">20 Mins</option>
+                                <option value="30mins">30 Mins</option>
+                                <option value="45mins">45 Mins</option>
+                                <option value="60mins">60 Mins</option>
+                                <option value="90mins">90 Mins</option>
+                                <option value="120mins">120 Mins</option>
+                            </select>
+                            <!-- <input type="next" value="Next"> -->
+                        </form>
+                    </div>
+
+                    <div class="cancel-next-buttons">
+
+                        <div class="cancel">
+                            <button class="btn" id="cancel-btn" data-dismiss="modal">Cancel</button>
+                        </div>
+
+                        <div></div>
+
+                        <div class="next">
+                            <button id="next-btn">Next</button>
+                        </div>
+
+                    </div>
+        
+                </div>
+            </div>
             <!-- Modal for Edit Button -->
             <div class="edit-modal" id="editBtn-modal" style="display:none;">
 
