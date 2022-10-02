@@ -1157,8 +1157,9 @@
 
 #time{
   text-align: center;
-  width: 50%;
+  width: 60%;
   height: 40%;
+  font-size: 3.5rem;
 }
 
 #cacnel-next-buttons{
@@ -1177,7 +1178,7 @@
 #cancel-btn{
   padding: 30px 60px;
   border-radius: 10px;
-  border-width: 2.5px;
+  border-width: 2px;
   border-color: black;
   background-color: lightcoral;
   color: black;
@@ -1191,10 +1192,10 @@
 }
 
 #next-btn{
-  padding: 30px 60px;
+  padding: 30px 80px;
   background-color: lightgreen;
   border-radius: 10px;
-  border-width: 2.5px;
+  border-width: 2px;
   border-color: black;
   color: black;
   float: right;
