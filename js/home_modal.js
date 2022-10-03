@@ -2598,6 +2598,21 @@ BS_Tomato_increaseBtn.addEventListener('click', () => {
 const checkModal = document.getElementById('checkBtn-modal');
 const checkBtn = document.getElementById('check-button');
 const closeBtn = document.querySelector('.close-btn-checkBtn');
+// const pickupModal = document.getElementById('pickupBtn-modal');
+// const submitBtn = document.getElementById('submit-btn');
+// const cancelBtn = document.querySelector('.cancel-btn');
+
+
+
+// submitBtn.onclick = function(){
+//   pickupModal.style.display = 'block'; 
+//   pickupModal.classList.add('bg-active-submitBtn'); 
+// }
+
+// cancelBtn.onclick = function() {
+//   pickupModal.style.display = 'none'; 
+// }
+
 
 // Set up for user login page 
 // checkBtn.addEventListener('click', () => {
@@ -2655,6 +2670,7 @@ window.addEventListener('click', (e) => {
       checkModal.style.display = 'none'; 
     }
 })
+
 
 
 
