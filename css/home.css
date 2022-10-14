@@ -9,7 +9,6 @@ html, body {
 }
 
 
-
 .wrapper{
     height:100%;
     width: 100%;
@@ -349,7 +348,7 @@ width: none; does not do anything as well */
     box-shadow: none;
     transform: translateY(3px);
     opacity: 0.5;
-  }
+}
   
 #order-btn{
     padding: 20px 0px;
