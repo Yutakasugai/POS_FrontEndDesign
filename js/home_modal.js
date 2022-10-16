@@ -14,11 +14,7 @@ $('button.modalButton').click(function(e) {
 // I could capture all results of preference lists from this function
 ramen_addBtn.onclick = () => {
 
-    if (item_container[0].includes("Cold") === true){
-
-        console.log("This is cold"); 
-
-    } else if (item_container[0].includes("Shrimp") === true) {
+    if (item_container[0].includes("Shrimp") === true) {
 
         console.log("This is shrimp"); 
 
@@ -118,7 +114,7 @@ const curryModal = document.getElementById('curryModal');
 const tomatoModal = document.getElementById('tomatoModal');
 
 // Season Special Ramen
-const coldModal = document.getElementById('coldModal'); 
+// const coldModal = document.getElementById('coldModal'); 
 
 // Bowl Soup
 const bowlSoupModal = document.getElementById('bowlSoupModal'); 
@@ -374,9 +370,9 @@ document.querySelector('#close_addToppings_modal').addEventListener('click', () 
   document.getElementById("chashu_shoulder_choice").disabled = false;
 
   // Make all checkbox unchecked when user back to home
-  $('input[name="pref_check"]').each(function() {
+  $('input[name="pref_must"]').each(function() {
     this.checked = false;
-    this.disabled = false;
+    this.disabled = false; 
   });
 
   // For other preference choices
@@ -426,9 +422,9 @@ document.querySelector('#close_removeItems_modal').addEventListener('click', () 
   document.getElementById("chashu_shoulder_choice").disabled = false;
 
   // Make all checkbox unchecked when user back to home
-  $('input[name="pref_check"]').each(function() {
+  $('input[name="pref_must"]').each(function() {
     this.checked = false;
-    this.disabled = false;
+    this.disabled = false; 
   });
 
   // For other preference choices
@@ -557,37 +553,6 @@ tomatoModal.addEventListener('click', () => {
   document.getElementById("More_Spicy").disabled = true;
   document.getElementById("Less_Spicy").disabled = true;
 });
-
-// Cold
-coldModal.addEventListener('click', () => {
-  document.querySelector('.modal_bg').style.display = 'block';
-  document.querySelector('.modal_bg').classList.add('bg-active');
-
-  document.getElementById('text-box').append("Chashu:");
-  document.getElementById('text-box-spicy').append("Spicy:");
-
-  // Block unnecessary checkbox options 
-  document.getElementById("rich_soup").disabled = true;
-  document.getElementById("regular_soup").disabled = true;
-
-  document.getElementById("chashu_belly_choice").disabled = true;
-  document.getElementById("chashu_shoulder_choice").disabled = true;
-
-  document.getElementById("noodles_ex_hard").disabled = true;
-  document.getElementById("noodles_hard").disabled = true;
-  document.getElementById("noodles_soft").disabled = true;
-
-  document.getElementById("salty_soup").disabled = true;
-  document.getElementById("less_salty_soup").disabled = true;
-
-  document.getElementById("ex_oil").disabled = true;
-  document.getElementById("less_oil").disabled = true;
-
-  // Remove an option for spicy 
-  document.getElementById("More_Spicy").disabled = true;
-  document.getElementById("Less_Spicy").disabled = true;
-
-}) 
 
 
 // Vegetable Ramen Flavour
@@ -778,9 +743,9 @@ cancelBtn.onclick = () => {
   // Back to enable chashu checkboxes to click
   document.getElementById("chashu_belly_choice").disabled = false;
   document.getElementById("chashu_shoulder_choice").disabled = false;
-
+  
   // Make all checkbox unchecked when user back to home
-  $('input[name="pref_check"]').each(function() {
+  $('input[name="pref_must"]').each(function() {
     this.checked = false;
     this.disabled = false; 
   });
@@ -1107,39 +1072,39 @@ cancelBtn_beers.onclick = () => {
 }
 
 // Bowl　Soup Modal 
-const closeBtn_bowlSoup = document.getElementById('close_bowlSoup_modal'); 
-const cancelBtn_bowlSoup = document.getElementById('cancelBtn_bowlSoup'); 
+// const closeBtn_bowlSoup = document.getElementById('close_bowlSoup_modal'); 
+// const cancelBtn_bowlSoup = document.getElementById('cancelBtn_bowlSoup'); 
 
-bowlSoupModal.addEventListener('click', () => {
-  document.querySelector('.modal_bg_bowlSoup').style.display = 'block';
-  document.querySelector('.modal_bg_bowlSoup').classList.add('bg-active-bowlSoup');
-})
+// bowlSoupModal.addEventListener('click', () => {
+//   document.querySelector('.modal_bg_bowlSoup').style.display = 'block';
+//   document.querySelector('.modal_bg_bowlSoup').classList.add('bg-active-bowlSoup');
+// })
 
-closeBtn_bowlSoup.addEventListener('click', () => {
-  document.querySelector('.modal_bg_bowlSoup').style.display = 'none';
+// closeBtn_bowlSoup.addEventListener('click', () => {
+//   document.querySelector('.modal_bg_bowlSoup').style.display = 'none';
 
-  // Reset the counter number to 0
-  $('.num_counter_bowlSoup').each(function() {
-    this.innerHTML = 0; 
-  })
+//   // Reset the counter number to 0
+//   $('.num_counter_bowlSoup').each(function() {
+//     this.innerHTML = 0; 
+//   })
 
-  // Make all counter values to 0
-  BS_Shio_count = 0; BS_Shoyu_count = 0; BS_Miso_count = 0; 
-  BS_hotMiso_count = 0; BS_Curry_count = 0; BS_Tomato_count = 0;
-})
+//   // Make all counter values to 0
+//   BS_Shio_count = 0; BS_Shoyu_count = 0; BS_Miso_count = 0; 
+//   BS_hotMiso_count = 0; BS_Curry_count = 0; BS_Tomato_count = 0;
+// })
 
-cancelBtn_bowlSoup.onclick = () => {
-  document.querySelector('.modal_bg_bowlSoup').style.display = 'none';
+// cancelBtn_bowlSoup.onclick = () => {
+//   document.querySelector('.modal_bg_bowlSoup').style.display = 'none';
 
-  // Reset the counter number to 0
-  $('.num_counter_bowlSoup').each(function() {
-    this.innerHTML = 0; 
-  })
+//   // Reset the counter number to 0
+//   $('.num_counter_bowlSoup').each(function() {
+//     this.innerHTML = 0; 
+//   })
 
-  // Make all counter values to 0
-  BS_Shio_count = 0; BS_Shoyu_count = 0; BS_Miso_count = 0; 
-  BS_hotMiso_count = 0; BS_Curry_count = 0; BS_Tomato_count = 0;
-}
+//   // Make all counter values to 0
+//   BS_Shio_count = 0; BS_Shoyu_count = 0; BS_Miso_count = 0; 
+//   BS_hotMiso_count = 0; BS_Curry_count = 0; BS_Tomato_count = 0;
+// }
 
 
 // The Majpr Multiplier
@@ -2412,188 +2377,6 @@ kokanee_increaseBtn.addEventListener('click', () => {
   }
 })
 
-
-// Bowl Soup Counter
-// for shio soup
-let BS_Shio_decreaseBtn = document.getElementById('BS_Shio_decrease');
-let BS_Shio_increaseBtn = document.getElementById('BS_Shio_increase'); 
-let BS_Shio_counter = document.getElementById('BS_Shio_counter');
-let BS_Shio_count = 0;
-
-// - btn: Decrease num  
-BS_Shio_decreaseBtn.addEventListener('click', () => {
-  BS_Shio_count --; 
-  BS_Shio_counter.innerHTML = BS_Shio_count; 
-  if(BS_Shio_count < 0) {
-    BS_Shio_count = 0;
-    BS_Shio_counter.innerHTML = BS_Shio_count; 
-  } else {
-    BS_Shio_counter.innerHTML = BS_Shio_count; 
-  }
-})
-// + btn: Increase num 
-BS_Shio_increaseBtn.addEventListener('click', () => {
-  BS_Shio_count ++; 
-  BS_Shio_counter.innerHTML = BS_Shio_count; 
-  if(BS_Shio_count >= 11) {
-    BS_Shio_count = 0;
-    BS_Shio_counter.innerHTML = BS_Shio_count; 
-  } else {
-    BS_Shio_counter.innerHTML = BS_Shio_count; 
-  }
-})
-
-
-// for shoyu soup
-let BS_Shoyu_decreaseBtn = document.getElementById('BS_Shoyu_decrease');
-let BS_Shoyu_increaseBtn = document.getElementById('BS_Shoyu_increase'); 
-let BS_Shoyu_counter = document.getElementById('BS_Shoyu_counter');
-let BS_Shoyu_count = 0;
-
-// - btn: Decrease num  
-BS_Shoyu_decreaseBtn.addEventListener('click', () => {
-  BS_Shoyu_count --; 
-  BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
-  if(BS_Shoyu_count < 0) {
-    BS_Shoyu_count = 0;
-    BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
-  } else {
-    BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
-  }
-})
-// + btn: Increase num 
-BS_Shoyu_increaseBtn.addEventListener('click', () => {
-  BS_Shoyu_count ++; 
-  BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
-  if(BS_Shoyu_count >= 11) {
-    BS_Shoyu_count = 0;
-    BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
-  } else {
-    BS_Shoyu_counter.innerHTML = BS_Shoyu_count; 
-  }
-})
-
-
-// for miso soup
-let BS_Miso_decreaseBtn = document.getElementById('BS_Miso_decrease');
-let BS_Miso_increaseBtn = document.getElementById('BS_Miso_increase'); 
-let BS_Miso_counter = document.getElementById('BS_Miso_counter');
-let BS_Miso_count = 0;
-
-// - btn: Decrease num  
-BS_Miso_decreaseBtn.addEventListener('click', () => {
-  BS_Miso_count --; 
-  BS_Miso_counter.innerHTML = BS_Miso_count; 
-  if(BS_Miso_count < 0) {
-    BS_Miso_count = 0;
-    BS_Miso_counter.innerHTML = BS_Miso_count; 
-  } else {
-    BS_Miso_counter.innerHTML = BS_Miso_count; 
-  }
-})
-// + btn: Increase num 
-BS_Miso_increaseBtn.addEventListener('click', () => {
-  BS_Miso_count ++; 
-  BS_Miso_counter.innerHTML = BS_Miso_count; 
-  if(BS_Miso_count >= 11) {
-    BS_Miso_count = 0;
-    BS_Miso_counter.innerHTML = BS_Miso_count; 
-  } else {
-    BS_Miso_counter.innerHTML = BS_Miso_count; 
-  }
-})
-
-
-// for hot miso soup
-let BS_hotMiso_decreaseBtn = document.getElementById('BS_hotMiso_decrease');
-let BS_hotMiso_increaseBtn = document.getElementById('BS_hotMiso_increase'); 
-let BS_hotMiso_counter = document.getElementById('BS_hotMiso_counter');
-let BS_hotMiso_count = 0;
-
-// - btn: Decrease num  
-BS_hotMiso_decreaseBtn.addEventListener('click', () => {
-  BS_hotMiso_count --; 
-  BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
-  if(BS_hotMiso_count < 0) {
-    BS_hotMiso_count = 0;
-    BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
-  } else {
-    BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
-  }
-})
-
-// + btn: Increase num 
-BS_hotMiso_increaseBtn.addEventListener('click', () => {
-  BS_hotMiso_count ++; 
-  BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
-  if(BS_hotMiso_count >= 11) {
-    BS_hotMiso_count = 0;
-    BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
-  } else {
-    BS_hotMiso_counter.innerHTML = BS_hotMiso_count; 
-  }
-})
-
-// for curry soup
-let BS_Curry_decreaseBtn = document.getElementById('BS_Curry_decrease');
-let BS_Curry_increaseBtn = document.getElementById('BS_Curry_increase'); 
-let BS_Curry_counter = document.getElementById('BS_Curry_counter');
-let BS_Curry_count = 0;
-
-// - btn: Decrease num  
-BS_Curry_decreaseBtn.addEventListener('click', () => {
-  BS_Curry_count --; 
-  BS_Curry_counter.innerHTML = BS_Curry_count; 
-  if(BS_Curry_count < 0) {
-    BS_Curry_count = 0;
-    BS_Curry_counter.innerHTML = BS_Curry_count; 
-  } else {
-    BS_Curry_counter.innerHTML = BS_Curry_count; 
-  }
-})
-
-// + btn: Increase num 
-BS_Curry_increaseBtn.addEventListener('click', () => {
-  BS_Curry_count ++; 
-  BS_Curry_counter.innerHTML = BS_Curry_count; 
-  if(BS_Curry_count >= 11) {
-    BS_Curry_count = 0;
-    BS_Curry_counter.innerHTML = BS_Curry_count; 
-  } else {
-    BS_Curry_counter.innerHTML = BS_Curry_count; 
-  }
-})
-
-// for tomato soup
-let BS_Tomato_decreaseBtn = document.getElementById('BS_Tomato_decrease');
-let BS_Tomato_increaseBtn = document.getElementById('BS_Tomato_increase'); 
-let BS_Tomato_counter = document.getElementById('BS_Tomato_counter');
-let BS_Tomato_count = 0;
-
-// - btn: Decrease num  
-BS_Tomato_decreaseBtn.addEventListener('click', () => {
-  BS_Tomato_count --; 
-  BS_Tomato_counter.innerHTML = BS_Tomato_count; 
-  if(BS_Tomato_count < 0) {
-    BS_Tomato_count = 0;
-    BS_Tomato_counter.innerHTML = BS_Tomato_count; 
-  } else {
-    BS_Tomato_counter.innerHTML = BS_Tomato_count; 
-  }
-})
-
-// + btn: Increase num 
-BS_Tomato_increaseBtn.addEventListener('click', () => {
-  BS_Tomato_count ++; 
-  BS_Tomato_counter.innerHTML = BS_Tomato_count; 
-  if(BS_Tomato_count >= 11) {
-    BS_Tomato_count = 0;
-    BS_Tomato_counter.innerHTML = BS_Tomato_count; 
-  } else {
-    BS_Tomato_counter.innerHTML = BS_Tomato_count; 
-  }
-})
-
 // Check Button
 const checkModal = document.getElementById('checkBtn-modal');
 const checkBtn = document.getElementById('check-button');
@@ -2639,20 +2422,10 @@ closeBtn.onclick = () => {
 }
 
 
-
 // Edit Button
 const editModal = document.getElementById('editBtn-modal');
 const editBtn = document.getElementById('edit-button');
 const closeEditBtn = document.querySelector('.close-btn-editBtn');
-
-// Set up for user login page 
-// editBtn.addEventListener('click', () => {
-//     editModal.style.display = 'block';
-// })
-
-// closeEditBtn.addEventListener('click', () => {
-//     editModal.style.display = 'none';
-// })
 
 editBtn.onclick = () => {
   editModal.style.display = 'block'; 
