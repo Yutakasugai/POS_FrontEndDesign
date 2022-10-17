@@ -43,6 +43,9 @@ html, body {
 }
 
 /* Body - Tables */
+.table-wrap{
+    overflow: scroll;
+}
 .cash-table{
     display: flex;
     justify-content: center;
@@ -71,22 +74,28 @@ html, body {
     border: 0.5px solid black;
 }
 
-#cash-data{
-    color:red;
+.cash-table input{
+    color: red;
+    background-color: ivory;
+    text-align: center;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    width: 85%;
+    margin: auto;
+    padding: 4px;
 }
+
 
 #final-data{
     color:blue;
 }
 
-#tip-data{
-    color:green;
-}
 
 .debit-table{
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .debit-table table{
@@ -111,16 +120,32 @@ html, body {
     border: 0.5px solid black;
 }
 
+.debit-table input{
+    color: red;
+    background-color: ivory;
+    text-align: center;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    width: 85%;
+    margin: auto;
+    padding: 4px;
+}
+
 #floats{
     background-color: lightcoral;
 }
 
 #tips{
-    background-color: lightgreen;
+    background-color: lightsalmon;
 }
 
 #sales{
-    background-color: lightsalmon;
+    background-color: lightgreen;
+}
+
+#cash{
+    background-color:lightgreen;
 }
 
 
@@ -132,6 +157,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     margin-top: auto;
+    margin-bottom: auto;
     border-radius: 10px;
     padding: 10px 15px;
     margin-bottom: 20px;

@@ -23,72 +23,78 @@
         </div>
     </div>
 
-    <div class="cash-table">
-        <table border cellspacing="0">
-            <tr>
-                <th colspan="4">Cash</th>
+    <div class="table-wrap">
+      <div class="cash-table">
+          <table border cellspacing="0">
+              <tr>
+                  <th colspan="4">Cash</th>
+                </tr>
+                <tr>
+                  <td>$100</td>
+                  <td id="cash-data"><input type="text"/></td>
+                  <td>$2</td>
+                  <td id="cash-data"><input type="text"/></td>
+                </tr>
+                <tr>
+                  <td>$50</td>
+                  <td id="cash-data"><input type="text"/></td>
+                  <td>$1</td>
+                  <td id="cash-data"><input type="text"/></td>
+                </tr>
+                <tr>
+                  <td>$20</td>
+                  <td id="cash-data"><input type="text"/></td>
+                  <td>$0.25</td>
+                  <td id="cash-data"><input type="text"/></td>
+                </tr>
+                <tr>
+                  <td>$10</td>
+                  <td id="cash-data"><input type="text"/></td>
+                  <td>$0.10</td>
+                  <td id="cash-data"><input type="text"/></td>
+                </tr>
+                <tr>
+                  <td>$5</td>
+                  <td id="cash-data"><input type="text"/></td>
+                  <td>$0.05</td>
+                  <td id="cash-data"><input type="text"/></td>
+                </tr>
+                <tr>
+                <td colspan="2" id="cash">Total Cash</td>
+                <td colspan="2" id="final-data">$300.50</td>
               </tr>
               <tr>
-                <td>$100</td>
-                <td id="cash-data">4</td>
-                <td>$2</td>
-                <td id="cash-data"></td>
+                <td colspan="2" id="floats">Float</td>
+                <td colspan="2" id="final-data">$40.50</td>
               </tr>
-              <tr>
-                <td>$50</td>
-                <td id="cash-data"></td>
-                <td>$1</td>
-                <td id="cash-data"></td>
-              </tr>
-              <tr>
-                <td>$20</td>
-                <td id="cash-data"></td>
-                <td>$0.25</td>
-                <td id="cash-data"></td>
-              </tr>
-              <tr>
-                <td>$10</td>
-                <td id="cash-data"></td>
-                <td>$0.10</td>
-                <td id="cash-data"></td>
-              </tr>
-              <tr>
-                <td>$5</td>
-                <td id="cash-data"></td>
-                <td>$0.05</td>
-                <td id="cash-data"></td>
-              </tr>
-              <tr>
-              <td colspan="2" id="floats">Float</td>
-              <td colspan="2" id="final-data">$300.50</td>
-            </tr>
-        </table>
-    </div>
+          </table>
+      </div>
 
-    <div class="debit-table">
-        <table border cellspacing="0">
-            <tr>
-                <th colspan="4">Debit</th>
-              </tr>
+      <div class="debit-table">
+          <table border cellspacing="0">
+              <tr>
+                  <th colspan="4">Debit</th>
+                </tr>
 
-              <tr>
-                <td colspan="2">Lunch</td>
-                <td colspan="2" id="cash-data"></td>
-              </tr>
-              <tr>
-                <td colspan="2">Night</td>
-                <td colspan="2" id="cash-data">$215.55</td>
-              </tr>
-              <tr>
-                <td colspan="2" id="sales">Sales</td>
-                <td colspan="2" id="final-data">$500.50</td>
-              </tr>
-              <tr>
-                <td colspan="2" id="tips">Total Tip</td>
-                <td colspan="2" id="tip-data">$90.50</td>
-              </tr>
+                <tr>
+                  <td colspan="2">Lunch</td>
+                  <td colspan="2" id="cash-data"><input type="text"/></td>
+                </tr>
+                <tr>
+                  <td colspan="2">Night</td>
+                  <td colspan="2" id="cash-data"><input type="text"/></td>
+                </tr>
+                <tr>
+                  <td colspan="2" id="sales">Total Sales</td>
+                  <td colspan="2" id="final-data">$500.50</td>
+                </tr>
+                <tr>
+                  <td colspan="2" id="tips">Total Tip</td>
+                  <td colspan="2" id="final-data">$90.50</td>
+                </tr>
 
-        </table>
+          </table>
+      </div>
     </div>
 
     <div class="footer">
