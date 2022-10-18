@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://css.gg/copy.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Kaisei+Tokumin:wght@500&family=Raleway&family=Share&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/AdminMain.css">
     <title>Control Site</title>
 
@@ -23,6 +24,7 @@
         By Yuta
     -->
 
+<div class= "wrap">
     <!-- Top Line -->
     <div class="page-container">
 
@@ -50,7 +52,11 @@
 
         <!-- square buttons at the top -->
         <div class="square-button">
-            <button id="history-btn"> View History</button>
+            <button id="more-orders-btn"><i class="gg-copy"></i>
+                <span class="num_notice_badge_orders">6</span> 
+            </button>
+            <button id="history-btn"><i class="fa fa-history"></i></button>
+            <button id="close-btn"><i class="fa fa-sign-out"></i></button>
         </div>
 
     </div>
@@ -91,6 +97,7 @@
             <div class="scrollable">
                 <div class="order-items" id="text_box2" box2_text="{{Box2_Item}}">
                     <p id="itemBox2"></p>
+                    <p>21312312213</p>
                 </div>
             </div>
 
@@ -153,33 +160,34 @@
     </div>
 
     <!-- More orders shown at the corner -->
-    <div class="bottom-container">
+    <!-- <div class="bottom-container"> -->
 
         <!-- home back button -->
-        <form action="/auth/admin/home" method="POST" class="home-button">
+        <!-- <form action="/auth/admin/home" method="POST" class="home-button">
             <input type="hidden" name="adminName" value="{{name}}">
             <input type="hidden" name="data_key" value="{{date}}">
             <input type="hidden" name="time_key" value="{{time}}">
             <div class="footer-buttons">
-                <button id="home-btn">Home</button>
+                <button id="home-btn">Home</button> -->
                 <!-- Close Btn -->
-                <button id="systemClose-btn">Close</button>
+                <!-- <button id="systemClose-btn">Close</button>
             </div>
-        </form>
+        </form> -->
 
-        <div class="moreOrder-container">
+        <!-- <div class="moreOrder-container">
             <div class="num-panel">
                 <p>+ 6</p>
-            </div>
+            </div> -->
     
-            <div class="two-boxes">
+            <!-- <div class="two-boxes">
                 <button class="box-1" id="box-btn"><i class="gg-copy"></i>
                     <span class="num_notice_badge_orders">6</span> 
                 </button>
             </div>
         </div>
-    </div>
+    </div> -->
 
+</div>
     <!-- Modal 1 -->
     <!-- Modal Page for Table Display -->
     <div class="table-modal" id='table-modal'>
@@ -267,10 +275,16 @@
             <div class="line"></div>
 
             <div class="permissions">
-                <div id="name">
-                    <p>Yuta is requesting: </p>
+                <div class= "name-cols">
+                    <p id ="name">Yuta is requesting: </p>
+                    <button id="allow-btn"> Allow</button>
                 </div>
-                <div id="allow-button">
+                <div class= "name-cols">
+                    <p id ="name">Darian is requesting: </p>
+                    <button id="allow-btn"> Allow</button>
+                </div>
+                <div class= "name-cols">
+                    <p id ="name">Yoshi is requesting: </p>
                     <button id="allow-btn"> Allow</button>
                 </div>
             </div>
@@ -291,7 +305,7 @@
                     <div class="box-title">
                         <p id="subBox1_title">{{Box_5}}</p>
                     </div>
-                    <div class="scrollable">
+                    <div class="scrollable2">
                         <div class="order-items" id="text_subox1" subBox1_text="{{Box5_Item}}">
                             <p id="itemBox5"></p>
                         </div>
@@ -314,7 +328,7 @@
                     <div class="box-title">
                         <p id="subBox2_title">{{Box_6}}</p>
                     </div>
-                    <div class="scrollable">
+                    <div class="scrollable2">
                         <div class="order-items" id="text_subox2" subBox2_text="{{Box6_Item}}">
                             <p id="itemBox6"></p>
                         </div>
@@ -336,7 +350,7 @@
                     <div class="box-title">
                         <p id="subBox3_title">{{Box_7}}</p>
                     </div>
-                    <div class="scrollable">
+                    <div class="scrollable2">
                         <div class="order-items" id="text_subox3" subBox3_text="{{Box7_Item}}">
                             <p id="itemBox7"></p>
                         </div>
@@ -359,7 +373,7 @@
                     <div class="box-title">
                         <p id="subBo4_title">{{Box_8}}</p>
                     </div>
-                    <div class="scrollable">
+                    <div class="scrollable2">
                         <div class="order-items" id="text_subox4" subBox4_text="{{Box8_Item}}">
                             <p id="itemBox8"></p>
                         </div>
@@ -381,7 +395,7 @@
                     <div class="box-title">
                         <p id="subBox5_title">{{Box_9}}</p>
                     </div>
-                    <div class="scrollable">
+                    <div class="scrollable2">
                         <div class="order-items" id="text_subox5" subBox5_text="{{Box9_Item}}">
                             <p id="itemBox9"></p>
                         </div>
@@ -404,7 +418,7 @@
                     <div class="box-title">
                         <p id="subBox6_title">{{Box_10}}</p>
                     </div>
-                    <div class="scrollable">
+                    <div class="scrollable2">
                         <div class="order-items" id="text_subox6" subBox6_text="{{Box10_Item}}">
                             <p id="itemBox10"></p>
                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
@@ -441,20 +455,21 @@
                     <h1>View History</h1>
                     <h2>{{date}} - {{time}}</h2>
                 </div>
-                <div class="scrollable">
-                    <div class="review-container">
-
+                <!-- Table -->
+                <div class="table">
+                    <!-- Table Desc -->
+                    <div class="table-desc">
                         <table border cellspacing="0">
-
-                            <!-- table desc rows -->
-                            <tr class="reviewBox-container"> 
-                                <tr class="reviewBox-header">
-                                    <th id="tableNum-row">Table Number</th>
-                                    <th id="togoPerson-row">Order By</th>
-                                    <th id="itemName-row">Item Name</th>
+                            <thead>
+                                <!-- Item Title -->
+                                <tr class="header">
+                                    <th id="item-rows">Table Number</th>
+                                    <th id="item-rows">Order By</th>
+                                    <th id="item-rows">Item Name</th>
                                 </tr>
-                                
-                                
+                            </thead>
+                            <tbody>
+                                <!-- Items Rows -->
                                 <tr class="addedInfo-container">
                                     <th>{{table_id}}</th>
                                     <th>{{order_by}}</th>
@@ -530,15 +545,36 @@
                                     <th>{{order_by}}</th>
                                     <th>{{item_name}}</th>
                                 </tr>
-
-                            </tr>
-
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                                <tr class="addedInfo-container">
+                                    <th>{{table_id}}</th>
+                                    <th>{{order_by}}</th>
+                                    <th>{{item_name}}</th>
+                                </tr>
+                            </tbody>
                         </table>
-
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 

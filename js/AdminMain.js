@@ -17,13 +17,13 @@ const tableModal = document.getElementById('table-modal');
 const close_tableBtn = document.querySelector('.close-btn-tableBtn'); 
 
 // CloseBtn Modal
-const finishBtn = document.getElementById('systemClose-btn'); 
+const finishBtn = document.getElementById('close-btn'); 
 const no_btn = document.getElementById('no-btn'); 
 const closeBtnModal = document.getElementById('closeBtn-modal');
 const close_closeBtn = document.querySelector('.close-btn-closeBtn'); 
 
 // Two Box Btn Modal
-const boxBtn = document.getElementById('box-btn'); 
+const boxBtn = document.getElementById('more-orders-btn'); 
 const boxBtnModal = document.getElementById('boxBtn-modal'); 
 const close_boxBtn = document.querySelector('.close-btn-boxBtn'); 
 
