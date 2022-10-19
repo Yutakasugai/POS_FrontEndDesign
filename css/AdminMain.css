@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    margin-top:20px;
 }
 /* User Info */
 .page-container {
@@ -181,7 +182,7 @@ body {
     overflow-y: scroll; 
 
     margin-bottom:auto;
-    height:70.5vh;
+    height:67vh;
 }
 
 .box-container {
@@ -195,7 +196,7 @@ body {
 }
 .order-box {
     width: 94%; 
-    height: 80.5vh;
+    height: 77vh;
     background-color: #fffdd0;
     border-width: 1.5px;
     border-style: solid;
