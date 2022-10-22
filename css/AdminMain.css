@@ -48,7 +48,7 @@ body {
 }
 .circle-buttons button {
     display: block;
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: 500;
     position: relative;
     align-items: center;
@@ -64,6 +64,7 @@ body {
 #table-btn {
     background-color: lightyellow;
     text-align:center;
+    padding:10px;
     
 }
 #userCheck-btn {
@@ -132,11 +133,13 @@ body {
     border-radius: 10px;
     text-align:center;
     background-color: lightblue;
+    padding:10px;
 }
 #close-btn{
     border-radius: 10px;
     text-align:center;
     background-color: lightcoral;
+    padding:10px;
 }
 
 .num_notice_badge_orders {
@@ -184,7 +187,6 @@ body {
     flex:1;
     overflow:scroll;
     overflow-y: scroll; 
-
     margin-bottom:auto;
     height:67vh;
 }
