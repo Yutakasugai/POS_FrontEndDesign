@@ -45,6 +45,7 @@ body {
     display: flex;
     align-self: center;
     gap: 50px;
+    color:black;
 }
 .circle-buttons button {
     display: block;
@@ -59,17 +60,19 @@ body {
     border-color: black;
     outline: none;
     border-radius: 50%;
+    color:black;
 }
 
 #table-btn {
     background-color: lightyellow;
     text-align:center;
     padding:10px;
-    
+    color:black;    
 }
 #userCheck-btn {
     background-color: white;
     text-align:center;
+    color:black;
 }
 /* Icon Button Design */
 .user-notice button {
