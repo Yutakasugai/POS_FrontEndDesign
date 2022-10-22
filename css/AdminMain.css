@@ -5,13 +5,14 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
     padding: 1.5rem calc((100vw - 1200px) / 2);
+    color:black;
 }
 
 .wrap{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    margin-top:20px;
+    margin-top: -20px;
 }
 /* User Info */
 .page-container {
@@ -21,7 +22,6 @@ body {
     border-radius: 20px;
     padding: 5px;
     color: white;
-    margin-top: -20px;
 }
 /* .page-info {
     margin-top: -15px;
@@ -63,10 +63,12 @@ body {
 
 #table-btn {
     background-color: lightyellow;
+    text-align:center;
     
 }
 #userCheck-btn {
     background-color: white;
+    text-align:center;
 }
 /* Icon Button Design */
 .user-notice button {
@@ -128,10 +130,12 @@ body {
 }
 #history-btn {
     border-radius: 10px;
+    text-align:center;
     background-color: lightblue;
 }
 #close-btn{
     border-radius: 10px;
+    text-align:center;
     background-color: lightcoral;
 }
 
