@@ -92,7 +92,7 @@ body {
     width: 30px;
     height: 30px;
     font-size: 1.1rem;
-    background: black;
+    background: red;
     color: white;
     display: flex;
     justify-content: center;
@@ -100,7 +100,7 @@ body {
     border-radius: 50%;
 }
 .icon-button i {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 
@@ -216,8 +216,10 @@ body {
 
 /* Box Title */
 .box-title {
+    display: grid;
+    grid-template-rows: auto;
     width: 100%;
-    height: 2.5rem;
+    height: 4.5rem;
     background-color: black;
     text-align: center;
 }
@@ -225,14 +227,38 @@ body {
     margin: auto;
     color: white;
     font-size: 1.6rem;
-    padding-top: 5px;
+    /* padding-top: 3px; */
+}
+.box-title h1 {
+    color: white;
+    font-size: 1.4rem;
+    margin-top: -0.1px;
 }
 
 
 /* Order Items */
 .order-items {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     padding-left: 10px;
+}
+#mainItem {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#exTopping {
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    margin-top: -20px;
+    padding-left: 20px;
+}
+#removeItem {
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    margin-top: -20px;
+    padding-left: 20px;
+    color: red;
 }
 #add-toppings {
     margin-top: -15px;
@@ -461,9 +487,7 @@ body {
     width:90%;
     max-height: 1fr;
 }
-
-#name{
-    grid-column: 1;
+#userLog_p {
     font-size: 24px;
     float:left;
 }
@@ -474,17 +498,17 @@ body {
     font-size: 1.1rem;
     padding: 10px 30px;
     background: lightcoral;
-    margin-top: 15px;
+    /* margin-top: 25px; */
     border-radius: 5px;
     border-width: 2.5px;
     border-color: black;
+    margin-left: 10rem;
 }
-
-#allow-btn:active {
+.allow-btn:active {
     box-shadow: none;
     transform: translateY(5px);
     opacity: 0.5;
-  }
+}
 .userLog-modal {
     position: fixed;
     z-index: 10;
@@ -634,6 +658,7 @@ body {
     margin-top: 10px;
     font-size: 2rem;
     z-index: 30;
+
 }
 .close-btn-historyBtn:hover {
     cursor: pointer;

@@ -31,13 +31,13 @@
 
                 <div class="user_info">
                     <div class="user_name">
-                        User Name: {{name}}
+                        User Name: Yuta
                     </div>
                     <div class="table_num">
-                        Order By:
+                        Table: Table_2
                     </div>
                     <div class="customer_num">
-                        Customer Number: 
+                        Customer Number: 3
                     </div>
                 </div>
 
@@ -53,7 +53,6 @@
         <div id="wrapper">
 
             <table  id="table_detail" align=center cellpadding=10>
-
 
                 <!-- Top Menu Row at the main -->
                 <tr id="top_row">
@@ -167,22 +166,6 @@
                         <button class="modalButton" value="Tomato" id="tomatoModal">Tomato Ramen</button>
                     </td>
                 </tr>
-
-                <!-- Bowl Soup -->
-                <tr id="row_soup" class="hidden_row">
-                    <td colspan=4>
-                        <button class="modalButton" id="bowlSoupModal">Bowl Soup</button>
-                    </td>
-                </tr>
-
-                <!-- Cold Ramen -->
-                <tr id="row_cold" class="hidden_row">
-                    <td colspan=4>
-                        <button class="modalButton" value="Cold" id="coldModal">Cold Ramen</button>
-                    </td>
-                </tr>
-
-
 
                 <!-- Ramen Set-->
                 <tr id="set_row" checkID_set="close">
@@ -477,19 +460,6 @@
                                                     <input type="checkbox" name="pref_others" value="(Less Spicy)" class="checkboxForPref" id="Less_Spicy">
                                                     <label for="Less_Spicy">Less</label>
                                                 </div>
-
-
-                                                <!-- <div class="item-name">Spicy:</div>
-
-                                                <div class="item-preference">
-                                                    <input type="checkbox" name="pref_others" value="(More Spicy)" class="checkboxForPref"  id="More_Spicy">
-                                                    <label for="More_Spicy">More</label>
-                                                </div>
-
-                                                <div class="item-preference">
-                                                    <input type="checkbox" name="pref_others" value="(Less Spicy)" class="checkboxForPref" id="Less_Spicy">
-                                                    <label for="Less_Spicy">Less</label>
-                                                </div> -->
 
                                             </div>
                                         </div>
@@ -1729,135 +1699,7 @@
             </div>
 
 
-            <!-- Modal for Bowl Soup -->
-            <div class="modal_bg_bowlSoup">
-
-                <div class="modal_content_bowlSoup">
-
-                    <!-- Title Line at the top -->
-                    <div class="bowlSoup_header">
-                        
-                        <div class="slide-title">Bowl Soup</div>
-                        <button class="close_button" id="close_bowlSoup_modal">&#x2715</button>
-                    
-                    </div>
-
-                    <!-- Main Body Part -->
-                    <div class="bowlSoup_content">
-
-                        <!-- Shio -->
-                        <div class="section_item_bowlSoup">
-
-                            <div class="title_bowlSoup">Shio</div>
-                            
-                            <!-- Section item counter button -->
-                            <div class="section_item_counter" id="side_item_counter">
-                                <div class="button_wrapper">               
-                                    <button class="button_decrease" id="BS_Shio_decrease">-</button>  
-                                    <div class="num_counter_bowlSoup" id="BS_Shio_counter">0</div>
-                                    <button class="button_increase" id="BS_Shio_increase">+</button>                
-                                </div>
-                            </div>
-
-                        </div>
-                    
-
-                        <!-- Shoyu -->
-                        <div class="section_item_bowlSoup">
-
-                            <div class="title_bowlSoup">Shoyu</div>
-
-                            <!-- Section item counter button -->
-                            <div class="section_item_counter" id="side_item_counter">
-                                <div class="button_wrapper">               
-                                    <button class="button_decrease" id="BS_Shoyu_decrease">-</button>   
-                                    <div class="num_counter_bowlSoup" id="BS_Shoyu_counter">0</div>
-                                    <button class="button_increase" id="BS_Shoyu_increase">+</button>             
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Miso -->
-                        <div class="section_item_bowlSoup">
-
-                            <div class="title_bowlSoup">Miso</div>
-
-                            <!-- Section item counter button -->
-                            <div class="section_item_counter" id="side_item_counter">
-                                <div class="button_wrapper">               
-                                    <button class="button_decrease" id="BS_Miso_decrease">-</button>
-                                    <div class="num_counter_bowlSoup" id="BS_Miso_counter">0</div>
-                                    <button class="button_increase" id="BS_Miso_increase">+</button>                 
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Hot Miso -->
-                        <div class="section_item_bowlSoup">
-
-                            <div class="title_bowlSoup">Hot Miso</div>
-
-                            <!-- Section item counter button -->
-                            <div class="section_item_counter" id="side_item_counter">
-                                <div class="button_wrapper">               
-                                    <button class="button_decrease" id="BS_hotMiso_decrease">-</button> 
-                                    <div class="num_counter_bowlSoup" id="BS_hotMiso_counter">0</div>
-                                    <button class="button_increase" id="BS_hotMiso_increase">+</button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Curry -->
-                        <div class="section_item_bowlSoup">
-
-                            <div class="title_bowlSoup">Curry</div>
-
-                            <!-- Section item counter button -->
-                            <div class="section_item_counter" id="side_item_counter">
-                                <div class="button_wrapper">               
-                                    <button class="button_decrease" id="BS_Curry_decrease">-</button>  
-                                    <div class="num_counter_bowlSoup" id="BS_Curry_counter">0</div>  
-                                    <button class="button_increase" id="BS_Curry_increase">+</button>                
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Tomato -->
-                        <div class="section_item_bowlSoup">
-
-                            <div class="title_bowlSoup">Tomato</div>
-
-                            <!-- Section item counter button -->
-                            <div class="section_item_counter" id="side_item_counter">
-                                <div class="button_wrapper">               
-                                    <button class="button_decrease" id="BS_Tomato_decrease">-</button>  
-                                    <div class="num_counter_bowlSoup" id="BS_Tomato_counter">0</div>
-                                    <button class="button_increase" id="BS_Tomato_increase">+</button>               
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- cancel and Add Button on Bowl Soup Modal -->
-                        <div class="bowlSoup_footer">
-
-                            <div class="bowlSoup-cancelOrAdd">
-                                <button class="cancelButton" id="cancelBtn_bowlSoup">Cancel</button>
-                                <button class="addButton" id="chashu_add">Add</button>
-                            </div>
-
-                        </div> 
-                        
-                    </div>
-                </div>
-            </div>  
-
             <!-- Modal for Check Button -->
-            
             <div class="check-modal" id="checkBtn-modal">
 
                 <div class="check-content">
@@ -1891,7 +1733,7 @@
                 </div>
             </div>
 
-                <!-- Modal for Submit Button using Bootstrap -->
+            <!-- Modal for Submit Button using Bootstrap -->
             <div class="modal fade" id="pickupBtn-modal" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content" >
@@ -1966,10 +1808,10 @@
             <div class="footer_section">
                 <div class="footer">
                     <div class="check_section">
-                        <button class="check_button" id = "check-button">&#128466;&#65039;</button>
+                        <button class="check_button" id="check-button">&#128466;&#65039;</button>
                     </div>
                     <div class="edit_section">
-                        <button class="edit_button" id = "edit-button">&#9999;&#65039;</button>
+                        <button class="edit_button" id="edit-button">&#9999;&#65039;</button>
                     </div>
                     <div class="home_section">
                         <button class="home_button">&#127968;</button>
@@ -1982,7 +1824,6 @@
 
         <script type="text/javascript" src="js/home_script.js"></script>
         <script type="text/javascript" src="js/home_modal.js"></script>
-        <script type="text/javascript" src="js/home_addItem.js"></script>
     </body>
 </html>
 
