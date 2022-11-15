@@ -1,0 +1,1331 @@
+/* modal for ramen pref & toppings removal or for side */
+.modal_bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /*hide this line*/
+    visibility:  hidden; /*hide this line*/
+    transition: visibility 0s opacity 0, 5s;
+    z-index: 20;
+  }
+  .bg-active{
+    visibility: visible;
+    opacity: 1;
+  }
+  .modal_content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(234, 234, 233);
+    width: 90%;
+    height: 90%;
+    z-index: 10;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  /* Modal slide 1 */
+  /* Basic Requirements */
+  .swiper-slide {
+    height: 100%;
+  }
+  .pref-section-content {
+    box-sizing: border-box;
+    height: 100%;
+  }
+  .slide-header {
+    height: 10%;
+    max-height: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(rgb(86, 84, 84),rgb(144, 135, 135));
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .slide-title {
+    padding-left: 0px;
+    font-size: 1.2em;
+    border-radius: 15px;
+    color: rgb(234, 234, 233);
+  }
+  .close_button {
+    border: none;
+    color: rgb(234, 234, 233);
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding: 0;
+    margin:0;
+  }
+  .pref-section-body {
+    box-sizing: border-box;
+    height: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    border-radius: 15px;
+    background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .slide-item {
+    width: 98%;
+  }
+  .item-name {
+    color: rgb(103, 103, 103);
+    font-weight: 500;
+    text-align: left;
+    margin-left: 0.4em;
+    font-size: 0.8em;
+  }
+  .item-preference {
+    height: 100%;
+    text-align: left;
+  }
+  .checkboxForPref {
+    width: 1.2em;
+    height: 1.2em;
+    position: relative;
+    top: 10px;
+  }
+  .containerFor3items {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+  }
+  
+  
+  /* same code for ramen preference, other side dishes, toppings, drinks, beer */
+  .menuItem_multiplied {
+    margin-top: -15px;
+    /* margin-bottom: 40px; */ 
+    padding: 35px 50px;
+  }
+  /* chashu counter button */
+  .item_counter {
+    display: flex;
+    justify-content: center;
+  }
+  .item_count {
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    width: 100px;
+  }
+  .item_button_wrapper {
+    border: none;
+    height: 100%;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 50px lightgrey;
+    background-color: rgb(240, 240, 240);
+  }
+  .item_button_wrapper button {
+    border: none;
+    outline: none; 
+    box-shadow: 20px 20px 20px lightgrey;
+    font-weight: bold;
+    font-size: 40px; 
+    color: inherit;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 5px rgb(119, 119, 119);
+  }
+  .menu_item_increase:active, 
+  .menu_item_decrease:active {
+    box-shadow: none;
+    transform: translateY(5px);
+    opacity: 0.5;
+  }
+  
+  .cancelOrAdd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .cancelButton{
+    background: linear-gradient(rgb(253, 213, 213),rgb(246, 142, 142));
+    padding: 10px 30px;
+    width: 250px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px rgb(137, 79, 79);
+  }
+  
+  .addButton {
+    background: linear-gradient(rgb(195, 225, 195), rgb(146, 197, 146));
+    padding: 10px 30px;
+    width: 250px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px rgb(79, 107, 79);
+  }
+  
+  .cancelButton:active,
+  .addButton:active {
+    box-shadow: none;
+    transform: translateY(5px);
+    opacity: 0.5;
+  }
+  
+  
+  /* Modal slide 2 */
+  /* Add Topping List */
+  .addToppings-section-content{
+    box-sizing: border-box;
+    height: 100%;
+    width: 98%;
+    margin-left: 1%;
+  } 
+  
+  .addToppings-section-body {
+    box-sizing: border-box;
+    height: 85%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 50px;
+  }
+  
+  .section-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 20px;
+    align-content: center;
+  }
+  .left-item{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* justify-content: space-between; */
+    height: 100%;
+    width: 100%;
+    margin-left: 10px;
+  }
+  .right-item{
+    /* display: flex;
+    justify-content: space-evenly; */
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr;
+    height: 100%;
+    width: 100%;
+  }
+  .item-name2 {
+    display: flex;
+    justify-content: start;
+    /* margin-top: 0.5em;
+    margin-right: 25px;
+    font-size: 0.8em;
+    text-align: right;*/
+    width: 120px; 
+    font-size: 0.8em;
+    margin-top: 0.5em;
+  }
+  
+  /* topping counter button */
+  .toppingCounter {
+    display: flex;
+    justify-content: center;
+    height: 1.9em;
+    margin-left: -10px;
+  }
+  .topping_counter {
+    font-size: 1em;
+    padding-bottom: 0.8em;
+  }
+  .topping_button_wrapper {
+    border: 2px solid;
+    height: 100%;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    gap: 1.7vw;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 50px lightgrey;
+    background-color: rgb(240, 240, 240);
+  }
+  .topping_button_wrapper button {
+    border: 1px solid;
+    outline: none; 
+    box-shadow: 0px 0px 50px lightgrey;
+    font-weight: 600;
+    color: inherit;
+    border-radius: 50%;
+    height: 6.5vw;
+    width: 6.5vw;
+    cursor: pointer;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 5px rgb(119, 119, 119);
+  }
+  
+  .topping_button_decrease,
+  .topping_button_increase{
+    font-size: 2.7vw;
+  }
+  
+  .topping_button_decrease:hover,
+  .topping_button_increase:hover {
+    background-color: lightgreen;
+  }
+  .topping_button_decrease:active,
+  .topping_button_increase:active {
+    box-shadow: none;
+    transform: translateY(5px);
+  }
+  
+  
+  /* Modal slide 3 (Remove toppings section) */
+  /* Remove toppings list */
+  .rToppings-section-content {
+    box-sizing: border-box;
+    height: 98%;
+    width: 98%;
+    margin-left: 1%;
+  }
+  .rToppings-section-body {
+    box-sizing: border-box;
+    height: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    border-radius: 15px;
+    background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
+    display: grid;
+    grid-template-rows: auto;
+    gap: 25px;
+  }
+  .rToppings-slide-item {
+    width: 98%;
+  }
+  .rToppings-containerFor3items {
+    display: grid;
+    grid-template-columns: 1.1fr 1.5fr 1.1fr;
+    align-self: center;
+    align-items: center;
+  }
+  .rToppings-title {
+    color: rgb(103, 103, 103);
+    font-weight: 500;
+    text-align: left;
+    margin-left: 0.4em;
+    font-size: 0.8em;
+  }
+  .rToppings-item-preference {
+    height: 100%;
+    text-align: left;
+  }
+  .rToppings-checkboxForPref {
+    width: 1.2em;
+    height: 1.2em;
+    position: relative;
+    top: 10px;
+  }
+  
+  
+  
+  /* Modal for Chashu & Don */ 
+  /* The box css to pop up  */
+  .modal_bg_chashu {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    opacity: 0; /*hide this line*/
+    visibility:  hidden; /*hide this line*/
+    transition: visibility 0s opacity 0, 5s;
+  }
+  .bg-active-chashu{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Design on the inside */
+  .chashu_modal_container {
+    box-sizing: border-box;
+    height: 98%;
+    width: 98%;
+    margin-left: 1%;
+  }
+  .modal_content_chashu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(234, 234, 233);
+    width: 90%;
+    height: 90%;
+    z-index: 10;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Title line of chashu modal */
+  .chashu_header {
+    height: 10%;
+    max-height: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(rgb(86, 84, 84),rgb(144, 135, 135));
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .slide-title-chashu {
+    padding-left: 0px;
+    font-size: 1.2em;
+    border-radius: 15px;
+    color: rgb(234, 234, 233);
+  }
+  .close_button-chashu {
+    border: none;
+    color: rgb(234, 234, 233);
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding: 0;
+    margin:0;
+  }
+  
+  /* Main Body Part on Chashu Modal */
+  .chashu-section-body {
+    box-sizing: border-box;
+    height: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    border-radius: 15px;
+    background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
+    /* display: grid;
+    grid-template-rows: auto; */
+    gap: 25px;
+  }
+  .slide-item-chashu {
+    width: 98%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .item-name-chashu {
+    color: rgb(103, 103, 103);
+    font-weight: 500;
+    text-align: left;
+    margin-left: 0.4em;
+    font-size: 0.9em;
+  }
+  .item-preference-chashu {
+    height: 100%;
+    text-align: left;
+  }
+  .checkboxForPref-chashu {
+    width: 1.2em;
+    height: 1.2em;
+    position: relative;
+    top: 10px;
+  }
+  .containerFor3items-chashu {
+    display: grid;
+    grid-template-columns: 1.1fr 1.2fr 1.3fr;
+    align-self: center;
+    align-items: center;
+  }
+  #chashu-section-line {
+    width: 95%;
+    background: black;
+  }
+  
+  /* Chashu Modal - Remove or Side options */
+  .rItems-section-body {
+    margin-top: 40px;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 40px;
+  }
+  .rItems-chashu {
+    width: 98%;
+  }
+  .rItems-containerFor3items {
+    display: grid;
+    grid-template-columns: 1.1fr 1.5fr 1.1fr;
+    align-self: center;
+    align-items: center;
+  }
+  .rItems-title {
+    color: rgb(103, 103, 103);
+    font-weight: 500;
+    text-align: left;
+    margin-left: 0.4em;
+    font-size: 0.8em;
+  }
+  .rItems-preference {
+    height: 100%;
+    text-align: left;
+  }
+  .rItems-checkboxForPref {
+    width: 1.2em;
+    height: 1.2em;
+    position: relative;
+    top: 10px;
+  }
+  
+  /* Chashu Modal Footer Section */
+  .chashu_footer {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .chashu-cancelOrAdd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 20px;
+  }
+  
+  
+  
+  /* Modal for Other Side Dishes */ 
+  .modal_bg_dishes {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    opacity: 0; /*hide this line*/
+    visibility: hidden; /*hide this line*/
+    transition: visibility 0s opacity 0, 5s;
+  }
+  .bg-active-dishes{
+    visibility: visible;
+    opacity: 1;
+  }
+  .modal_content_dishes {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(234, 234, 233);
+    width: 90%;
+    height: 90%;
+    z-index: 10;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .dishes_header {
+    height: 10%;
+    max-height: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(rgb(86, 84, 84),rgb(144, 135, 135));
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dishes_content {
+    height: 89%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
+    display: grid;
+    grid-template-rows: auto;
+    
+  }
+  /* same format for drinks as well */ 
+  .section_item {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-bottom: 2px solid;
+    align-items: center;
+  }
+  .section_item_name {
+    padding-top: 30px;
+    font-weight: 450;
+    font-size: 3.7rem;
+  }
+  
+  
+  /* Section item counter button (used for other side dishes)*/
+  /* This code is also used for soft drinks and beers */
+  .section_item_counter {
+    display: flex;
+    justify-content: center;
+    margin-left: -10px;
+    margin-top: 20px;
+  }
+  .counter_section_item {
+    font-size: 70px;
+    padding-bottom: 0px;
+    width: 80px;
+  }
+  .button_wrapper {
+    border: 2px solid;
+    height: 2.3em;
+    width: 350px;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 50px lightgrey;
+    background-color: rgb(240, 240, 240);
+  }
+  .button_wrapper button {
+    outline: none; 
+    box-shadow: 0px 0px 50px lightgrey;
+    font-weight: bold;
+    font-size: 30px; 
+    color: inherit;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0 5px rgb(119, 119, 119);
+  }
+  
+  .button_decrease:hover,
+  .button_increase:hover {
+    background-color: lightgreen;
+  }
+  .button_decrease:active,
+  .button_increase:active {
+    box-shadow: none;
+    transform: translateY(5px);
+  }
+  
+  
+  
+  /* modal for topping (directly from top menu) */
+  .modal_bg_toppings {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    opacity: 0; /*hide this line*/
+    visibility: hidden; /*hide this line*/
+    transition: visibility 0s opacity 0, 5s;
+  }
+  .bg-active-toppings{
+    visibility: visible;
+    opacity: 1;
+  }
+  .modal_content_toppings {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(234, 234, 233);
+    width: 90%;
+    height: 90%;
+    z-index: 10;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .toppings_header {
+    height: 10%;
+    max-height: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(rgb(86, 84, 84),rgb(144, 135, 135));
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .toppings-body {
+    box-sizing: border-box;
+    height: 89%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 45px;
+  }
+  .topping_footer {
+    margin-bottom: 15px;
+  }
+  .toppings-section-row {
+    display: grid;
+    grid-template-columns: 0.98fr 1.02fr;
+    /* margin-right: 15px; */
+    /* margin-top: 1px; */
+    align-content: center;
+  }
+  .toppings-left-item{
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    /* justify-content: space-between; */
+    height: 100%;
+    width: 100%;
+    margin-left: 10px;
+  }
+  .toppings-right-item{
+    /* display: flex;
+    justify-content: space-evenly; */
+    display: grid;
+    grid-template-columns: 1.15fr 1.25fr;
+    height: 100%;
+    width: 100%;
+  }
+  .toppings-item-name2 {
+    display: flex;
+    justify-content: start;
+    /* margin-top: 0.5em;
+    margin-right: 25px;
+    font-size: 0.8em;
+    text-align: right;*/
+    width: 120px; 
+    font-size: 0.8em;
+    margin-top: 0.5em;
+  }
+  
+  
+  /* modal for soft drink*/
+  .modal_bg_softDrink {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    opacity: 0; /*hide this line*/
+    visibility: hidden; /*hide this line*/
+    transition: visibility 0s opacity 0, 5s;
+  }
+  .bg-active-softDrink{
+    visibility: visible;
+    opacity: 1;
+  }
+  .modal_content_softDrink {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(234, 234, 233);
+    width: 90%;
+    height: 90%;
+    z-index: 10;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .softDrink_header {
+    height: 10%;
+    max-height: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(rgb(86, 84, 84),rgb(144, 135, 135));
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .softDrink_body {
+    height:90%;
+    /* max-height: 1100px; */
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
+    display: grid;
+    grid-template-rows: auto;
+  }
+  .softDrink_footer {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+  .soft_drink_count{
+    font-size: 4.5rem;
+    padding-bottom: 0px;
+    width: 80px;
+  }
+  
+  
+  /* Modal for beers */
+  .modal_bg_beer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    opacity: 0; /*hide this line*/
+    visibility: hidden; /*hide this line*/
+    transition: visibility 0s opacity 0, 5s;
+  }
+  .bg-active-beer {
+    visibility: visible;
+    opacity: 1;
+  }
+  .modal_content_beer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(234, 234, 233);
+    width: 90%;
+    height: 90%;
+    z-index: 10;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .beer_header {
+    height: 10%;
+    max-height: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(rgb(86, 84, 84),rgb(144, 135, 135));
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-title-beer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+  .beer_body {
+    height: 90%;
+    /* max-height: 1100px; */
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .beer_footer {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .drink_beers_count {
+    font-size: 4.5rem;
+    padding-bottom: 0px;
+    width: 80px;
+  }
+  
+  
+  /* Modal for Bowl Soup */
+  .modal_bg_bowlSoup {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    opacity: 0; /*hide this line*/
+    visibility: hidden; /*hide this line*/
+    transition: visibility 0s opacity 0, 5s;
+  }
+  .bg-active-bowlSoup {
+    visibility: visible;
+    opacity: 1;
+  }
+  .modal_content_bowlSoup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(234, 234, 233);
+    width: 90%;
+    height: 90%;
+    z-index: 10;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .bowlSoup_header {
+    height: 10%;
+    max-height: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(rgb(86, 84, 84),rgb(144, 135, 135));
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bowlSoup_content {
+    height: 89%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    background: linear-gradient(rgb(184, 183, 183),rgb(232, 225, 225));
+    display: grid;
+    grid-template-rows: auto;
+    
+  }
+  /* same format for drinks as well */ 
+  .section_item_bowlSoup {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-bottom: 2px solid;
+    align-items: center;
+  }
+  .title_bowlSoup {
+    padding-top: 30px;
+    font-weight: 450;
+    font-size: 3.7rem;
+  }
+  .num_counter_bowlSoup {
+    font-size: 70px;
+    padding-bottom: 0px;
+    width: 80px;
+  }
+  
+  /* BowlSoup Modal Footer Section */
+  .bowlSoup_footer {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .bowlSoup-cancelOrAdd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 20px;
+  }
+  
+  
+  /* Modal for Check Button*/
+  .check-modal{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    opacity: 0; /*hide this line*/
+    visibility: hidden; /*hide this line*/
+    transition: visibility 0s opacity 0, 5s;
+  }
+  
+  .bg-active-checkBtn {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .close-btn-checkBtn{
+    color: whitesmoke;
+  }
+  .check-content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(234, 234, 233);
+    width: 92%;
+    height: 90%;
+    z-index: 10;
+    font-size: 50px;
+    display: grid;
+    grid-template-rows: 8% auto 7%;
+  }
+  
+  .check-title{
+    grid-row:1;
+    position: fixed;
+    text-align: center;
+    background-color: green;
+    color: whitesmoke;
+    width: 100%;
+    font-size: 2rem;
+    padding: 20px 10px;
+    height: auto;
+  }
+  
+  .check-title h2{
+    font-size: 4rem;
+    margin-top: 20px;
+  }
+  
+  .orders{
+    grid-row:2;
+    height:96%;
+    width: 90%;
+    margin:auto;
+    color: black;
+    font-size: 70px;
+    text-align: left;
+    flex: 1;
+    /* overflow:auto; */
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    position:relative;
+  }
+  
+  .check_box{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .check_item {
+    font-size: 4rem;
+  }
+  
+  #other_pref {
+    font-size: 3.5rem;
+    word-wrap: break-word;
+    width: 90%;
+  }
+  
+  .close-btn-checkBtn {
+    position: fixed;
+    left: 87%;
+    font-size: 6rem;
+    z-index: 30;
+  }
+  
+  .remove-submit-buttons{
+    grid-row: 3;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1.2fr 0.2fr 1.2fr;
+    padding: 20px;
+    color: #c3c3c3;
+    background-color: green;
+    border-color: whitesmoke;
+    border-width: 10px;
+    width: 100%;
+    margin: auto; 
+  }
+  
+  #remove-btn{
+  
+    padding: 9px 50px;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    background-color: lightcoral;
+    float: left;
+  }
+  #remove-btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
+  
+  .submit-btn{
+    /* padding: 9px 60px; */
+    background-color: yellow;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    float: right;
+  }
+  .submit-btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
+  
+  
+  
+  /* Edit Modal */
+  .edit-modal{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    opacity: 0; /*hide this line*/
+    visibility: hidden; /*hide this line*/
+    transition: visibility 0s opacity 0, 5s;
+  }
+  
+  .close-btn-editBtn{
+    color: whitesmoke;
+  }
+  
+  .bg-active-editBtn {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .edit-content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(234, 234, 233);
+    width: 90%;
+    height: 90%;
+    z-index: 10;
+    font-size: 50px;
+    display: grid;
+    grid-template-rows: 8% auto 7%;
+  }
+  
+  .edit-title{
+    grid-row:1;
+    position: fixed;
+    text-align: center;
+    background-color: orangered;
+    color: whitesmoke;
+    width: 100%;
+    font-size: 2rem;
+    padding: 20px 10px;
+    height: auto;
+  }
+  
+  .edit-orders{
+    grid-row:2;
+    height:96%;
+    width: 90%;
+    margin:auto;
+    color: black;
+    font-size: 70px;
+    text-align: left;
+    flex: 1;
+    overflow:auto;
+    overflow-y: scroll;
+    position:relative;
+  }
+  
+  .check{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .edit-title h2{
+    font-size: 4rem;
+    margin-top: 20px;
+  }
+  
+  .close-btn-editBtn {
+    position: fixed;
+    left: 87%;
+    font-size: 6rem;
+    z-index: 30;
+  }
+  
+  .edit-confirm-buttons{
+    grid-row: 3;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1.2fr 0.2fr 1.2fr;
+    padding: 20px;
+    color: #c3c3c3;
+    background-color: orangered;
+    border-color: whitesmoke;
+    width: 100%;
+    margin: auto; 
+  }
+  
+  #edit-btn{
+  
+    padding: 9px 90px;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    background-color: lightpink;
+    float: left;
+  }
+  #edit-btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
+  
+  #remove-btn-v2{
+    padding: 9px 50px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-color: black;
+    float: right;
+  }
+  #remove-btn-v2:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
+  
+  /* Phone Order: PickUp Time Modal */
+  #pickupBtn-modal{
+    z-index: 1080 !important;
+  }
+  
+  #pickup-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(234, 234, 233);
+    width: 50%;
+    height: 50%;
+    z-index: 10;
+    font-size: 50px;
+  }
+  
+  #pickup-title {
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  
+  #time{
+    text-align: center;
+    width: 60%;
+    height: 40%;
+    font-size: 3.5rem;
+  }
+  
+  #cacnel-next-buttons{
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1.2fr 0.2fr 1.2fr;
+    padding: 20px;
+    color: #c3c3c3;
+    background-color: green;
+    border-color: whitesmoke;
+    border-width: 10px;
+    width: 100%;
+    margin: auto; 
+  }
+  
+  #cancel-btn{
+    padding: 30px 60px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: black;
+    background-color: lightcoral;
+    color: black;
+    float: left;
+    font-size: 3rem;
+  }
+  #cancel-btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
+  
+  #next-btn{
+    padding: 30px 80px;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: black;
+    color: black;
+    float: right;
+    font-size: 3rem;
+  }
+  #next-btn:active {
+    box-shadow: none;
+    transform: translateY(3px);
+    opacity: 0.5;
+  }
+  
+  .modal-dialog{
+      max-width: 80%;
+  }
+  
+  .modal-dialog, .modal-content{
+    height: 50%;
+  }
+  
