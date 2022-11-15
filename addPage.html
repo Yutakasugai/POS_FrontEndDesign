@@ -26,53 +26,54 @@
 </head>
 
 <body>
-<!-- header section at the top -->
-<div class="header_section">
 
-    <div class="header">
-
-        <div class="user_info">
-
-            <div class="user_name">
-                User Name: Yuta
-            </div>
-
-            <div class="table_num">
-                Table: Table_?
-            </div>
-
-            <!-- {{#if pickUp_time }}
-                <div class="customer_num">
-                    PickUp Time: {{pickUp_time}}
-                </div>
-            {{else}} -->
-
-            <div class="customer_num">
-                Customer Number: 2
-            </div>
-
-        </div>
-
-        <div class="view_section">
-
-            <form action="/auth/user/viewPage" method="POST">
-                <input type="hidden" name="userName" value="{{name}}">
-                <input type="hidden" name="date_key" value="{{Date}}">
-                <input type="hidden" name="time_key" value="{{Time}}">
-                <input type="hidden" name="table_key" value="{{table_key}}">
-                <input type="hidden" name="c_number" value="{{c_number}}">
-                <input type="hidden" name="phone_key" value="{{phone_key}}">
-                <button class="view-button">View</button>
-            </form>
-            
-        </div>
-
-    </div>
-
-</div>
 
 <!-- Wrapper Start -->
 <div id="wrapper">
+    <!-- header section at the top -->
+    <div class="header_section">
+
+        <div class="header">
+
+            <div class="user_info">
+
+                <div class="user_name">
+                    User Name: Yuta
+                </div>
+
+                <div class="table_num">
+                    Table: Table_?
+                </div>
+
+                <!-- {{#if pickUp_time }}
+                    <div class="customer_num">
+                        PickUp Time: {{pickUp_time}}
+                    </div>
+                {{else}} -->
+
+                <div class="customer_num">
+                    Customer Number: 2
+                </div>
+
+            </div>
+
+            <div class="view_section">
+
+                <form action="/auth/user/viewPage" method="POST">
+                    <input type="hidden" name="userName" value="{{name}}">
+                    <input type="hidden" name="date_key" value="{{Date}}">
+                    <input type="hidden" name="time_key" value="{{Time}}">
+                    <input type="hidden" name="table_key" value="{{table_key}}">
+                    <input type="hidden" name="c_number" value="{{c_number}}">
+                    <input type="hidden" name="phone_key" value="{{phone_key}}">
+                    <button class="view-button">View</button>
+                </form>
+                
+            </div>
+
+        </div>
+
+    </div>
 
     <table  id="table_detail" align=center cellpadding=10>
 
