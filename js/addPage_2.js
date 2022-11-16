@@ -19,11 +19,121 @@ ramen_addBtn.addEventListener('click', function(event){
 
       console.log("This is cold"); 
 
-  } else if (item_container[0].includes("Shrimp") === true) {
+  } 
+  
+  else if (item_container[0].includes("Shrimp") === true) {
 
-      console.log("This is shrimp"); 
+      if (document.getElementById("rich_soup").checked === false && document.getElementById("regular_soup").checked === false){
+          
+        document.getElementById('soup_container').style.background = '#f56c77'; 
+        event.preventDefault();
+        return; 
+      }
+      else {
+          
+        document.getElementById('soup_container').style.background = 'transparent'; 
+        // This is only one condition when the soup and chashu boxes are filled
 
-  } else {
+          document.getElementById('chashu_container').style.background = 'transparent'; 
+
+          // Capture the total number counter 
+          let total_num = document.getElementById('toppingTop_counter').innerText; 
+
+          const totalNum_input = document.getElementById('total_num'); 
+          totalNum_input.setAttribute('value', total_num); 
+
+          // Capture the chashu and soup values and combine them with each other
+          var result = ''
+          $.each($("input[name='pref_must']:checked"), function(){            
+              // item_container.push($(this).val());
+              result = result + this.value; 
+          });
+
+          item_container.push(result);
+      }
+      // Capture add topping items 
+      $.each($("h1[name='addTop_count']"), function(){            
+        if ($(this).text() > 0) {document.getElementById('soup_container').style.background = 'transparent'; 
+
+            let addTop_result = ('+' + $(this).text() + '{' + $(this).attr('addTop'));
+            item_container.push(addTop_result);
+        }
+      });
+
+      // Capture other pref options 
+      $.each($("input[name='pref_others']:checked"), function(){            
+          item_container.push($(this).val());
+      });
+
+      $.each($("input[name='remove_check']:checked"), function(){
+
+          item_container.push($(this).val());
+      })
+
+      console.log(item_container); 
+
+      // Insert this array to the hidden input to keep 
+      const item_input = document.getElementById('added_item'); 
+      item_input.setAttribute('value', item_container); 
+  } 
+
+
+  else if (item_container[0].includes("Vege") === true) {
+
+    if (document.getElementById("rich_soup").checked === false && document.getElementById("regular_soup").checked === false){
+        
+      document.getElementById('soup_container').style.background = '#f56c77'; 
+      event.preventDefault();
+      return; 
+    }
+    else {
+        
+      document.getElementById('soup_container').style.background = 'transparent'; 
+      // This is only one condition when the soup and chashu boxes are filled
+
+        document.getElementById('chashu_container').style.background = 'transparent'; 
+
+        // Capture the total number counter 
+        let total_num = document.getElementById('toppingTop_counter').innerText; 
+
+        const totalNum_input = document.getElementById('total_num'); 
+        totalNum_input.setAttribute('value', total_num); 
+
+        // Capture the chashu and soup values and combine them with each other
+        var result = ''
+        $.each($("input[name='pref_must']:checked"), function(){            
+            // item_container.push($(this).val());
+            result = result + this.value; 
+        });
+
+        item_container.push(result);
+    }
+    // Capture add topping items 
+    $.each($("h1[name='addTop_count']"), function(){            
+      if ($(this).text() > 0) {document.getElementById('soup_container').style.background = 'transparent'; 
+
+          let addTop_result = ('+' + $(this).text() + '{' + $(this).attr('addTop'));
+          item_container.push(addTop_result);
+      }
+    });
+
+    // Capture other pref options 
+    $.each($("input[name='pref_others']:checked"), function(){            
+        item_container.push($(this).val());
+    });
+
+    $.each($("input[name='remove_check']:checked"), function(){
+
+        item_container.push($(this).val());
+    })
+
+    console.log(item_container); 
+
+    // Insert this array to the hidden input to keep 
+    const item_input = document.getElementById('added_item'); 
+    item_input.setAttribute('value', item_container); 
+}
+  else {
 
       // check if the required options is chcked or not 
       if (document.getElementById("rich_soup").checked === false && document.getElementById("regular_soup").checked === false){
@@ -108,6 +218,112 @@ ramen_addBtn.addEventListener('click', function(event){
   }
 
 })
+
+
+
+
+//Side Dishes
+// Add Button Function
+const sides_addBtn = document.getElementById('chashu_add'); 
+const sides_button = document.querySelectorAll('.chashu_pref_button'); 
+
+// I could capture main item name from this function
+$('button.chashu_pref_button').click(function(e) {
+
+  // console.log(e.currentTarget.value);
+  item_container.push(e.currentTarget.value)
+});
+
+sides_addBtn.addEventListener('click', function(event){
+
+  if (item_container[0].includes("Other") === true){
+
+      console.log("This is cold"); 
+
+  } 
+  else {
+      // check if the required options is chcked or not 
+      if (document.getElementById("chashu_belly").checked === false && document.getElementById("chashu_shoulder").checked === false){   
+          document.getElementById('containerFor3items-chashu').style.background = '#f56c77'; 
+          event.preventDefault(); 
+          return; 
+      } 
+
+      else {
+        
+        // This is only one condition when the soup and chashu boxes are filled
+          document.getElementById('chashu_container').style.background = 'transparent'; 
+
+          // Capture the total number counter 
+          let total_num = document.getElementById('toppingTop_counter').innerText; 
+
+          const totalNum_input = document.getElementById('total_num'); 
+          totalNum_input.setAttribute('value', total_num); 
+
+          // Capture the chashu
+          var result = ''
+          $.each($("input[name='pref_must']:checked"), function(){            
+              // item_container.push($(this).val());
+              result = result + this.value; 
+          });
+          item_container.push(result);
+
+
+        // Capture add topping items 
+        $.each($("h1[name='addTop_count']"), function(){            
+          if ($(this).text() > 0) {
+
+              let addTop_result = ('+' + $(this).text() + '{' + $(this).attr('addTop'));
+              item_container.push(addTop_result);
+          }
+        });
+
+        // Capture other pref options 
+        $.each($("input[name='pref_others']:checked"), function(){            
+            item_container.push($(this).val());
+        });
+
+        $.each($("input[name='remove_check']:checked"), function(){
+
+            item_container.push($(this).val());
+        })
+
+        console.log(item_container); 
+
+        // Insert this array to the hidden input to keep 
+        const item_input = document.getElementById('added_item'); 
+        item_input.setAttribute('value', item_container); 
+
+      }
+  
+    }
+        
+})
+
+
+
+
+
+
+
+//Drinks
+
+// Add Button Function
+const drinks_addBtn = document.getElementById('softDrink_add'); 
+const drinks_button = document.querySelectorAll('.modal_bg_softDrink'); 
+
+// I could capture main item name from this function
+$('button.section_item').click(function(e) {
+
+  console.log(e.currentTarget.value);
+  item_container.push(e.currentTarget.value)
+});
+
+
+
+
+
+
 
 
 // Addply this same condition to Change button on edit sheet 
