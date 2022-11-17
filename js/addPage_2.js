@@ -19,77 +19,18 @@ ramen_addBtn.addEventListener('click', function(event){
 
       console.log("This is cold"); 
 
-  } 
-  
-  else if (item_container[0].includes("Shrimp") === true) {
+  } else if (item_container[0].includes("Shrimp") === true) {
 
       if (document.getElementById("rich_soup").checked === false && document.getElementById("regular_soup").checked === false){
           
         document.getElementById('soup_container').style.background = '#f56c77'; 
         event.preventDefault();
         return; 
-      }
-      else {
+
+      } else {
           
         document.getElementById('soup_container').style.background = 'transparent'; 
         // This is only one condition when the soup and chashu boxes are filled
-
-          document.getElementById('chashu_container').style.background = 'transparent'; 
-
-          // Capture the total number counter 
-          let total_num = document.getElementById('toppingTop_counter').innerText; 
-
-          const totalNum_input = document.getElementById('total_num'); 
-          totalNum_input.setAttribute('value', total_num); 
-
-          // Capture the chashu and soup values and combine them with each other
-          var result = ''
-          $.each($("input[name='pref_must']:checked"), function(){            
-              // item_container.push($(this).val());
-              result = result + this.value; 
-          });
-
-          item_container.push(result);
-      }
-      // Capture add topping items 
-      $.each($("h1[name='addTop_count']"), function(){            
-        if ($(this).text() > 0) {document.getElementById('soup_container').style.background = 'transparent'; 
-
-            let addTop_result = ('+' + $(this).text() + '{' + $(this).attr('addTop'));
-            item_container.push(addTop_result);
-        }
-      });
-
-      // Capture other pref options 
-      $.each($("input[name='pref_others']:checked"), function(){            
-          item_container.push($(this).val());
-      });
-
-      $.each($("input[name='remove_check']:checked"), function(){
-
-          item_container.push($(this).val());
-      })
-
-      console.log(item_container); 
-
-      // Insert this array to the hidden input to keep 
-      const item_input = document.getElementById('added_item'); 
-      item_input.setAttribute('value', item_container); 
-  } 
-
-
-  else if (item_container[0].includes("Vege") === true) {
-
-    if (document.getElementById("rich_soup").checked === false && document.getElementById("regular_soup").checked === false){
-        
-      document.getElementById('soup_container').style.background = '#f56c77'; 
-      event.preventDefault();
-      return; 
-    }
-    else {
-        
-      document.getElementById('soup_container').style.background = 'transparent'; 
-      // This is only one condition when the soup and chashu boxes are filled
 
         document.getElementById('chashu_container').style.background = 'transparent'; 
 
@@ -107,7 +48,66 @@ ramen_addBtn.addEventListener('click', function(event){
         });
 
         item_container.push(result);
+      }
+
+      // Capture add topping items 
+      $.each($("h1[name='addTop_count']"), function(){            
+        if ($(this).text() > 0) {document.getElementById('soup_container').style.background = 'transparent'; 
+
+            let addTop_result = ('+' + $(this).text() + '{' + $(this).attr('addTop'));
+            item_container.push(addTop_result);
+        }
+      });
+
+      // Capture other pref options 
+      $.each($("input[name='pref_others']:checked"), function(){            
+          item_container.push($(this).val());
+      });
+
+      $.each($("input[name='remove_check']:checked"), function(){
+          item_container.push($(this).val());
+      })
+
+      console.log(item_container); 
+
+      // Insert this array to the hidden input to keep 
+      const item_input = document.getElementById('added_item'); 
+      item_input.setAttribute('value', item_container); 
+
+
+  } else if (item_container[0].includes("Vege") === true) {
+
+    if (document.getElementById("rich_soup").checked === false && document.getElementById("regular_soup").checked === false){
+        
+      document.getElementById('soup_container').style.background = '#f56c77'; 
+      event.preventDefault();
+      return; 
+
     }
+    else {
+        
+      document.getElementById('soup_container').style.background = 'transparent'; 
+      // This is only one condition when the soup and chashu boxes are filled
+
+      document.getElementById('chashu_container').style.background = 'transparent'; 
+
+      // Capture the total number counter 
+      let total_num = document.getElementById('toppingTop_counter').innerText; 
+
+      const totalNum_input = document.getElementById('total_num'); 
+      totalNum_input.setAttribute('value', total_num); 
+
+      // Capture the chashu and soup values and combine them with each other
+      var result = ''
+      $.each($("input[name='pref_must']:checked"), function(){            
+          // item_container.push($(this).val());
+          result = result + this.value; 
+      });
+
+      item_container.push(result);
+
+    }
+
     // Capture add topping items 
     $.each($("h1[name='addTop_count']"), function(){            
       if ($(this).text() > 0) {document.getElementById('soup_container').style.background = 'transparent'; 
@@ -123,7 +123,6 @@ ramen_addBtn.addEventListener('click', function(event){
     });
 
     $.each($("input[name='remove_check']:checked"), function(){
-
         item_container.push($(this).val());
     })
 
@@ -132,24 +131,21 @@ ramen_addBtn.addEventListener('click', function(event){
     // Insert this array to the hidden input to keep 
     const item_input = document.getElementById('added_item'); 
     item_input.setAttribute('value', item_container); 
-}
-  else {
+
+
+  } else {
 
       // check if the required options is chcked or not 
       if (document.getElementById("rich_soup").checked === false && document.getElementById("regular_soup").checked === false){
-          
         document.getElementById('soup_container').style.background = '#f56c77'; 
 
         // check if the required options is chcked or not 
         if (document.getElementById("chashu_belly_choice").checked === false && document.getElementById("chashu_shoulder_choice").checked === false){   
             document.getElementById('chashu_container').style.background = '#f56c77'; 
-
-
             event.preventDefault(); 
             return; 
 
         } else {
-
           document.getElementById('chashu_container').style.background = 'transparent'; 
         }
         
@@ -169,23 +165,22 @@ ramen_addBtn.addEventListener('click', function(event){
           } else {
             
             // This is only one condition when the soup and chashu boxes are filled
+            document.getElementById('chashu_container').style.background = 'transparent'; 
 
-              document.getElementById('chashu_container').style.background = 'transparent'; 
+            // Capture the total number counter 
+            let total_num = document.getElementById('toppingTop_counter').innerText; 
 
-              // Capture the total number counter 
-              let total_num = document.getElementById('toppingTop_counter').innerText; 
+            const totalNum_input = document.getElementById('total_num'); 
+            totalNum_input.setAttribute('value', total_num); 
 
-              const totalNum_input = document.getElementById('total_num'); 
-              totalNum_input.setAttribute('value', total_num); 
+            // Capture the chashu and soup values and combine them with each other
+            var result = ''
+            $.each($("input[name='pref_must']:checked"), function(){            
+                // item_container.push($(this).val());
+                result = result + this.value; 
+            });
 
-              // Capture the chashu and soup values and combine them with each other
-              var result = ''
-              $.each($("input[name='pref_must']:checked"), function(){            
-                  // item_container.push($(this).val());
-                  result = result + this.value; 
-              });
-
-              item_container.push(result);
+            item_container.push(result);
           }
 
       }
@@ -214,16 +209,13 @@ ramen_addBtn.addEventListener('click', function(event){
       // Insert this array to the hidden input to keep 
       const item_input = document.getElementById('added_item'); 
       item_input.setAttribute('value', item_container); 
-
   }
-
 })
 
 
 
-
 //Side Dishes
-// Add Button Function
+//Add Button Function
 const sides_addBtn = document.getElementById('chashu_add'); 
 const sides_button = document.querySelectorAll('.chashu_pref_button'); 
 
@@ -263,33 +255,6 @@ sides_addBtn.addEventListener('click', function(event){
       item_input.setAttribute('value', item_container); 
 
   } 
-  else if (item_container[0].includes("G. Onion Don")===true){
-  // This is only one condition when the soup and chashu boxes are filled
-      document.getElementById('chashu-bg').style.background = 'transparent'; 
-
-      // Capture the total number counter 
-      let total_num = document.getElementById('chashu_counter').innerText; 
-
-      const totalNum_input = document.getElementById('total_num'); 
-      totalNum_input.setAttribute('value', total_num); 
-
-      // Capture other pref options 
-      $.each($("input[name='pref_others']:checked"), function(){            
-          item_container.push($(this).val());
-      });
-
-      $.each($("input[name='remove_check']:checked"), function(){
-
-          item_container.push($(this).val());
-      })
-
-      console.log(item_container); 
-
-      // Insert this array to the hidden input to keep 
-      const item_input = document.getElementById('added_item'); 
-      item_input.setAttribute('value', item_container); 
-  }
-
   else {
       // check if the required options is chcked or not 
       if (document.getElementById("chashu_belly").checked === false && document.getElementById("chashu_shoulder").checked === false){   
