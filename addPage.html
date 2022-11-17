@@ -312,7 +312,7 @@
         <!-- Ramen topping-->
         <tr id="topping_row">
             <th colspan=4>
-                <button class="topping_modal_button" id="topping_yellow">
+                <button class="topping_modal_button" value="Extra Toppings" id="topping_yellow">
                     Topping
                 </div>
             </th>
@@ -328,13 +328,13 @@
 
         <tr id="soft_drink_row" class="hidden_row">
             <th colspan=4>
-                <button class="modalButton" value="Soft Drinks" id="soft_dri_modal">Soft Drinks</button>
+                <button class="drinksButton" value="Soft Drinks" id="soft_dri_modal">Soft Drinks</button>
             </th>
         </tr>
 
         <tr id="beer_row" class="hidden_row">
             <th colspan=4>
-                <button class="modalButton" value="Beer" id="beer_modal">Beer</button>
+                <button class="drinksButton" value="Beer" id="beer_modal">Beer</button>
             </th>
         </tr>
 
@@ -1025,7 +1025,7 @@
                 <div class="chashu-section-body">
 
                     <!-- Chashu Option for only plate and burger -->
-                    <div class="slide-item-chashu">
+                    <div class="slide-item-chashu" id="chashu-bg">
                         <div class="containerFor3items-chashu">
 
                             <div class="item-name-chashu">
@@ -1034,12 +1034,12 @@
                             </div>
                             
                             <div class="item-preference-chashu">
-                                <input type="checkbox" name="chashu_check" class="checkboxForPref-chashu" id="chashu_belly">
+                                <input type="checkbox" name="chashu_check" value="[B]" class="checkboxForPref-chashu" id="chashu_belly">
                                 <label for="chashu_belly">Belly</label>
                             </div>
 
                             <div class="item-preference-chashu">
-                                <input type="checkbox" name="chashu_check" class="checkboxForPref-chashu" id="chashu_shoulder">
+                                <input type="checkbox" name="chashu_check" value="[S]" class="checkboxForPref-chashu" id="chashu_shoulder">
                                 <label for="chashu_shoulder">Shoulder</label>
                             </div>
 
@@ -1059,12 +1059,12 @@
                                 <div class="rItems-title">G.onion:</div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_gonion">
+                                    <input type="checkbox" name="remove_check" value="No G. Onion" class="rItems-checkboxForPref" id="rItems_gonion">
                                     <label for="rItems_gonion">Remove</label>
                                 </div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_gonion">
+                                    <input type="checkbox" name="pref_others" value="+ G. Onion"class="rItems-checkboxForPref"  id="sItems_gonion">
                                     <label for="sItems_gonion">Side</label>
                                 </div>
 
@@ -1078,12 +1078,12 @@
                                 <div class="rItems-title">Sesame:</div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_sesame">
+                                    <input type="checkbox" name="remove_check" value="No Sesame" class="rItems-checkboxForPref" id="rItems_sesame">
                                     <label for="rItems_sesame">Remove</label>
                                 </div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_sesame">
+                                    <input type="checkbox" name="pref_others" value="+ Sesame" class="rItems-checkboxForPref"  id="sItems_sesame">
                                     <label for="sItems_sesame">Side</label>
                                 </div>
 
@@ -1097,12 +1097,12 @@
                                 <div class="rItems-title">Lettuce:</div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_lettuce">
+                                    <input type="checkbox" name="remove_check" value="No Lettuce" class="rItems-checkboxForPref" id="rItems_lettuce">
                                     <label for="rItems_lettuce">Remove</label>
                                 </div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_lettuce">
+                                    <input type="checkbox" name="pref_others" value="+ Lettuce" class="rItems-checkboxForPref"  id="sItems_lettuce">
                                     <label for="sItems_lettuce">Side</label>
                                 </div>
 
@@ -1116,12 +1116,12 @@
                                 <div class="rItems-title">B.Flake:</div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_bflake">
+                                    <input type="checkbox" name="remove_check" value= "No B. Flake" class="rItems-checkboxForPref" id="rItems_bflake">
                                     <label for="rItems_bflake">Remove</label>
                                 </div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_bflake">
+                                    <input type="checkbox" name="pref_others" value="+ B. Flake" class="rItems-checkboxForPref"  id="sItems_bflake">
                                     <label for="sItems_bflake">Side</label>
                                 </div>
 
@@ -1136,12 +1136,12 @@
                                 <div class="rItems-title">Sauce:</div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_sauce">
+                                    <input type="checkbox" name="remove_check" value="No Sauce" class="rItems-checkboxForPref" id="rItems_sauce">
                                     <label for="rItems_sauce">Remove</label>
                                 </div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_sauce">
+                                    <input type="checkbox" name="pref_others" value="+ Sauce" class="rItems-checkboxForPref"  id="sItems_sauce">
                                     <label for="sItems_sauce">Side</label>
                                 </div>
 
@@ -1156,12 +1156,12 @@
                                 <div class="rItems-title">All Top:</div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref" id="rItems_alltop">
+                                    <input type="checkbox" name="remove_check" value="No Toppings" class="rItems-checkboxForPref" id="rItems_alltop">
                                     <label for="rItems_alltop">Remove</label>
                                 </div>
 
                                 <div class="rItems-preference">
-                                    <input type="checkbox" name="chashu_check" class="rItems-checkboxForPref"  id="sItems_alltop">
+                                    <input type="checkbox" name="pref_others" value="+ All Toppings" class="rItems-checkboxForPref"  id="sItems_alltop">
                                     <label for="sItems_alltop">Side</label>
                                 </div>
 
@@ -1221,7 +1221,7 @@
                     <div class="section_item_counter" id="side_item_counter">
                         <div class="button_wrapper">               
                             <button class="button_decrease" id="gyoza_decrease">-</button>  
-                            <div class="counter_section_item" id="gyoza_counter">0</div>
+                            <div class="counter_section_item" name="addTop_count" addTop="Gyoza" id="gyoza_counter">0</div>
                             <button class="button_increase" id="gyoza_increase">+</button>                
                         </div>
                     </div>
@@ -1234,7 +1234,7 @@
                     <div class="section_item_counter" id="side_item_counter">
                         <div class="button_wrapper">               
                             <button class="button_decrease" id="steamedBan_decrease">-</button>   
-                            <div class="counter_section_item" id="steamedBan_counter">0</div>
+                            <div class="counter_section_item" name="addTop_count" addTop="Ban" id="steamedBan_counter">0</div>
                             <button class="button_increase" id="steamedBan_increase">+</button>             
                         </div>
                     </div>
@@ -1246,7 +1246,7 @@
                     <div class="section_item_counter" id="side_item_counter">
                         <div class="button_wrapper">               
                             <button class="button_decrease" id="kimchiS_decrease">-</button>
-                            <div class="counter_section_item" id="kimchiS_counter">0</div>
+                            <div class="counter_section_item" name="addTop_count" addTop="Kimchi [S]" id="kimchiS_counter">0</div>
                             <button class="button_increase" id="kimchiS_increase">+</button>                 
                         </div>
                     </div>
@@ -1258,7 +1258,7 @@
                     <div class="section_item_counter" id="side_item_counter">
                         <div class="button_wrapper">               
                             <button class="button_decrease" id="kimchiL_decrease">-</button> 
-                            <div class="counter_section_item" id="kimchiL_counter">0</div>
+                            <div class="counter_section_item" name="addTop_count" addTop="Kimchi [L]" id="kimchiL_counter">0</div>
                             <button class="button_increase" id="kimchiL_increase">+</button>
                         </div>
                     </div>
@@ -1270,7 +1270,7 @@
                     <div class="section_item_counter" id="side_item_counter">
                         <div class="button_wrapper">               
                             <button class="button_decrease" id="rice_decrease">-</button>  
-                            <div class="counter_section_item" id="rice_counter">0</div>  
+                            <div class="counter_section_item" name="addTop_count" addTop="Rice" id="rice_counter">0</div>  
                             <button class="button_increase" id="rice_increase">+</button>                
                         </div>
                     </div>
@@ -1282,7 +1282,7 @@
                     <div class="section_item_counter" id="side_item_counter">
                         <div class="button_wrapper">               
                             <button class="button_decrease" id="matcha_decrease">-</button>  
-                            <div class="counter_section_item" id="matcha_counter">0</div>
+                            <div class="counter_section_item" name="addTop_count" addTop="Ice Cream" id="matcha_counter">0</div>
                             <button class="button_increase" id="matcha_increase">+</button>               
                         </div>
                     </div>
@@ -1292,7 +1292,7 @@
 
                     <div class="chashu-cancelOrAdd">
                         <button class="cancelButton" id="cancelBtn_other">Cancel</button>
-                        <button class="addButton" id="chashu_add">Add</button>
+                        <button class="addButton" id="other-add">Add</button>
                     </div>
 
                 </div> 
@@ -1332,7 +1332,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="beansTop_decrease">-</button>   
-                                <h1 class="topping_counter" name="exTopping_count" id="beansTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="Beans" id="beansTop_counter">0</h1>
                                 <button class="topping_button_increase" id="beansTop_increase">+</button>                 
                             </div>
                         </div>
@@ -1347,7 +1347,7 @@
                             <div class="topping_button_wrapper"> 
 
                                 <button class="topping_button_decrease" id="eggsTop_decrease">-</button> 
-                                <h1 class="topping_counter" name="exTopping_count" id="eggsTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="Eggs" id="eggsTop_counter">0</h1>
                                 <button class="topping_button_increase" id="eggsTop_increase">+</button>
 
                             </div>
@@ -1367,7 +1367,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="bellyTop_decrease">-</button> 
-                                <h1 class="topping_counter" name="exTopping_count" id="bellyTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="Belly" id="bellyTop_counter">0</h1>
                                 <button class="topping_button_increase" id="bellyTop_increase">+</button>
                     
                             </div>
@@ -1382,7 +1382,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="shoulderTop_decrease">-</button>
-                                <h1 class="topping_counter" name="exTopping_count" id="shoulderTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="Shoulder" id="shoulderTop_counter">0</h1>
                                 <button class="topping_button_increase" id="shoulderTop_increase">+</button>
                                                 
                             </div>
@@ -1402,7 +1402,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="sCakeTop_decrease">-</button> 
-                                <h1 class="topping_counter" name="exTopping_count" id="sCakeTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="S. Cake" id="sCakeTop_counter">0</h1>
                                 <button class="topping_button_increase" id="sCakeTop_increase">+</button>
                                                 
                             </div>
@@ -1418,7 +1418,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="wakameTop_decrease">-</button> 
-                                <h1 class="topping_counter" name="exTopping_count" id="wakameTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="Wakame" id="wakameTop_counter">0</h1>
                                 <button class="topping_button_increase" id="wakameTop_increase">+</button>
                             </div>
                         </div>
@@ -1437,7 +1437,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="noriTop_decrease">-</button> 
-                                <h1 class="topping_counter" name="exTopping_count" id="noriTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="Nori" id="noriTop_counter">0</h1>
                                 <button class="topping_button_increase" id="noriTop_increase">+</button>
                             </div>
                         </div>
@@ -1452,7 +1452,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="gOniTop_decrease">-</button>  
-                                <h1 class="topping_counter" name="exTopping_count" id="gOniTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="G. Onions"  id="gOniTop_counter">0</h1>
                                 <button class="topping_button_increase" id="gOniTop_increase">+</button>
                             </div>
                         </div>
@@ -1471,7 +1471,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="cheeseTop_decrease">-</button> 
-                                <h1 class="topping_counter" name="exTopping_count" id="cheeseTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="Cheese" id="cheeseTop_counter">0</h1>
                                 <button class="topping_button_increase" id="cheeseTop_increase">+</button>
                             </div>
                         </div>
@@ -1486,7 +1486,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="butterTop_decrease">-</button> 
-                                <h1 class="topping_counter" name="exTopping_count" id="butterTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count"  exTop="Butter" id="butterTop_counter">0</h1>
                                 <button class="topping_button_increase" id="butterTop_increase">+</button>
                             </div>
                         </div>
@@ -1505,7 +1505,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="cornTop_decrease">-</button>    
-                                <h1 class="topping_counter" name="exTopping_count" id="cornTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="Corn" id="cornTop_counter">0</h1>
                                 <button class="topping_button_increase" id="cornTop_increase">+</button>
                             </div>
                         </div>
@@ -1519,7 +1519,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="fCakeTop_decrease">-</button>
-                                <h1 class="topping_counter" name="exTopping_count" id="fCakeTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="Fish Cake" id="fCakeTop_counter">0</h1>
                                 <button class="topping_button_increase" id="fCakeTop_increase">+</button>
                             </div>
                         </div>
@@ -1531,14 +1531,14 @@
                     <div class="toppings-left-item">
 
                         <div class="toppings-item-name2">
-                            Bloccoli:
+                            Brocolli:
                         </div>
 
                         <!-- Topping counter button -->
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="bloccoliTop_decrease">-</button>
-                                <h1 class="topping_counter" name="exTopping_count" id="bloccoliTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="Brocolli" id="bloccoliTop_counter">0</h1>
                                 <button class="topping_button_increase" id="bloccoliTop_increase">+</button>
                             </div>
                         </div>
@@ -1554,7 +1554,7 @@
                         <div class="toppingCounter">
                             <div class="topping_button_wrapper">               
                                 <button class="topping_button_decrease" id="exNoodlesTop_decrease">-</button>
-                                <h1 class="topping_counter" name="exTopping_count" id="exNoodlesTop_counter">0</h1>
+                                <h1 class="topping_counter" name="exTopping_count" exTop="Noodle" id="exNoodlesTop_counter">0</h1>
                                 <button class="topping_button_increase" id="exNoodlesTop_increase">+</button>
                             </div>
                         </div>
@@ -1600,7 +1600,7 @@
                     <div class="section_item_counter" value="Coke" id="soft_coke_counter">
                         <div class="button_wrapper">               
                             <button class="button_decrease" id="coke_decrease">-</button>  
-                            <div class="soft_drink_count" id="coke_counter">0</div>
+                            <div class="soft_drink_count" name="drinks_count" drinks="Coke" id="coke_counter">0</div>
                             <!-- <h1 class="soft_drink_count" id="coke_counter">0</h1> -->
                             <button class="button_increase" id="coke_increase">+</button>                
                         </div>
@@ -1614,7 +1614,7 @@
                     <div class="section_item_counter" value="Sprite" id="soft_sprite_counter">
                         <div class="button_wrapper">               
                             <button class="button_decrease" id="sprite_decrease">-</button>  
-                            <div class="soft_drink_count" id="sprite_counter">0</div>
+                            <div class="soft_drink_count" name="drinks_count" drinks="Sprite" id="sprite_counter">0</div>
                             <button class="button_increase" id="sprite_increase">+</button>
                                             
                         </div>
@@ -1627,7 +1627,7 @@
                     <div class="section_item_counter" value="Iced Tea" id="soft_icedTea_counter">
                         <div class="button_wrapper">               
                             <button class="button_decrease" id="icedTea_decrease">-</button>  
-                            <div class="soft_drink_count" id="icedTea_counter">0</div>
+                            <div class="soft_drink_count" name="drinks_count" drinks="Iced Tea" id="icedTea_counter">0</div>
                             <button class="button_increase" id="icedTea_increase">+</button>
                         </div>
                     </div>
@@ -1669,7 +1669,7 @@
                     <div class="section_item_counter" id="beer_asahi_counter">
                         <div class="button_wrapper">               
                             <button class="button_decrease" id="asahi_decrease">-</button> 
-                            <div class="drink_beers_count" id="asahi_counter">0</div>
+                            <div class="drink_beers_count" name="drinks_count" drinks="Asahi" id="asahi_counter">0</div>
                             <button class="button_increase" id="asahi_increase">+</button>
                         </div>
                     </div>
@@ -1687,7 +1687,7 @@
                         <div class="button_wrapper">        
 
                             <button class="button_decrease" id="sapporo_decrease">-</button> 
-                            <div class="drink_beers_count" id="sapporo_counter">0</div>
+                            <div class="drink_beers_count" name="drinks_count" drinks="Sapporo" id="sapporo_counter">0</div>
                             <button class="button_increase" id="sapporo_increase">+</button>
                                             
                         </div>
@@ -1704,7 +1704,7 @@
                         <div class="button_wrapper">      
 
                             <button class="button_decrease" id="kokanee_decrease">-</button>  
-                            <div class="drink_beers_count" id="kokanee_counter">0</div>
+                            <div class="drink_beers_count" name="drinks_count" drinks="Kpkanee" id="kokanee_counter">0</div>
                             <button class="button_increase" id="kokanee_increase">+</button>
                         
                         </div>

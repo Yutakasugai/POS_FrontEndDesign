@@ -230,53 +230,93 @@ const sides_button = document.querySelectorAll('.chashu_pref_button');
 // I could capture main item name from this function
 $('button.chashu_pref_button').click(function(e) {
 
-  // console.log(e.currentTarget.value);
+  console.log(e.currentTarget.value);
   item_container.push(e.currentTarget.value)
 });
 
 sides_addBtn.addEventListener('click', function(event){
 
-  if (item_container[0].includes("Other") === true){
+  if (item_container[0].includes("C. Don") === true){
+        // This is only one condition when the soup and chashu boxes are filled
+        document.getElementById('chashu-bg').style.background = 'transparent'; 
 
-      console.log("This is cold"); 
+        // Capture the total number counter 
+        let total_num = document.getElementById('chashu_counter').innerText; 
+
+        const totalNum_input = document.getElementById('total_num'); 
+        totalNum_input.setAttribute('value', total_num); 
+
+      // Capture other pref options 
+      $.each($("input[name='pref_others']:checked"), function(){            
+          item_container.push($(this).val());
+      });
+
+      $.each($("input[name='remove_check']:checked"), function(){
+
+          item_container.push($(this).val());
+      })
+
+      console.log(item_container); 
+
+      // Insert this array to the hidden input to keep 
+      const item_input = document.getElementById('added_item'); 
+      item_input.setAttribute('value', item_container); 
 
   } 
+  else if (item_container[0].includes("G. Onion Don")===true){
+  // This is only one condition when the soup and chashu boxes are filled
+      document.getElementById('chashu-bg').style.background = 'transparent'; 
+
+      // Capture the total number counter 
+      let total_num = document.getElementById('chashu_counter').innerText; 
+
+      const totalNum_input = document.getElementById('total_num'); 
+      totalNum_input.setAttribute('value', total_num); 
+
+      // Capture other pref options 
+      $.each($("input[name='pref_others']:checked"), function(){            
+          item_container.push($(this).val());
+      });
+
+      $.each($("input[name='remove_check']:checked"), function(){
+
+          item_container.push($(this).val());
+      })
+
+      console.log(item_container); 
+
+      // Insert this array to the hidden input to keep 
+      const item_input = document.getElementById('added_item'); 
+      item_input.setAttribute('value', item_container); 
+  }
+
   else {
       // check if the required options is chcked or not 
       if (document.getElementById("chashu_belly").checked === false && document.getElementById("chashu_shoulder").checked === false){   
-          document.getElementById('containerFor3items-chashu').style.background = '#f56c77'; 
+          document.getElementById('chashu-bg').style.background = '#f56c77'; 
           event.preventDefault(); 
           return; 
       } 
 
       else {
-        
         // This is only one condition when the soup and chashu boxes are filled
-          document.getElementById('chashu_container').style.background = 'transparent'; 
+          document.getElementById('chashu-bg').style.background = 'transparent'; 
 
           // Capture the total number counter 
-          let total_num = document.getElementById('toppingTop_counter').innerText; 
+          let total_num = document.getElementById('chashu_counter').innerText; 
 
           const totalNum_input = document.getElementById('total_num'); 
           totalNum_input.setAttribute('value', total_num); 
 
           // Capture the chashu
           var result = ''
-          $.each($("input[name='pref_must']:checked"), function(){            
+          $.each($("input[name='chashu_check']:checked"), function(){            
               // item_container.push($(this).val());
               result = result + this.value; 
           });
           item_container.push(result);
 
 
-        // Capture add topping items 
-        $.each($("h1[name='addTop_count']"), function(){            
-          if ($(this).text() > 0) {
-
-              let addTop_result = ('+' + $(this).text() + '{' + $(this).attr('addTop'));
-              item_container.push(addTop_result);
-          }
-        });
 
         // Capture other pref options 
         $.each($("input[name='pref_others']:checked"), function(){            
@@ -301,7 +341,71 @@ sides_addBtn.addEventListener('click', function(event){
 })
 
 
+//Other Sides
+// Add Button Function
+const other_addBtn = document.getElementById('other-add'); 
+const other_button = document.querySelectorAll('.dishes_button'); 
 
+// I could capture main item name from this function
+$('button.dishes_button').click(function(e) {
+
+  console.log(e.currentTarget.value);
+  item_container.push(e.currentTarget.value)
+});
+
+other_addBtn.addEventListener('click', function(event){
+
+  if (item_container[0].includes("Other") === true){
+
+      // Capture add topping items 
+      $.each($("div[name='addTop_count']"), function(){            
+        if ($(this).text() > 0) {
+            let addTop_result = ('+' + $(this).text() + '{' + $(this).attr('addTop'));
+            item_container.push(addTop_result);
+        }
+      });
+
+      console.log(item_container); 
+
+      // Insert this array to the hidden input to keep 
+      const item_input = document.getElementById('added_item'); 
+      item_input.setAttribute('value', item_container); 
+
+  }
+})
+
+//Toppings
+const toppings_addBtn = document.getElementById('topping_add'); 
+const toppings_button = document.querySelectorAll('.topping_modal_button'); 
+
+// I could capture main item name from this function
+$('button.topping_modal_button').click(function(e) {
+
+  console.log(e.currentTarget.value);
+  item_container.push(e.currentTarget.value)
+});
+
+toppings_addBtn.addEventListener('click', function(event){
+
+  if (item_container[0].includes("Extra Toppings") === true){
+
+      // Capture add topping items 
+      $.each($("h1[name='exTopping_count']"), function(){            
+        if ($(this).text() > 0) {
+
+            let exTop_result = ('+' + $(this).text() + '{' + $(this).attr('exTop'));
+            item_container.push(exTop_result);
+        }
+      });
+
+      console.log(item_container); 
+
+      // Insert this array to the hidden input to keep 
+      const item_input = document.getElementById('added_item'); 
+      item_input.setAttribute('value', item_container); 
+
+  }
+})
 
 
 
@@ -310,16 +414,62 @@ sides_addBtn.addEventListener('click', function(event){
 
 // Add Button Function
 const drinks_addBtn = document.getElementById('softDrink_add'); 
-const drinks_button = document.querySelectorAll('.modal_bg_softDrink'); 
+const drinks_button = document.querySelectorAll('.drinksButton'); 
 
 // I could capture main item name from this function
-$('button.section_item').click(function(e) {
+$('button.drinksButton').click(function(e) {
 
   console.log(e.currentTarget.value);
   item_container.push(e.currentTarget.value)
 });
 
+drinks_addBtn.addEventListener('click', function(event){
 
+  if (item_container[0].includes("Soft Drinks") === true){
+
+      // Capture add topping items 
+      $.each($("div[name='drinks_count']"), function(){            
+        if ($(this).text() > 0) {
+
+            let drinks_results = ('+' + $(this).text() + '{' + $(this).attr('drinks'));
+            item_container.push(drinks_results);
+        }
+      });
+
+      console.log(item_container); 
+
+      // Insert this array to the hidden input to keep 
+      const item_input = document.getElementById('added_item'); 
+      item_input.setAttribute('value', item_container); 
+
+  }
+})
+
+// Add Button Function
+const beer_addBtn = document.getElementById('beer_add'); 
+
+
+beer_addBtn.addEventListener('click', function(event){
+
+  if (item_container[0].includes("Beer") === true){
+
+      // Capture add topping items 
+      $.each($("div[name='drinks_count']"), function(){            
+        if ($(this).text() > 0) {
+
+            let drinks_results = ('+' + $(this).text() + '{' + $(this).attr('drinks'));
+            item_container.push(drinks_results);
+        }
+      });
+
+      console.log(item_container); 
+
+      // Insert this array to the hidden input to keep 
+      const item_input = document.getElementById('added_item'); 
+      item_input.setAttribute('value', item_container); 
+
+  }
+})
 
 
 
@@ -1212,6 +1362,18 @@ document.querySelector('#close_chashu_modal').addEventListener('click', () => {
   $('input[name="chashu_check"]').each(function() {
     this.checked = false;
   });
+   // For other preference choices
+   $('input[name="pref_others"]').each(function() {
+     this.checked = false;
+     this.disabled = false; 
+   });
+   // Make remove topping checkboxes unchecked 
+   $('input[name="remove_check"]').each(function() {
+     this.checked = false;
+   });
+
+   // Make the item container clean 
+   item_container.length = 0;
 
   // Reset the major multiplier to 1 again
   chashu_count = 1;
@@ -1249,7 +1411,6 @@ chashuP_Modal.addEventListener('click', () => {
 
   document.getElementById('display-text').append("Chashu:");
 });
-
 // C. Burger
 chashuB_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg_chashu').style.display = 'block';
@@ -1297,11 +1458,16 @@ document.querySelector('#close_side_modal').addEventListener('click', () => {
   // Reset all values to 0
   gyoza_count = 0; steamedBan_count = 0; kimchiS_count = 0; 
   kimchiL_count = 0; rice_count = 0; matcha_count = 0; 
+
+    // Make the item container clean 
+    item_container.length = 0;
 });
 
 side_Modal.addEventListener('click', () => {
   document.querySelector('.modal_bg_dishes').style.display = 'block';
   document.querySelector('.modal_bg_dishes').classList.add('bg-active-dishes');
+
+  
 });
 
 // cancel Button
@@ -1312,6 +1478,15 @@ cancelBtn_other.onclick = () => {
   $('.counter_section_item').each(function() {
     this.innerHTML = 0;
   });
+
+    // Make add topping count number reset to 0
+    $('div[name="addTop_count"]').each(function(){
+      this.innerHTML = 0; 
+    })
+
+  
+  // Make the item container clean 
+  item_container.length = 0;
 
   // Reset all values to 0
   gyoza_count = 0; steamedBan_count = 0; kimchiS_count = 0; 
@@ -1336,6 +1511,9 @@ document.querySelector('#close_toppings_modal').addEventListener('click', () => 
   beansTop_count = 0; eggsTop_count = 0; bellyTop_count = 0; shoulderTop_count = 0; sCakeTop_count = 0;
   wakameTop_count = 0; noriTop_count = 0; gOniTop_count = 0; cheeseTop_count = 0;butterTop_count = 0;
   cornTop_count = 0; fCakeTop_count = 0; bloccoliTop_count = 0; exNoodlesTop_count = 0; 
+
+    // Make the item container clean 
+  item_container.length = 0;
 });
 
 toppings_Modal.addEventListener('click', () => {
@@ -1351,6 +1529,9 @@ cancelBtn_topping.onclick = () => {
   $("h1[name='exTopping_count']").each(function(){
     this.innerHTML = 0; 
   })
+
+  // Make the item container clean 
+  item_container.length = 0;
 
   // Reset each counters to 0
   beansTop_count = 0; eggsTop_count = 0; bellyTop_count = 0; shoulderTop_count = 0; sCakeTop_count = 0;
@@ -1374,6 +1555,8 @@ document.querySelector('#close_softDrink_modal').addEventListener('click', () =>
   // Make the js value to 0
   coke_count = 0; sprite_count = 0; icedTea_count = 0;
 
+   // Make the item container clean 
+   item_container.length = 0;
 });
 
 softDrink_Modal.addEventListener('click', () => {
@@ -1391,6 +1574,9 @@ cancelBtn_softDrinks.onclick = () => {
 
   // Make the js value to 0
   coke_count = 0; sprite_count = 0; icedTea_count = 0;
+
+     // Make the item container clean 
+     item_container.length = 0;
 }
 
 
@@ -1408,6 +1594,9 @@ document.querySelector('#close_beer_modal').addEventListener('click', () => {
   }); 
 
   asahi_count = 0; sapporo_count = 0; kokanee_count = 0; 
+
+     // Make the item container clean 
+     item_container.length = 0;
 });
 
 beer_Modal.addEventListener('click', () => {
@@ -1424,6 +1613,9 @@ cancelBtn_beers.onclick = () => {
   }); 
 
   asahi_count = 0; sapporo_count = 0; kokanee_count = 0; 
+
+     // Make the item container clean 
+     item_container.length = 0;
 }
 
 // Bowl　Soup Modal 
