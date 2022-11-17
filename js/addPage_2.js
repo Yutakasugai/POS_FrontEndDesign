@@ -255,6 +255,34 @@ sides_addBtn.addEventListener('click', function(event){
       item_input.setAttribute('value', item_container); 
 
   } 
+
+  else if (item_container[0].includes("G. Onion Don") === true){
+    // This is only one condition when the soup and chashu boxes are filled
+    document.getElementById('chashu-bg').style.background = 'transparent'; 
+
+    // Capture the total number counter 
+    let total_num = document.getElementById('chashu_counter').innerText; 
+
+    const totalNum_input = document.getElementById('total_num'); 
+    totalNum_input.setAttribute('value', total_num); 
+
+  // Capture other pref options 
+  $.each($("input[name='pref_others']:checked"), function(){            
+      item_container.push($(this).val());
+  });
+
+  $.each($("input[name='remove_check']:checked"), function(){
+
+      item_container.push($(this).val());
+  })
+
+  console.log(item_container); 
+
+  // Insert this array to the hidden input to keep 
+  const item_input = document.getElementById('added_item'); 
+  item_input.setAttribute('value', item_container); 
+
+} 
   else {
       // check if the required options is chcked or not 
       if (document.getElementById("chashu_belly").checked === false && document.getElementById("chashu_shoulder").checked === false){   
